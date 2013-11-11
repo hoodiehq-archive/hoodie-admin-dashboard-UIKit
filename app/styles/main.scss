@@ -1,0 +1,65 @@
+$icon-font-path: "/bower_components/sass-bootstrap/fonts/";
+
+// Use own version of bootstrap
+@import '../styles/lib/bootstrap';
+
+@mixin clearfix{
+  &:before,
+  &:after {
+    display: table;
+    content: " ";
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Set your grid dimensions here
+$body-width: 960px;
+$font-size: 16px;
+$baseline: 28px;
+@mixin baseline-grid {
+  $columns: 1;
+  $column-color: rgba(0,0,0,0);
+  $baseline-color: rgba(56,255,255,.8);
+
+  // These are all automatically calculated
+  $gutter-width: 20px;  // Change if you like
+  $gutters: ($columns - 1);
+  $column-width: $body-width / $columns;
+
+  background-image: -webkit-linear-gradient(0deg, $column-color $column-width, transparent $gutter-width),
+  -webkit-linear-gradient(top, rgba(0,0,0,0) 95%, $baseline-color 100%);
+  background-image: -moz-linear-gradient(0deg, $column-color $column-width, transparent $gutter-width),
+  -moz-linear-gradient(top, rgba(0,0,0,0) 95%, $baseline-color 100%);
+  background-image: -o-linear-gradient(0deg, $column-color $column-width, transparent $gutter-width),
+  -o-linear-gradient(top, rgba(0,0,0,0) 95%, $baseline-color 100%);
+  background-size: ($column-width + $gutter-width) 100%, 100% $baseline;
+  background-position: 10px 1px; // Use to offset and center your grid
+}
+
+body{
+  @include baseline-grid;
+}
+
+form{
+  legend{
+
+  }
+  .form-group{
+    @include clearfix;
+    label{
+      display: block;
+      width: 30%;
+      float: left;
+      margin-top: .5em;
+      margin-bottom: .5em;
+      line-height: 1.75em;
+    }
+    input{
+      display: block;
+      width: 70%;
+    }
+  }
+
+}

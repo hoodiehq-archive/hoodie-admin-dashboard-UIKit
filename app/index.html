@@ -1,0 +1,176 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>pocket static</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="/scripts/lib/dropzone/css/dropzone.css">
+  <link href="/bower_components/jquery-icheck/skins/flat/green.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+</head>
+<body>
+  <div class="container">
+    <form role="form">
+      <legend>Add user</legend>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address really long  label that will probably break the layout but shouldn't really</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+        <p class="help-block">Example block-level help text here.</p>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        <p class="help-block">Example block-level help text here.</p>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputFile">File input</label>
+        <div id="dropzoneExample" class="dropzone">
+          <div class="dropzone-previews"></div>
+          <div class="fallback">
+            <input name="file" type="file" multiple />
+          </div>
+        </div>
+        <p class="help-block">Example block-level help text here.</p>
+      </div>
+      <div class="form-group">
+        <label>
+          <input type="checkbox"> Check me out
+        </label>
+      </div>
+      <div class="form-group">
+        <div class="checkbox">
+          <input type="checkbox" id="checkbox-1">
+          <label for="checkbox-1">Checkbox 1</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="radio">
+          <input type="radio" name="radio" id="radio-1" checked>
+          <label for="radio-1">Radio 1</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="checkbox">
+          <input tabindex="13" type="checkbox" id="flat-checkbox-1">
+          <label for="flat-checkbox-1">Checkbox 1</label>
+        </div>
+        <div class="checkbox">
+          <input tabindex="14" type="checkbox" id="flat-checkbox-2" checked>
+          <label for="flat-checkbox-2">Checkbox 2</label>
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" id="flat-checkbox-disabled" disabled>
+          <label for="flat-checkbox-disabled">Disabled</label>
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" id="flat-checkbox-disabled-checked" checked disabled>
+        </div>
+        <label for="flat-checkbox-disabled-checked">Disabled &amp; checked</label>
+        <input tabindex="15" type="radio" id="flat-radio-1" name="flat-radio">
+        <label for="flat-radio-1">Radio button 1</label>
+        <input tabindex="16" type="radio" id="flat-radio-2" name="flat-radio" checked>
+        <label for="flat-radio-2">Radio button 2</label>
+        <input type="radio" id="flat-radio-disabled" disabled>
+        <label for="flat-radio-disabled">Disabled</label>
+        <input type="radio" id="flat-radio-disabled-checked" checked disabled>
+        <label for="flat-radio-disabled-checked">Disabled &amp; checked</label>
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </div>
+
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/jquery.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+  <script>
+  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+  e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+  e.src='//www.google-analytics.com/analytics.js';
+  r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+  ga('create','UA-XXXXX-X');ga('send','pageview');
+  </script>
+
+  <!-- build:js scripts/main.js -->
+  <script src="bower_components/dropzone/downloads/dropzone.js"></script>
+  <script>
+  Dropzone.options.dropzoneExample = { // The camelized version of the ID of the form element
+
+    autoProcessQueue: false,
+    uploadMultiple: true,
+    parallelUploads: 100,
+    maxFiles: 100,
+    addRemoveLinks: true,
+    url: "undefined",
+    dictDefaultMessage: "Drop files here or click to upload",
+    // The setting up of the dropzone
+    init: function() {
+      var myDropzone = this;
+
+      // First change the button to actually tell Dropzone to process the queue.
+      /*
+      this.element.querySelector("button[type=submit]").addEventListener("click", function(e) {
+        // Make sure that the form isn't actually being sent.
+        e.preventDefault();
+        e.stopPropagation();
+        myDropzone.processQueue();
+      });
+      */
+
+      // Listen to the sendingmultiple event. In this case, it's the sendingmultiple event instead
+      // of the sending event because uploadMultiple is set to true.
+      this.on("sendingmultiple", function() {
+        // Gets triggered when the form is actually being sent.
+        // Hide the success button or the complete form.
+      });
+      this.on("successmultiple", function(files, response) {
+        // Gets triggered when the files have successfully been sent.
+        // Redirect user or notify of success.
+      });
+      this.on("errormultiple", function(files, response) {
+        // Gets triggered when there was an error sending the files.
+        // Maybe show form again, and notify user of error
+      });
+    }
+
+  }
+  $(document).ready(function(){
+    $('input').iCheck({
+      checkboxClass: 'icheckbox_flat-green',
+      radioClass: 'iradio_flat-green',
+      increaseArea: '20%' // optional
+    });
+  });
+  </script>
+  <script src="/bower_components/jquery-icheck/jquery.icheck.js"></script>
+  <script src="scripts/main.js"></script>
+  <!-- endbuild -->
+
+  <!-- build:js scripts/plugins.js -->
+  <script src="bower_components/sass-bootstrap/js/affix.js"></script>
+  <script src="bower_components/sass-bootstrap/js/alert.js"></script>
+  <script src="bower_components/sass-bootstrap/js/dropdown.js"></script>
+  <script src="bower_components/sass-bootstrap/js/tooltip.js"></script>
+  <script src="bower_components/sass-bootstrap/js/modal.js"></script>
+  <script src="bower_components/sass-bootstrap/js/transition.js"></script>
+  <script src="bower_components/sass-bootstrap/js/button.js"></script>
+  <script src="bower_components/sass-bootstrap/js/popover.js"></script>
+  <script src="bower_components/sass-bootstrap/js/carousel.js"></script>
+  <script src="bower_components/sass-bootstrap/js/scrollspy.js"></script>
+  <script src="bower_components/sass-bootstrap/js/collapse.js"></script>
+  <script src="bower_components/sass-bootstrap/js/tab.js"></script>
+  <!-- endbuild -->
+</body>
+</html>
