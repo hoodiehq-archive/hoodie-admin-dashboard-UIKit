@@ -5,6 +5,14 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 //@import "compass/css3/transition";
 //@import "compass/css3/transform";
 
+$line-height:     1.75em;
+$inputHeight:     2.75em;
+$inputMargin:     0.5em;
+$inputDistance:   1.25em;
+
+$labelColWidth:   30%;
+$inputColWidth:   70%;
+
 @mixin clearfix{
   &:before,
   &:after {
@@ -60,34 +68,50 @@ form{
   }
   .form-group{
     @include clearfix;
+    border-radius: 25px;
+    padding: 0 1em;
     &>label{
       display: block;
       width: 30%;
       float: left;
-      margin-top: .5em;
-      margin-bottom: .5em;
+      margin: 1.75em 0;
       line-height: 1.75em;
     }
     input{
       display: block;
       width: 70%;
+      margin: $inputDistance 0 $inputDistance $labelColWidth;
+      /*
       & + .checkbox,
       & + .radio,
       & + .help-block{
         margin-top: 1.25em;
       }
+      */
+      & + input{
+        margin-top: -$inputMargin;
+      }
     }
+    p:before,
+    p:after{
+      content: "\00a0"; /* No-break space character */
+      display: block;
+      overflow: hidden;
+      height: 0;
+    }
+
   }
   .help-block{
-    margin-bottom: 0.2em;
+    float: none;
+    margin: 0 0 0 $labelColWidth;
     &:last-child{
-      margin-bottom: 0.5em;
+      //margin-bottom: 0.5em;
     }
   }
   .radio, .checkbox{
     line-height: 1.25em;
     padding-left: 0;
-    margin: .5em 0 .5em 30%;
+    margin: 0 0 0 30%;
     padding-top: .2em;
     padding-bottom: 0;
     label{
@@ -95,16 +119,11 @@ form{
       margin-left: .5em;
     }
     & + .help-block{
-      margin-top: -.5em;
       padding-left: 2em;
-      margin-bottom: 0.25em;
-      &:last-child{
-        margin-bottom: 0.5em;
-      }
     }
     & + .radio,
     & + .checkbox {
-      margin-top: -.5em;
+      margin-top: 0;
     }
     .iradio, .icheckbox{
       display: inline-block;
@@ -122,6 +141,10 @@ form{
 
     }
   }
+}
+
+.dropzone{
+  margin: 1.25em 0;
 }
 
 .select2-search{

@@ -17,7 +17,7 @@ legend {
   display: block;
   width: 100%;
   padding: 0;
-  margin-bottom: .625em;
+  margin-bottom: 0;
   font-size: 2em;
   line-height: 1.75em;
   color: $legend-color;
@@ -166,7 +166,7 @@ textarea.form-control {
 // horizontal forms, use the predefined grid classes.
 
 .form-group {
-  margin-bottom: .75em;
+  margin-bottom: 0;
   background: rgba(200, 0, 0, 0.05);
 }
 
