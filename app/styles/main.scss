@@ -2,6 +2,8 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 // Use own version of bootstrap
 @import '../styles/lib/bootstrap';
+//@import "compass/css3/transition";
+//@import "compass/css3/transform";
 
 @mixin clearfix{
   &:before,
@@ -48,7 +50,7 @@ form{
   }
   .form-group{
     @include clearfix;
-    label{
+    &>label{
       display: block;
       width: 30%;
       float: left;
@@ -61,5 +63,30 @@ form{
       width: 70%;
     }
   }
-
+  .radio, .checkbox{
+    line-height: 1.25em;
+    padding-left: 0;
+    margin: .5em 0 .5em 30%;
+    padding-top: .2em;
+    padding-bottom: 0;
+    label{
+      vertical-align: top;
+      margin-left: .5em;
+    }
+    & + .help-block{
+      margin-top: -.5em;
+      padding-left: 2em;
+      margin-bottom: 0.25em;
+      &:last-child{
+        margin-bottom: 0.5em;
+      }
+    }
+    & + .radio,
+    & + .checkbox {
+      margin-top: -.5em;
+    }
+    .iradio, .icheckbox{
+      display: inline-block;
+    }
+  }
 }
