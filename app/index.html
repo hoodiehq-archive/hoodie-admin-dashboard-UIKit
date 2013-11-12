@@ -13,16 +13,42 @@
   <!-- build:css(.tmp) styles/main.css -->
   <link rel="stylesheet" href="/scripts/lib/dropzone/css/dropzone.css">
   <link href="/bower_components/jquery-icheck/skins/flat/green.css" rel="stylesheet">
+  <link rel="stylesheet" href="/bower_components/select2/select2.css">
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
 </head>
 <body>
   <div class="container">
+    <header>
+      <h1>Page Title</h1>
+    </header>
     <form role="form">
       <legend>Add user</legend>
       <div class="form-group">
         <label for="exampleInputEmail1">Email address really long  label that will probably break the layout but shouldn't really</label>
         <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+        <p class="help-block">Example block-level help text here.</p>
+        <div class="checkbox">
+          <input tabindex="14" type="checkbox" id="flat-checkbox-2" checked>
+          <label for="flat-checkbox-2">Checkbox 2</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address really long  label that will probably break the layout but shouldn't really</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+        <div class="checkbox">
+          <input tabindex="14" type="checkbox" id="flat-checkbox-2" checked>
+          <label for="flat-checkbox-2">Checkbox 2</label>
+        </div>
+        <p class="help-block">Example block-level help text here.</p>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Short label</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+        <div class="checkbox">
+          <input tabindex="14" type="checkbox" id="flat-checkbox-2" checked>
+          <label for="flat-checkbox-2">Checkbox 2</label>
+        </div>
         <p class="help-block">Example block-level help text here.</p>
       </div>
       <div class="form-group">
@@ -91,9 +117,34 @@
           <label for="flat-radio-disabled-checked">Disabled &amp; checked</label>
         </div>
       </div>
-      <button type="submit" class="btn btn-default">Submit</button>
+      <!--<button type="submit" class="btn btn-default">Submit</button>-->
+      <div class="form-group">
+        <label>Pocket uses Select2</label>
+        <select>
+          <option>All</option>
+          <option>Visible</option>
+          <option>Hidden</option>
+        </select>
+      </div>
+    </form>
+    <form class="form-inline row">
+      <div class="col-xs-3 col-md-2">
+        <select>
+          <option>All</option>
+          <option>Visible</option>
+          <option>Hidden</option>
+        </select>
+      </div>
+      <div class="col-xs-9 col-md-10">
+        <input type="search" placeholder="Search products" class="form-control">
+      </div>
     </form>
   </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
 
   <!-- build:js scripts/vendor.js -->
   <!-- bower:js -->
@@ -160,9 +211,11 @@
       radioClass: 'iradio_flat-green iradio',
       increaseArea: '20%' // optional
     });
+    $("select").select2();
   });
   </script>
   <script src="/bower_components/jquery-icheck/jquery.icheck.js"></script>
+  <script src="/bower_components/select2/select2.js"></script>
   <script src="scripts/main.js"></script>
   <!-- endbuild -->
 

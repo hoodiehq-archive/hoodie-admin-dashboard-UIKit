@@ -296,6 +296,7 @@ input[type="checkbox"],
 // Heads up! This is mixin-ed into `.navbar-form` in navbars.less.
 
 .form-inline {
+  background-color: rgba(0,200,0,.25);
 
   // Kick in the inline
   @media (min-width: $screen-sm) {
