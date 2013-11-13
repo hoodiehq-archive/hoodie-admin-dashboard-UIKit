@@ -77,8 +77,18 @@ form{
       display: block;
       width: 30%;
       float: left;
-      margin: 0.75em 0;
+      clear:left;
+      margin: 1.75em 0 0.75em;
       line-height: 1.75em;
+      &:last-of-type{
+        margin-top: 0;
+      }
+      &:first-child{
+        margin-top: 0.75em;
+      }
+      & + input{
+        margin-top: 1.25em;
+      }
     }
     input{
       display: block;
@@ -109,58 +119,71 @@ form{
       height: 0;
     }
 
-  }
-  .help-block{
-    float: none;
-    margin: 0 0 0 $labelColWidth;
-    &:last-child{
-      margin-bottom: 0.75em;
-    }
-  }
-  .radio, .checkbox{
-    line-height: 1.25em;
-    padding-left: 0;
-    margin: 0 0 0 30%;
-    padding-top: .25em;
-    padding-bottom: 0;
-    label{
-      vertical-align: top;
-      margin-left: .5em;
-    }
-    & + .help-block{
-      padding-left: 2em;
-    }
-    & + .radio,
-    & + .checkbox {
-      margin-top: 0;
-    }
-    .iradio, .icheckbox{
-      display: inline-block;
-      &.focus{
-        @include box-shadow(0 0 0 1px #66AFE9 inset, 0 0 0 3px #66AFE9);
-        @include border-radius($input-border-radius);
+    .help-block{
+      float: none;
+      margin: 0 0 0 $labelColWidth;
+      &:last-child{
+        margin-bottom: 0.75em;
+      }
+      & + input{
+        margin-top: 1.25em;
       }
     }
-    .iradio.focus{
-      @include border-radius(50%);
-    }
-    &:first-of-type{
-      margin-top: .75em;
-    }
-    &:last-child{
-      margin-bottom: .75em;
-    }
-  }
-  .select2-container{
-    width: 70%;
-    .select2-choice{
-      height: 2.625em;
-      line-height: 2.625em;
-      padding: .025em 0 0 .5em;
-      .select2-arrow b {
-        background-position-y: 0.45em;
+    .radio, .checkbox{
+      @include clearfix;
+      line-height: 1.25em;
+      height: 1.75em;
+      padding-left: 0;
+      margin: 0 0 0 30%;
+      padding-top: .25em;
+      padding-bottom: 0;
+      label{
+        vertical-align: top;
+        margin-left: .5em;
       }
+      & + .help-block{
+        padding-left: 2em;
+      }
+      & + .radio,
+      & + .checkbox {
+        margin-top: 0;
+      }
+      & + input{
+        margin-top: 1.25em;
+      }
+      & ~ input{
+        &:last-child{
+          margin-top: 1.25em;
+        }
+      }
+      .iradio, .icheckbox{
+        display: inline-block;
+        &.focus{
+          @include box-shadow(0 0 0 1px #66AFE9 inset, 0 0 0 3px #66AFE9);
+          @include border-radius($input-border-radius);
+        }
+      }
+      .iradio.focus{
+        @include border-radius(50%);
+      }
+      &:first-of-type{
+        margin-top: .75em;
+      }
+      &:last-child{
+        margin-bottom: .75em;
+      }
+    }
+    .select2-container{
+      width: 70%;
+      .select2-choice{
+        height: 2.625em;
+        line-height: 2.625em;
+        padding: .025em 0 0 .5em;
+        .select2-arrow b {
+          background-position-y: 0.45em;
+        }
 
+      }
     }
   }
 }
