@@ -191,9 +191,10 @@ form{
     }
     .select2-container{
       width: 70%;
+      margin-top: .25em;
       .select2-choice{
-        height: 2.625em;
-        line-height: 2.625em;
+        height: 2.75em;
+        line-height: 2.75em;
         padding: .025em 0 0 .5em;
         .select2-arrow b {
           background-position-y: 0.45em;
@@ -211,6 +212,15 @@ form{
   }
   &:last-of-type:last-child{
     margin-bottom: .25em;
+  }
+  .dz-preview{
+    @include box-shadow(none);
+    border: none;
+    @include border-radius(4px);
+    margin: 19px 19px 5px 19px;
+    &:last-of-type {
+      margin-bottom: 19px;
+    }
   }
 }
 
