@@ -2,6 +2,8 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 // Use own version of bootstrap
 @import '../styles/lib/bootstrap';
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
 //@import "compass/css3/transition";
 //@import "compass/css3/transform";
 
@@ -68,13 +70,14 @@ form{
   }
   .form-group{
     @include clearfix;
-    border-radius: 25px;
-    padding: 0 1em;
+    border-radius: 0.5em;
+    padding: 0 0.25em 0 0.5em;
+    margin-bottom: .25em;
     &>label{
       display: block;
       width: 30%;
       float: left;
-      margin: 1.75em 0;
+      margin: 0.75em 0;
       line-height: 1.75em;
     }
     input{
@@ -91,6 +94,12 @@ form{
       & + input{
         margin-top: -$inputMargin;
       }
+      &:first-of-type{
+        margin-top: .25em;
+      }
+      &:last-of-type:last-child{
+        margin-bottom: .25em;
+      }
     }
     p:before,
     p:after{
@@ -105,14 +114,14 @@ form{
     float: none;
     margin: 0 0 0 $labelColWidth;
     &:last-child{
-      //margin-bottom: 0.5em;
+      margin-bottom: 0.75em;
     }
   }
   .radio, .checkbox{
     line-height: 1.25em;
     padding-left: 0;
     margin: 0 0 0 30%;
-    padding-top: .2em;
+    padding-top: .25em;
     padding-bottom: 0;
     label{
       vertical-align: top;
@@ -127,6 +136,19 @@ form{
     }
     .iradio, .icheckbox{
       display: inline-block;
+      &.focus{
+        @include box-shadow(0 0 0 1px #66AFE9 inset, 0 0 0 3px #66AFE9);
+        @include border-radius($input-border-radius);
+      }
+    }
+    .iradio.focus{
+      @include border-radius(50%);
+    }
+    &:first-of-type{
+      margin-top: .75em;
+    }
+    &:last-child{
+      margin-bottom: .75em;
     }
   }
   .select2-container{
@@ -145,6 +167,12 @@ form{
 
 .dropzone{
   margin: 1.25em 0;
+  &:first-of-type{
+    margin-top: .25em;
+  }
+  &:last-of-type:last-child{
+    margin-bottom: .25em;
+  }
 }
 
 .select2-search{
