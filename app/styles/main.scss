@@ -64,6 +64,15 @@ header{
   }
 }
 
+@mixin label{
+  display: block;
+  width: 30%;
+  float: left;
+  clear:left;
+  margin: 1.75em 0 0.75em;
+  line-height: 1.75em;
+}
+
 form{
   legend{
 
@@ -74,12 +83,7 @@ form{
     padding: 0 0.25em 0 0.5em;
     margin-bottom: .25em;
     &>label{
-      display: block;
-      width: 30%;
-      float: left;
-      clear:left;
-      margin: 1.75em 0 0.75em;
-      line-height: 1.75em;
+      @include label;
       &:last-of-type{
         margin-top: 0;
       }
@@ -88,6 +92,18 @@ form{
       }
       & + input{
         margin-top: 1.25em;
+      }
+    }
+    .form-container{
+      overflow: hidden;
+      background: rgba(0, 200, 0, .05);
+      margin-top: .25em;
+      &:first-child{
+        margin-top: 0;
+      }
+      &>label{
+        @include label;
+        margin: .75em 0 0.75em;
       }
     }
     input{
