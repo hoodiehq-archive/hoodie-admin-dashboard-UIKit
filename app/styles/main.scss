@@ -52,8 +52,16 @@ $baseline: 28px;
   background-position: 10px 1px; // Use to offset and center your grid
 }
 
-body{
-  //@include baseline-grid;
+body.debug{
+  @include baseline-grid;
+  form .form-group{
+    // Reddish tint to identify form containers
+    background: rgba(200, 0, 0, 0.05);
+    .form-container{
+      // Greenish tint to identify form containers
+      background: rgba(0, 200, 0, .05);
+    }
+  }
 }
 
 header{
@@ -81,6 +89,7 @@ form{
   }
   .form-group{
     @include clearfix;
+    background: #F7F4F2;
     border-radius: 0.5em;
     padding: 0 0.25em 0 0.5em;
     margin-bottom: .25em;
@@ -98,7 +107,6 @@ form{
     }
     .form-container{
       overflow: hidden;
-      background: rgba(0, 200, 0, .05);
       margin-top: .25em;
       &:first-child{
         margin-top: 0;
@@ -127,6 +135,23 @@ form{
       }
       &:last-of-type:last-child{
         margin-bottom: .25em;
+      }
+      &:required:invalid,
+      &:focus:invalid{
+        background-image: url('../images/required_form.png');
+        background-repeat: no-repeat;
+        background-position: calc(100% - 10px) center;
+      }
+      &.valid,
+      &:required:valid{
+        background-image: url('../images/valid_form.png');
+        background-repeat: no-repeat;
+        background-position: calc(100% - 10px) center;
+      }
+      &.invalid{
+        background-image: url('../images/invalid_form.png');
+        background-repeat: no-repeat;
+        background-position: calc(100% - 10px) center;
       }
     }
     p:before,
@@ -180,6 +205,12 @@ form{
           @include box-shadow(0 0 0 1px #66AFE9 inset, 0 0 0 3px #66AFE9);
           @include border-radius($input-border-radius);
         }
+        &.disabled{
+          cursor: not-allowed;
+          & + label{
+            cursor: not-allowed;
+          }
+        }
       }
       .iradio.focus{
         @include border-radius(50%);
@@ -189,6 +220,11 @@ form{
       }
       &:last-child{
         margin-bottom: .75em;
+      }
+    }
+    select{
+      & + .help-block{
+        margin-top: 1.25em;
       }
     }
   }

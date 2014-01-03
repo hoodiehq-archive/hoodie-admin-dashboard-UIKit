@@ -30,10 +30,12 @@
         <label for="exampleInputEmail1">A label</label>
         <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
         <p class="help-block">Example block-level help text here.</p>
-        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-        <p class="help-block">Example block-level help text here. Example block-level help text here.</p>
-        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+        <input type="email" class="form-control" placeholder="Enter email" required>
+        <p class="help-block">This input is type="email" and required, so it's marked with an exclamation mark over there on the right. Once you enter a valid email, that exclamation mark will be replaced by a green check mark. This is how all HTML5 form validation features (required, patterns and types) are handled in Pocket.</p>
+        <input type="email" class="form-control invalid" placeholder="Enter email">
+        <p class="help-block">This input has the class "invalid", you can use this for server-side validation.</p>
+        <input type="email" class="form-control valid" placeholder="Enter email">
+        <p class="help-block">You can also get the green checkmark by manually adding the class "valid" to an input.</p>
         <div class="checkbox">
           <input type="checkbox" id="flat-checkbox-2" checked>
           <label for="flat-checkbox-2">Checkbox 2</label>
@@ -47,23 +49,23 @@
         </div>
 
         <div class="form-container">
-          <label for="exampleInputEmail1">Another label</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+          <label for="exampleInputEmail2">Another label</label>
+          <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
           <p class="help-block">Example block-level help text here. Example block-level help text here.</p>
         </div>
 
         <div class="form-container">
-          <label for="exampleInputEmail1">Another label</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+          <label for="exampleInputEmail3">Another label</label>
+          <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Enter email">
         </div>
 
         <div class="form-container">
-          <label for="exampleInputEmail1">This is a really long label inside a form-container</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+          <label for="exampleInputEmail4">This is a really long label inside a form-container</label>
+          <input type="email" class="form-control" id="exampleInputEmail4" placeholder="Enter email">
         </div>
 
         <div class="form-container">
-          <label for="exampleInputEmail1">YAL</label>
+          <label>YAL</label>
           <div class="checkbox">
             <input type="checkbox" id="flat-checkbox-2" checked>
             <label for="flat-checkbox-2">Checkbox 2</label>
@@ -71,33 +73,33 @@
         </div>
       </div>
       <div class="form-group">
-        <label for="exampleInputEmail1">Short label</label>
+        <label>Short label</label>
         <div class="checkbox">
           <input type="checkbox" id="flat-checkbox-2" checked>
           <label for="flat-checkbox-2">Checkbox 2</label>
         </div>
-        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+        <input type="email" class="form-control" placeholder="Enter email">
       </div>
       <div class="form-group">
-        <label for="exampleInputEmail1">Short label</label>
+        <label>Short label</label>
         <div class="checkbox">
           <input type="checkbox" id="flat-checkbox-2" checked>
           <label for="flat-checkbox-2">Checkbox 2</label>
         </div>
         <p class="help-block">Example block-level help text here. Example block-level help text here.</p>
-        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+        <input type="email" class="form-control" placeholder="Enter email">
       </div>
       <div class="form-group">
-        <label for="exampleInputEmail1">Short label</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+        <label for="exampleInputEmail5">Short label</label>
+        <input type="email" class="form-control" id="exampleInputEmail5" placeholder="Enter email">
       </div>
       <div class="form-group">
-        <label for="exampleInputEmail1">Email address really long  label that will probably break the layout but shouldn't really</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+        <label for="exampleInputEmail6">Email address really long  label that will probably break the layout but shouldn't really</label>
+        <input type="email" class="form-control" id="exampleInputEmail6" placeholder="Enter email">
       </div>
       <div class="form-group">
-        <label for="exampleInputEmail1">Email address really long  label that will probably break the layout but shouldn't really</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+        <label for="exampleInputEmail7">Email address really long  label that will probably break the layout but shouldn't really</label>
+        <input type="email" class="form-control" id="exampleInputEmail7" placeholder="Enter email">
         <div class="checkbox">
           <input type="checkbox" id="flat-checkbox-2" checked>
           <label for="flat-checkbox-2">Checkbox 2</label>
@@ -105,8 +107,8 @@
         <p class="help-block">Example block-level help text here.</p>
       </div>
       <div class="form-group">
-        <label for="exampleInputEmail1">Short label</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+        <label for="exampleInputEmail8">Short label</label>
+        <input type="email" class="form-control" id="exampleInputEmail8" placeholder="Enter email">
         <div class="checkbox">
           <input type="checkbox" id="flat-checkbox-2" checked>
           <label for="flat-checkbox-2">Checkbox 2</label>
@@ -191,10 +193,12 @@
       <div class="form-group">
         <label>Pocket uses Select2</label>
         <select>
-          <option>All</option>
-          <option>Visible</option>
-          <option>Hidden</option>
+          <option>Pick me!</option>
+          <option>I'm cool too!</option>
+          <option>Huh?</option>
+          <option>Hey wait</option>
         </select>
+        <p class="help-block">Pocket uses the wonderful <a href="http://ivaynberg.github.io/select2/index.html">Select2 library</a> to enhance select boxes.</p>
       </div>
     </form>
     <form class="form-inline row">
