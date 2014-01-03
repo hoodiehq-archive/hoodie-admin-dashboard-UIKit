@@ -16,6 +16,9 @@ $labelColWidth:   30%;
 $inputColWidth:   70%;
 
 $white:           #FFFFFF;
+$lightBlue:       #9FCAEC;
+$strongLightBlue: #66AFE9;
+$lightGreen:      #1ABC9C;
 
 @mixin clearfix{
   &:before,
@@ -61,6 +64,13 @@ body.debug{
       // Greenish tint to identify form containers
       background: rgba(0, 200, 0, .05);
     }
+  }
+}
+
+a {
+  color: $lightGreen;
+  &:hover{
+    color: $lightGreen;
   }
 }
 
@@ -114,6 +124,22 @@ form{
       &>label{
         @include label;
         margin: .75em 0 0.75em;
+      }
+    }
+    .input-group{
+      input{
+        margin-left: 0;
+        &:focus + .input-group-btn .btn{
+          @include box-shadow(0 0 0 3px $lightBlue);
+          border: 1px solid $strongLightBlue;
+        }
+      }
+      .input-group-btn:last-child > .btn {
+        height: 2.75em;
+        margin-top: .25em;
+      }
+      & + .help-block{
+        margin-top: 1.25em;
       }
     }
     input{
