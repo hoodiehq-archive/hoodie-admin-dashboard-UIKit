@@ -31,6 +31,16 @@ $lightGreen:      #1ABC9C;
   }
 }
 
+@mixin noShadow{
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+@mixin noBackground{
+  background: $white;
+  background-image: none;
+}
+
 // Set your grid dimensions here
 $body-width: 960px;
 $font-size: 16px;
@@ -129,10 +139,12 @@ form{
     .input-group{
       input{
         margin-left: 0;
-        &:focus + .input-group-btn .btn{
-          @include box-shadow(0 0 0 3px $lightBlue);
-          border: 1px solid $strongLightBlue;
-        }
+      }
+      input:focus + .input-group-btn .btn,
+      .input-group-btn .btn:focus{
+        @include box-shadow(0 0 0 3px $lightBlue);
+        border: 1px solid $strongLightBlue;
+        outline: none;
       }
       .input-group-btn:last-child > .btn {
         height: 2.75em;
@@ -258,6 +270,8 @@ form{
 
 .dropzone{
   margin: 1.25em 0;
+  background: $lightGreen;
+  color: $white;
   &:first-of-type{
     margin-top: .25em;
   }
@@ -275,17 +289,13 @@ form{
     .dz-remove{
       cursor: pointer;
     }
+    .dz-details{
+      color: #666;
+    }
+    .dz-remove{
+      @include noBackground;
+    }
   }
-}
-
-@mixin noShadow{
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-@mixin noBackground{
-  background: $white;
-  background-image: none;
 }
 
 .select2-search{
