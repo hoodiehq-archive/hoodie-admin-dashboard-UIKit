@@ -15,6 +15,8 @@ $inputDistance:   1.25em;
 $labelColWidth:   30%;
 $inputColWidth:   70%;
 
+$white:           #FFFFFF;
+
 @mixin clearfix{
   &:before,
   &:after {
@@ -51,7 +53,7 @@ $baseline: 28px;
 }
 
 body{
-  @include baseline-grid;
+  //@include baseline-grid;
 }
 
 header{
@@ -189,19 +191,6 @@ form{
         margin-bottom: .75em;
       }
     }
-    .select2-container{
-      width: 70%;
-      margin-top: .25em;
-      .select2-choice{
-        height: 2.75em;
-        line-height: 2.75em;
-        padding: .025em 0 0 .5em;
-        .select2-arrow b {
-          background-position-y: 0.45em;
-        }
-
-      }
-    }
   }
 }
 
@@ -221,7 +210,20 @@ form{
     &:last-of-type {
       margin-bottom: 19px;
     }
+    .dz-remove{
+      cursor: pointer;
+    }
   }
+}
+
+@mixin noShadow{
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+@mixin noBackground{
+  background: $white;
+  background-image: none;
 }
 
 .select2-search{
@@ -229,3 +231,39 @@ form{
     background: none;
   }
 }
+
+.select2-drop{
+  @include noShadow;
+  &.select2-drop-above{
+    @include noShadow;
+  }
+}
+
+.select2-container-active .select2-choice,
+.select2-container-active .select2-choices {
+  @include noShadow;
+}
+
+.select2-dropdown-open.select2-drop-above .select2-choice,
+.select2-dropdown-open.select2-drop-above .select2-choices{
+  @include noBackground;
+}
+
+.select2-container{
+  width: 70%;
+  margin-top: .25em;
+
+  .select2-choice{
+    height: 2.75em;
+    line-height: 2.75em;
+    padding: .025em 0 0 .5em;
+    @include noBackground;
+    .select2-arrow{
+      @include noBackground;
+      b{
+        background-position: 0 8px;
+      }
+    }
+  }
+}
+
