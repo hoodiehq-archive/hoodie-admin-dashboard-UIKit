@@ -25,9 +25,9 @@
     </header>
     -->
     <form role="form">
-      <legend>CSS Test Page</legend>
+      <h1>CSS Test Page</h1>
       <div class="form-group">
-        <label for="exampleInputEmail1">A label</label>
+        <legend for="exampleInputEmail1">A label</legend>
         <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
         <p class="help-block">Example block-level help text goes in a paragraph with class "help-block".</p>
         <input type="email" class="form-control" placeholder="Enter email" required>
@@ -78,6 +78,7 @@
           <input type="checkbox" id="flat-checkbox-2" checked>
           <label for="flat-checkbox-2">Checkbox 2</label>
         </div>
+        <input type="email" class="form-control" placeholder="Enter email">
         <input type="email" class="form-control" placeholder="Enter email">
         <textarea class="form-control" rows="3"></textarea>
         <p class="help-block">Example block-level help text here. Example block-level help text here.</p>
@@ -217,16 +218,43 @@
           <label for="flat-radio-disabled-checked">Disabled &amp; checked</label>
         </div>
       </div>
-      <!--<button type="submit" class="btn btn-default">Submit</button>-->
       <div class="form-group">
         <label>Pocket uses Select2</label>
         <select>
-          <option>Pick me!</option>
-          <option>I'm cool too!</option>
-          <option>Huh?</option>
-          <option>Hey wait</option>
+          <option value="Pick me!">Pick me!</option>
+          <option value="I'm cool too!">I'm cool too!</option>
+          <option value="Huh?" disabled>Huh?</option>
+          <option value="Hey wait">Hey wait</option>
         </select>
         <p class="help-block">Pocket uses the wonderful <a href="http://ivaynberg.github.io/select2/index.html">Select2 library</a> to enhance select boxes.</p>
+        <select multiple>
+          <option value="Pick me!">Pick me!</option>
+          <option value="I'm cool too!">I'm cool too!</option>
+          <option value="Huh?" disabled>Huh?</option>
+          <option value="Hey wait">Hey wait</option>
+        </select>
+        <p class="help-block">Pocket uses the wonderful <a href="http://ivaynberg.github.io/select2/index.html">Select2 library</a> to enhance select boxes.</p>
+      </div>
+      <div class="form-group">
+        <p class="help-block">Pocket uses the wonderful <a href="http://ivaynberg.github.io/select2/index.html">Select2 library</a> to enhance select boxes.</p>
+        <select multiple>
+          <option value="Pick me!">Pick me!</option>
+          <option value="I'm cool too!">I'm cool too!</option>
+          <option value="Huh?" disabled>Huh?</option>
+          <option value="Hey wait">Hey wait</option>
+        </select>
+        <input type="email" class="form-control" id="exampleInputEmail8" placeholder="Enter email">
+        <div class="checkbox">
+          <input type="checkbox" id="flat-checkbox-2" checked>
+          <label for="flat-checkbox-2">Checkbox 2</label>
+        </div>
+        <select class="forceEndMargin">
+          <option value="Pick me!">Pick me!</option>
+          <option value="I'm cool too!">I'm cool too!</option>
+          <option value="Huh?" disabled>Huh?</option>
+          <option value="Hey wait">Hey wait</option>
+        </select>
+
       </div>
     </form>
     <form class="form-inline row">

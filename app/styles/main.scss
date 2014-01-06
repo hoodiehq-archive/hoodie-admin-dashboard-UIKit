@@ -90,14 +90,12 @@ a {
   }
 }
 
-header{
-  h1{
-    font-size: 2em;
-    line-height: 1.75em;
-    margin-bottom: 0;
-    margin-top: 0;
-    border-bottom: 1px solid #000;
-  }
+h1{
+  font-size: 2em;
+  line-height: 1.75em;
+  margin-bottom: .5em;
+  margin-top: 0;
+  border-bottom: 1px solid #000;
 }
 
 @mixin label{
@@ -111,7 +109,10 @@ header{
 
 form{
   legend{
-
+    @include label;
+    font-size: 1em;
+    margin-top: .75em;
+    border: none;
   }
   .form-group{
     @include clearfix;
@@ -158,19 +159,47 @@ form{
         margin-top: 1.25em;
       }
     }
+    label, legend{
+      & + input,
+      & + textarea,
+      & + .dropzone,
+      & + .select2-container{
+        margin-top: .25em;
+      }
+    }
+    label, legend{
+      & + .radio,
+      & + .checkbox,
+      & + p{
+        margin-top: .75em;
+      }
+    }
+    .radio,
+    .checkbox,
+    p{
+      &:first-child{
+        margin-top: .75em;
+      }
+    }
+    input,
+    textarea,
+    .dropzone,
+    .select2-container,
+    select{
+      &:first-child{
+        margin-top: .25em;
+      }
+      &:last-child{
+        margin-bottom: .25em;
+      }
+    }
+    .forceEndMargin{
+      margin-bottom: .25em;
+    }
     input{
       display: block;
       width: 70%;
       margin: $inputDistance 0 $inputDistance $labelColWidth;
-      & + input{
-        margin-top: -$inputMargin;
-      }
-      &:first-of-type{
-        margin-top: .25em;
-      }
-      &:last-of-type:last-child{
-        margin-bottom: .25em;
-      }
       &:required:invalid,
       &:focus:invalid{
         background-image: url('../images/required_form.png');
@@ -191,12 +220,15 @@ form{
     }
     textarea{
       width: 70%;
-      margin: -.5em 0 .25em 30%;
+      margin: 1.25em 0 calc(1.25em - 2px) 30%;
       line-height: 1.75em;
       padding: 0.5em 0.5em 0.5em;
       resize:vertical;
-      & + .help-block{
-        margin-top: .4em;
+    }
+    p{
+      & + .radio,
+      & + .checkbox{
+        margin-top:1.75em;
       }
     }
     p:before,
@@ -207,13 +239,14 @@ form{
       height: 0;
     }
     p a{
+      padding: 0 3px;
       &:hover,
       &:focus{
         background: $lightGreen;
         color: $white;
         padding: 3px;
         outline: none;
-        border-radius: 3px;
+        @include border-radius(3px);
         text-decoration: none;
       }
     }
@@ -243,6 +276,7 @@ form{
       & + .help-block{
         padding-left: 2em;
       }
+      /*
       & + .radio,
       & + .checkbox {
         margin-top: 0;
@@ -255,6 +289,7 @@ form{
           margin-top: 1.25em;
         }
       }
+      */
       .iradio, .icheckbox{
         display: inline-block;
         &.focus{
@@ -268,20 +303,40 @@ form{
           }
         }
       }
-      .iradio.focus{
-        @include border-radius(50%);
-      }
-      &:first-of-type{
+      &:first-child{
         margin-top: .75em;
       }
       &:last-child{
         margin-bottom: .75em;
+      }
+      .iradio.focus{
+        @include border-radius(50%);
       }
     }
     select{
       & + .help-block{
         margin-top: 1.25em;
       }
+    }
+    // Bit daft, but input elements that immediately follow each other
+    // look better with less top margin, so:
+    input + input,
+    input + textarea,
+    input + select,
+    input + .dropzone,
+    textarea + input,
+    textarea + textarea,
+    textarea + select,
+    textarea + .dropzone,
+    select + input,
+    select + textarea,
+    select + select,
+    select + .dropzone,
+    .dropzone + input,
+    .dropzone + textarea,
+    .dropzone + select,
+    .dropzone + .dropzone {
+      margin-top: -$inputMargin;
     }
   }
 }
@@ -291,12 +346,14 @@ form{
   margin: 1.25em 0;
   background: $lightGreen;
   color: $white;
+  /*
   &:first-of-type{
     margin-top: .25em;
   }
   &:last-of-type:last-child{
     margin-bottom: .25em;
   }
+  */
   .dz-preview{
     @include box-shadow(none);
     border: none;
@@ -325,6 +382,7 @@ form{
 .select2-search{
   input{
     background: none;
+    @include border-radius(3px);
   }
 }
 
@@ -332,6 +390,14 @@ form{
   @include noShadow;
   &.select2-drop-above{
     @include noShadow;
+  }
+  .select2-disabled{
+    background: none;
+    color: #CCC;
+  }
+  .select2-highlighted{
+    background: $lightGreen;
+    @include border-radius(3px);
   }
 }
 
@@ -347,8 +413,8 @@ form{
 
 .select2-container{
   width: 70%;
-  margin-top: .25em;
-
+  margin: 1.25em 0 1.25em 30%;
+  display: block;
   .select2-choice{
     height: 2.75em;
     line-height: 2.75em;
@@ -356,8 +422,52 @@ form{
     @include noBackground;
     .select2-arrow{
       @include noBackground;
+      border-left: none;
       b{
         background-position: 0 8px;
+      }
+    }
+  }
+  &:last-child{
+    margin-bottom: 0.25em;
+  }
+}
+
+.select2-container-multi{
+  &.select2-container-active{
+    .select2-choices{
+      @include noShadow;
+    }
+  }
+  .select2-choices{
+    min-height: 2.75em;
+    @include noBackground;
+    @include border-radius(3px);
+    .select2-search-field{
+      input{
+        padding: .35em 0 0em .5em;
+      }
+    }
+    .select2-search-choice{
+      @include border-radius(1em);
+      @include noBackground;
+      background-color: $white;
+      font-size: 1em;
+      height: 2.1em;
+      margin: .25em 0 .25em .25em;
+      &.select2-search-choice-focus{
+        background: $lightGreen;
+        border-color: $lightGreen;
+        @include noShadow;
+        color: $white;
+      }
+      div{
+        line-height: 1.5em;
+        margin: 0 .75em;
+      }
+      .select2-search-choice-close{
+        top: 10em;
+        left: 10em;
       }
     }
   }
