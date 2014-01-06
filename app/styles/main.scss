@@ -41,6 +41,12 @@ $lightGreen:      #1ABC9C;
   background-image: none;
 }
 
+@mixin focus{
+  @include box-shadow(0 0 0 3px $lightBlue);
+  border: 1px solid $strongLightBlue;
+  outline: none;
+}
+
 // Set your grid dimensions here
 $body-width: 960px;
 $font-size: 16px;
@@ -142,9 +148,7 @@ form{
       }
       input:focus + .input-group-btn .btn,
       .input-group-btn .btn:focus{
-        @include box-shadow(0 0 0 3px $lightBlue);
-        border: 1px solid $strongLightBlue;
-        outline: none;
+        @include focus;
       }
       .input-group-btn:last-child > .btn {
         height: 2.75em;
@@ -158,13 +162,6 @@ form{
       display: block;
       width: 70%;
       margin: $inputDistance 0 $inputDistance $labelColWidth;
-      /*
-      & + .checkbox,
-      & + .radio,
-      & + .help-block{
-        margin-top: 1.25em;
-      }
-      */
       & + input{
         margin-top: -$inputMargin;
       }
@@ -192,12 +189,33 @@ form{
         background-position: calc(100% - 10px) center;
       }
     }
+    textarea{
+      width: 70%;
+      margin: -.5em 0 .25em 30%;
+      line-height: 1.75em;
+      padding: 0.5em 0.5em 0.5em;
+      resize:vertical;
+      & + .help-block{
+        margin-top: .4em;
+      }
+    }
     p:before,
     p:after{
       content: "\00a0"; /* No-break space character */
       display: block;
       overflow: hidden;
       height: 0;
+    }
+    p a{
+      &:hover,
+      &:focus{
+        background: $lightGreen;
+        color: $white;
+        padding: 3px;
+        outline: none;
+        border-radius: 3px;
+        text-decoration: none;
+      }
     }
 
     .help-block{
@@ -268,6 +286,7 @@ form{
   }
 }
 
+// Style overrides for dropezone.js
 .dropzone{
   margin: 1.25em 0;
   background: $lightGreen;
@@ -288,6 +307,9 @@ form{
     }
     .dz-remove{
       cursor: pointer;
+      &:focus{
+        @include focus;
+      }
     }
     .dz-details{
       color: #666;
@@ -298,6 +320,8 @@ form{
   }
 }
 
+
+// Style overrides for Select2
 .select2-search{
   input{
     background: none;
@@ -335,6 +359,18 @@ form{
       b{
         background-position: 0 8px;
       }
+    }
+  }
+}
+
+// Style overrides for general Bootstrap elements
+
+.btn{
+  &.btn-default{
+    &:hover,
+    &:focus{
+      background: $lightGreen;
+      color: $white;
     }
   }
 }

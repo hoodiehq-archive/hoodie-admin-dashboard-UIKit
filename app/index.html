@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
 </head>
-<body>
+<body class="debug">
   <div class="container">
     <!--
     <header>
@@ -79,6 +79,8 @@
           <label for="flat-checkbox-2">Checkbox 2</label>
         </div>
         <input type="email" class="form-control" placeholder="Enter email">
+        <textarea class="form-control" rows="3"></textarea>
+        <p class="help-block">Example block-level help text here. Example block-level help text here.</p>
       </div>
       <div class="form-group">
         <label>Short label</label>
@@ -170,10 +172,10 @@
         </div>
       </div>
       <div class="form-group">
-        <label>If you need two labels</label>
+        <label>A single option</label>
         <div class="checkbox">
           <input type="checkbox" name="checkbox" checked>
-          <label for="checkbox-1">Single checkbox</label>
+          <label for="checkbox-1">Activate Hyperdrive</label>
         </div>
       </div>
       <div class="form-group">
@@ -252,16 +254,6 @@
   <!-- endbower -->
   <!-- endbuild -->
 
-  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-  <script>
-  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-  e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-  e.src='//www.google-analytics.com/analytics.js';
-  r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-  ga('create','UA-XXXXX-X');ga('send','pageview');
-  </script>
-
   <!-- build:js scripts/main.js -->
   <script src="bower_components/dropzone/downloads/dropzone.js"></script>
   <script>
@@ -306,11 +298,13 @@
 
   }
   $(document).ready(function(){
+    // Init iCheck checkboxes
     $('input').iCheck({
       checkboxClass: 'icheckbox_flat-green icheckbox',
       radioClass: 'iradio_flat-green iradio',
       increaseArea: '20%' // optional
     });
+    // Init Select2 select dropdowns
     $("select").select2();
   });
   </script>
