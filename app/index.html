@@ -296,53 +296,54 @@
           <td>89.00 <abbr>USD</abbr></td>
           <td>0</td>
           <td>June 14, 16:03</td>
-          <td class="status"><span class="on"></span></td>
+          <td class="status on"></td>
         </tr>
         <tr>
           <td><a href="#">Laptop</a></td>
           <td>400.00 <abbr>USD</abbr></td>
           <td>5</td>
           <td>June 10, 11:56</td>
-          <td class="status"><span class="warn"></span></td>
+          <td class="status warn"></td>
         </tr>
         <tr>
           <td><a href="#">Shirt</a></td>
           <td>59.00 <abbr>USD</abbr></td>
           <td>55</td>
           <td>June 10, 11:57</td>
-          <td class="status"><span></span></td>
+          <td class="status"></td>
         </tr>
         <tr>
           <td><a href="#">Suitcase</a></td>
           <td>89.00 <abbr>USD</abbr></td>
           <td>0</td>
           <td>June 14, 16:03</td>
-          <td class="status"><span class="on"></span></td>
+          <td class="status on"></td>
         </tr>
         <tr>
           <td><a href="#">Laptop</a></td>
           <td>400.00 <abbr>USD</abbr></td>
           <td>5</td>
           <td>June 10, 11:56</td>
-          <td class="status"><span class="on"></span></td>
+          <td class="status on"></td>
         </tr>
         <tr>
           <td><a href="#">Shirt</a></td>
           <td>59.00 <abbr>USD</abbr></td>
           <td>55</td>
           <td>June 10, 11:57</td>
-          <td class="status"><span></span></td>
+          <td class="status error"></td>
         </tr>
       </tbody>
     </table>
     <div class="group">
       <legend>Tables</legend>
-      <p class="help-block">Tables are tables. Give them the class `table-striped` to make them zebraesque. There's a small helper for showing the status of a row: any `tr` with class `status` may contain a `span` with any of the following classes:</p>
+      <p class="help-block">Tables are tables. Give them the class `table-striped` to make them zebraesque. There's a small helper for showing the status of a row: any `tr` with class `status` plus any of the following classes will show one of those nice status indicators you see over there on the right.</p>
       <ul>
-        <li>Green dot: `on`, `yes` or `true`</li>
-        <li>Red dot: `off`, `no or `false`</li>
-        <li>Yellow dot: `warn</li>
+        <li>Green dot<span class="status success"></span>: `on`, `yes` or `true`</li>
+        <li>Red dot<span class="status error"></span>: `off`, `no or `false`</li>
+        <li>Yellow dot<span class="status warn"></span>: `warn</li>
       </ul>
+      <p class="help-block">Additionally, you can use `status` and its modifier classes in individual `spans` as well. For example:<span class="status success"></span>this works.</p>
     </div>
   </div>
   <br>

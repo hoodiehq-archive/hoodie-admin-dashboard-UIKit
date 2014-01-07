@@ -111,6 +111,7 @@ h1{
   clear:left;
   margin: 1.75em 0 0.75em;
   line-height: 1.75em;
+  font-weight: bold;
 }
 
 legend{
@@ -395,27 +396,37 @@ legend{
       }
     }
   }
+  span.status{
+    width: 1.75em;
+    padding: 0 .5em;
+    display: inline-block;
+    height: .7em;
+    &:before{
+      margin: 0;
+    }
+  }
   .status{
-    span{
+    &:before{
+      content: "";
       @include border-radius(50%);
       width: .75em;
       height: .75em;
       background-color: $borderGrey;
       position: absolute;
       margin: .25em 0 0 0;
-      &.on,
-      &.success,
-      &.true{
-        background-color: $lightGreen;
-      }
-      &.off,
-      &.error,
-      &.false{
-        background-color: $red;
-      }
-      &.warn{
-        background-color: $yellow;
-      }
+    }
+    &.on:before,
+    &.success:before,
+    &.true:before{
+      background-color: $lightGreen;
+    }
+    &.off:before,
+    &.error:before,
+    &.false:before{
+      background-color: $red;
+    }
+    &.warn:before{
+      background-color: $yellow;
     }
   }
 }
