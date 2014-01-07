@@ -16,9 +16,13 @@ $labelColWidth:   30%;
 $inputColWidth:   70%;
 
 $white:           #FFFFFF;
+$lightGrey:       #F7F4F2;
+$borderGrey:      #AAAAAA;
 $lightBlue:       #9FCAEC;
 $strongLightBlue: #66AFE9;
 $lightGreen:      #1ABC9C;
+$red:             #F22D23;
+$yellow:          #F9B233;
 
 @mixin clearfix{
   &:before,
@@ -73,7 +77,9 @@ $baseline: 28px;
 
 body.debug{
   @include baseline-grid;
-  form .form-group{
+  form .form-group,
+  .group,
+  table{
     // Reddish tint to identify form containers
     background: rgba(200, 0, 0, 0.05);
     .form-container{
@@ -107,236 +113,309 @@ h1{
   line-height: 1.75em;
 }
 
-form{
-  legend{
+legend{
+  @include label;
+  font-size: 1em;
+  margin-top: .75em;
+  border: none;
+}
+
+.form-group, .group{
+  @include clearfix;
+  background: $lightGrey;
+  border-radius: 0.5em;
+  padding: 0 0.25em 0 0.5em;
+  margin-bottom: .25em;
+  &>label{
     @include label;
-    font-size: 1em;
-    margin-top: .75em;
-    border: none;
+    &:last-of-type{
+      margin-top: 0;
+    }
+    &:first-child{
+      margin-top: 0.75em;
+    }
+    & + input{
+      margin-top: 1.25em;
+    }
   }
-  .form-group{
-    @include clearfix;
-    background: #F7F4F2;
-    border-radius: 0.5em;
-    padding: 0 0.25em 0 0.5em;
-    margin-bottom: .25em;
+  .form-container{
+    overflow: hidden;
+    margin-top: .25em;
+    &:first-child{
+      margin-top: 0;
+    }
     &>label{
       @include label;
-      &:last-of-type{
-        margin-top: 0;
-      }
-      &:first-child{
-        margin-top: 0.75em;
-      }
-      & + input{
-        margin-top: 1.25em;
-      }
+      margin: .75em 0 0.75em;
     }
-    .form-container{
-      overflow: hidden;
+  }
+  .input-group{
+    input{
+      margin-left: 0;
+    }
+    input:focus + .input-group-btn .btn,
+    .input-group-btn .btn:focus{
+      @include focus;
+    }
+    .input-group-btn:last-child > .btn {
+      height: 2.75em;
       margin-top: .25em;
-      &:first-child{
-        margin-top: 0;
-      }
-      &>label{
-        @include label;
-        margin: .75em 0 0.75em;
-      }
     }
-    .input-group{
-      input{
-        margin-left: 0;
-      }
-      input:focus + .input-group-btn .btn,
-      .input-group-btn .btn:focus{
-        @include focus;
-      }
-      .input-group-btn:last-child > .btn {
-        height: 2.75em;
-        margin-top: .25em;
-      }
-      & + .help-block{
-        margin-top: 1.25em;
-      }
+    & + .help-block{
+      margin-top: 1.25em;
     }
-    label, legend{
-      & + input,
-      & + textarea,
-      & + .dropzone,
-      & + .select2-container{
-        margin-top: .25em;
-      }
+  }
+  label, legend{
+    & + input,
+    & + textarea,
+    & + .dropzone,
+    & + .select2-container{
+      margin-top: .25em;
     }
-    label, legend{
-      & + .radio,
-      & + .checkbox,
-      & + p{
-        margin-top: .75em;
-      }
+  }
+  label, legend{
+    & + .radio,
+    & + .checkbox,
+    & + .help-block{
+      margin-top: .75em;
     }
-    .radio,
-    .checkbox,
-    p{
-      &:first-child{
-        margin-top: .75em;
-      }
+  }
+  .radio,
+  .checkbox,
+  p{
+    &:first-child{
+      margin-top: .75em;
     }
-    input,
-    textarea,
-    .dropzone,
-    .select2-container,
-    select{
-      &:first-child{
-        margin-top: .25em;
-      }
-      &:last-child{
-        margin-bottom: .25em;
-      }
+  }
+  input,
+  textarea,
+  .dropzone,
+  .select2-container,
+  select{
+    &:first-child{
+      margin-top: .25em;
     }
-    .forceEndMargin{
+    &:last-child{
       margin-bottom: .25em;
     }
-    input{
-      display: block;
-      width: 70%;
-      margin: $inputDistance 0 $inputDistance $labelColWidth;
-      &:required:invalid,
-      &:focus:invalid{
-        background-image: url('../images/required_form.png');
-        background-repeat: no-repeat;
-        background-position: calc(100% - 10px) center;
-      }
-      &.valid,
-      &:required:valid{
-        background-image: url('../images/valid_form.png');
-        background-repeat: no-repeat;
-        background-position: calc(100% - 10px) center;
-      }
-      &.invalid{
-        background-image: url('../images/invalid_form.png');
-        background-repeat: no-repeat;
-        background-position: calc(100% - 10px) center;
-      }
+  }
+  .forceEndMargin{
+    margin-bottom: .25em;
+  }
+  input{
+    display: block;
+    width: 70%;
+    margin: $inputDistance 0 $inputDistance $labelColWidth;
+    &:required:invalid,
+    &:focus:invalid{
+      background-image: url('../images/required_form.png');
+      background-repeat: no-repeat;
+      background-position: calc(100% - 10px) center;
     }
-    textarea{
-      width: 70%;
-      margin: 1.25em 0 calc(1.25em - 2px) 30%;
-      line-height: 1.75em;
-      padding: 0.5em 0.5em 0.5em;
-      resize:vertical;
+    &.valid,
+    &:required:valid{
+      background-image: url('../images/valid_form.png');
+      background-repeat: no-repeat;
+      background-position: calc(100% - 10px) center;
     }
-    p{
-      & + .radio,
-      & + .checkbox{
-        margin-top:1.75em;
-      }
+    &.invalid{
+      background-image: url('../images/invalid_form.png');
+      background-repeat: no-repeat;
+      background-position: calc(100% - 10px) center;
     }
-    p:before,
-    p:after{
-      content: "\00a0"; /* No-break space character */
-      display: block;
-      overflow: hidden;
-      height: 0;
+  }
+  textarea{
+    width: 70%;
+    margin: 1.25em 0 calc(1.25em - 2px) 30%;
+    line-height: 1.75em;
+    padding: 0.5em 0.5em 0.5em;
+    resize:vertical;
+  }
+  p{
+    & + .radio,
+    & + .checkbox{
+      margin-top:1.75em;
     }
-    p a{
-      padding: 0 3px;
-      &:hover,
-      &:focus{
-        background: $lightGreen;
-        color: $white;
-        padding: 3px;
-        outline: none;
-        @include border-radius(3px);
-        text-decoration: none;
-      }
+  }
+  p:before,
+  p:after{
+    content: "\00a0"; /* No-break space character */
+    display: block;
+    overflow: hidden;
+    height: 0;
+  }
+  p a,
+  table a{
+    padding: 0 3px;
+    &:hover,
+    &:focus{
+      background: $lightGreen;
+      color: $white;
+      padding: 3px;
+      outline: none;
+      @include border-radius(3px);
+      text-decoration: none;
     }
+  }
 
-    .help-block{
-      float: none;
-      margin: 0 0 0 $labelColWidth;
+  .help-block,
+  ul{
+    float: none;
+    margin: 0 0 0 $labelColWidth;
+    &:last-child{
+      margin-bottom: 0.75em;
+    }
+    & + input{
+      margin-top: 1.25em;
+    }
+  }
+  .radio, .checkbox{
+    @include clearfix;
+    line-height: 1.25em;
+    height: 1.75em;
+    padding-left: 0;
+    margin: 0 0 0 30%;
+    padding-top: .25em;
+    padding-bottom: 0;
+    label{
+      vertical-align: top;
+      margin-left: .5em;
+    }
+    & + .help-block{
+      padding-left: 2em;
+    }
+    /*
+    & + .radio,
+    & + .checkbox {
+      margin-top: 0;
+    }
+    & + input{
+      margin-top: 1.25em;
+    }
+    & ~ input{
       &:last-child{
-        margin-bottom: 0.75em;
-      }
-      & + input{
         margin-top: 1.25em;
       }
     }
-    .radio, .checkbox{
-      @include clearfix;
-      line-height: 1.25em;
-      height: 1.75em;
-      padding-left: 0;
-      margin: 0 0 0 30%;
-      padding-top: .25em;
-      padding-bottom: 0;
-      label{
-        vertical-align: top;
-        margin-left: .5em;
+    */
+    .iradio, .icheckbox{
+      display: inline-block;
+      &.focus{
+        @include box-shadow(0 0 0 1px #66AFE9 inset, 0 0 0 3px #66AFE9);
+        @include border-radius($input-border-radius);
       }
-      & + .help-block{
-        padding-left: 2em;
-      }
-      /*
-      & + .radio,
-      & + .checkbox {
-        margin-top: 0;
-      }
-      & + input{
-        margin-top: 1.25em;
-      }
-      & ~ input{
-        &:last-child{
-          margin-top: 1.25em;
-        }
-      }
-      */
-      .iradio, .icheckbox{
-        display: inline-block;
-        &.focus{
-          @include box-shadow(0 0 0 1px #66AFE9 inset, 0 0 0 3px #66AFE9);
-          @include border-radius($input-border-radius);
-        }
-        &.disabled{
+      &.disabled{
+        cursor: not-allowed;
+        & + label{
           cursor: not-allowed;
-          & + label{
-            cursor: not-allowed;
+        }
+      }
+    }
+    &:first-child{
+      margin-top: .75em;
+    }
+    &:last-child{
+      margin-bottom: .75em;
+    }
+    .iradio.focus{
+      @include border-radius(50%);
+    }
+  }
+  select{
+    & + .help-block{
+      margin-top: 1.25em;
+    }
+  }
+  // Bit daft, but input elements that immediately follow each other
+  // look better with less top margin, so:
+  input + input,
+  input + textarea,
+  input + select,
+  input + .dropzone,
+  textarea + input,
+  textarea + textarea,
+  textarea + select,
+  textarea + .dropzone,
+  select + input,
+  select + textarea,
+  select + select,
+  select + .dropzone,
+  .dropzone + input,
+  .dropzone + textarea,
+  .dropzone + select,
+  .dropzone + .dropzone {
+    margin-top: -$inputMargin;
+  }
+}
+
+.container{
+  table{
+    background: $lightGrey;
+    @include border-radius(.5em);
+    margin-bottom: 0.25em;
+    thead{
+      tr{
+        th{
+          padding: 1em 0 0 .25em;
+          font-size: .75em;
+          font-weight: bold;
+          text-transform: uppercase;
+          line-height: 2.25em;
+          border-bottom: 1px solid $borderGrey;
+          &:first-of-type{
+            padding-left: 1em;
           }
         }
       }
-      &:first-child{
-        margin-top: .75em;
-      }
-      &:last-child{
-        margin-bottom: .75em;
-      }
-      .iradio.focus{
-        @include border-radius(50%);
+    }
+    tfoot{
+      tr{
+        td{
+          padding: 0 0 1em .25em;
+          font-size: .75em;
+          font-weight: bold;
+          text-transform: uppercase;
+          line-height: 2.25em;
+          border-top: 1px solid $borderGrey;
+          &:first-of-type{
+            padding-left: 1em;
+          }
+        }
       }
     }
-    select{
-      & + .help-block{
-        margin-top: 1.25em;
+    tbody{
+      tr{
+        td{
+          line-height: calc(2rem - 1px);
+          padding: 0.25em;
+          &:first-of-type{
+            padding-left: 1em;
+          }
+        }
       }
     }
-    // Bit daft, but input elements that immediately follow each other
-    // look better with less top margin, so:
-    input + input,
-    input + textarea,
-    input + select,
-    input + .dropzone,
-    textarea + input,
-    textarea + textarea,
-    textarea + select,
-    textarea + .dropzone,
-    select + input,
-    select + textarea,
-    select + select,
-    select + .dropzone,
-    .dropzone + input,
-    .dropzone + textarea,
-    .dropzone + select,
-    .dropzone + .dropzone {
-      margin-top: -$inputMargin;
+  }
+  .status{
+    span{
+      @include border-radius(50%);
+      width: .75em;
+      height: .75em;
+      background-color: $borderGrey;
+      position: absolute;
+      margin: .25em 0 0 0;
+      &.on,
+      &.success,
+      &.true{
+        background-color: $lightGreen;
+      }
+      &.off,
+      &.error,
+      &.false{
+        background-color: $red;
+      }
+      &.warn{
+        background-color: $yellow;
+      }
     }
   }
 }
@@ -483,5 +562,12 @@ form{
       color: $white;
     }
   }
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  color: $white;
+  background-color: #1ABC9C;
+  outline: none;
 }
 
