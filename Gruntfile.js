@@ -257,7 +257,8 @@ module.exports = function (grunt) {
                         '.htaccess',
                         'images/{,*/}*.{webp,gif}',
                         'styles/fonts/{,*/}*.*',
-                        'bower_components/sass-bootstrap/fonts/*.*'
+                        'scripts/**/*.*',
+                        'bower_components/**/*.*',
                     ]
                 }]
             },
@@ -266,6 +267,16 @@ module.exports = function (grunt) {
                 dot: true,
                 cwd: '<%= yeoman.app %>/styles',
                 dest: '.tmp/styles/',
+                src: [
+                    'styles/{,*/}*.css',
+                    '../bower_components/**/*.css'
+                ]
+            },
+            tempstyles: {
+                expand: true,
+                dot: true,
+                cwd: '.tmp/styles/',
+                dest: '<%= yeoman.dist %>/styles',
                 src: '{,*/}*.css'
             }
         },
@@ -287,7 +298,7 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.registerTask('serve', function (target) {
+    grunt.registerTask('server', function (target) {
         if (target === 'dist') {
             return grunt.task.run(['build', 'connect:dist:keepalive']);
         }
@@ -299,11 +310,6 @@ module.exports = function (grunt) {
             'connect:livereload',
             'watch'
         ]);
-    });
-
-    grunt.registerTask('server', function () {
-      grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
-      grunt.task.run(['serve']);
     });
 
     grunt.registerTask('test', [
@@ -318,12 +324,13 @@ module.exports = function (grunt) {
         'clean:dist',
         'useminPrepare',
         'concurrent:dist',
-        'autoprefixer',
-        'concat',
-        'cssmin',
-        'uglify',
+        //'autoprefixer',
+        //'concat',
+        //'cssmin',
+        //'uglify',
         'copy:dist',
-        'rev',
+        'copy:tempstyles',
+        //'rev',
         'usemin'
     ]);
 
