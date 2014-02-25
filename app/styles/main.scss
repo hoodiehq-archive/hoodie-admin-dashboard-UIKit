@@ -108,6 +108,19 @@ h1{
   border-bottom: 1px solid #000;
 }
 
+h2{
+  font-size: 1em;
+  line-height: 1.25em;
+  margin-bottom: .5em;
+  margin-top: 0;
+  margin-left: .25em;
+  font-weight: bold;
+}
+
+.description {
+  margin: 1.25em .25em 1em;
+}
+
 @mixin label{
   display: block;
   width: 30%;
@@ -123,6 +136,19 @@ legend{
   font-size: 1em;
   margin-top: .75em;
   border: none;
+}
+
+.btn{
+  margin: .5em 0 .5em 30%;
+  background: $white;
+  &:hover,
+  &:focus{
+    background: $lightGreen;
+    color: $white;
+  }
+  &:focus{
+    @include focus;
+  }
 }
 
 .form-group, .group{

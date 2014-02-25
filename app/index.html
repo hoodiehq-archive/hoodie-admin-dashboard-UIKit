@@ -19,13 +19,53 @@
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
 </head>
-<body class="">
+<body class="debug">
   <div class="container">
     <!--
     <header>
       <h1>Page Title</h1>
     </header>
     -->
+    <form role="form" id="emailForm">
+      <h1>Appconfig</h1>
+      <h2>Email settings</h2>
+      <div class="description">
+        Set up all outgoing email from this Hoodie app
+      </div>
+      <div class="form-group">
+        <div class="form-container">
+          <legend for="appNameInput">App name</legend>
+          <input type="text" class="form-control" id="appNameInput" name="appName" placeholder="Application name">
+        </div>
+        <div class="form-container">
+          <legend for="fromEmailInput">Default "from" E-mail address</legend>
+          <input type="email" class="form-control" id="fromEmailInput" name="fromEmail" placeholder="Enter from email">
+          <p class="help-block">
+            The "from"-address is used for password reset emails, for example.
+          </p>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-container">
+          <label>Email service</label>
+          <select name="emailService">
+            <option value="Gmail">Google Mail</option>
+            <option value="Mailgun">Mailgun</option>
+            <option value="Mandrill">Mandrill</option>
+            <option value="Postmark">Postmark</option>
+            <option value="SendGrid">SendGrid</option>
+          </select>
+        </div>
+        <div class="form-container">
+          <legend for="username">Username</legend>
+          <input type="text" class="form-control" id="userNameInput" name="emailUsername" placeholder="User name">
+          <legend for="password">Password</legend>
+          <input type="password" class="form-control" id="passwordInput" name="emailPassword" placeholder="Password">
+        </div>
+        <button class="submit btn" type="submit">Save config</button>
+        <span class="submitMessage"></span>
+      </div>
+    </form>
     <form role="form">
       <h1>CSS Test Page</h1>
       <div class="form-group">
