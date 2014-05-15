@@ -170,8 +170,9 @@ legend{
     }
   }
   .form-container{
-    overflow: hidden;
+    //overflow: hidden;
     margin-top: .25em;
+    margin-bottom: .75em;
     &:first-child{
       margin-top: 0;
     }
@@ -193,7 +194,7 @@ legend{
       margin-top: .25em;
     }
     & + .help-block{
-      margin-top: 1.25em;
+      margin-top: 0em;
     }
   }
   label, legend{
@@ -265,7 +266,7 @@ legend{
   p{
     & + .radio,
     & + .checkbox{
-      margin-top:1.75em;
+      margin-top: 0em;
     }
   }
   p:before,
@@ -288,11 +289,22 @@ legend{
       text-decoration: none;
     }
   }
-
-  .help-block,
+  .help-block{
+    float: none;
+    margin: -1em 0 0 $labelColWidth;
+    font-size: .75em;
+    padding: 0 0.75em;
+    &:last-child{
+      margin-bottom: 0.75em;
+    }
+    & + input{
+      margin-top: 1.25em;
+    }
+  }
   ul{
     float: none;
-    margin: 0 0 0 $labelColWidth;
+    margin: .75em 0 1.75em $labelColWidth;
+    font-size: .75em;
     &:last-child{
       margin-bottom: 0.75em;
     }
@@ -309,11 +321,13 @@ legend{
     padding-top: .25em;
     padding-bottom: 0;
     label{
-      vertical-align: top;
+      vertical-align: bottom;
       margin-left: .5em;
     }
     & + .help-block{
-      padding-left: 2em;
+      padding-left: 2.75em;
+      margin-top: .25em;
+      margin-bottom: 0em;
     }
     /*
     & + .radio,
@@ -524,11 +538,33 @@ legend{
 .select2-container-active .select2-choice,
 .select2-container-active .select2-choices {
   @include noShadow;
+  @include focus;
+  border: none;
 }
 
 .select2-dropdown-open.select2-drop-above .select2-choice,
 .select2-dropdown-open.select2-drop-above .select2-choices{
   @include noBackground;
+  border: none;
+}
+
+.select2-drop.select2-drop-above.select2-drop-active {
+  //@include focus;
+  border-top: 3px solid #9FCAEC;
+  //border: none;
+}
+
+.select2-drop-active {
+  //@include focus;
+  border: 3px solid #9FCAEC;
+  border-top: none;
+  //border: none;
+  box-sizing: content-box;
+  margin-left: -3px;
+}
+
+.select2-choice{
+  border: 1px solid #CCC;
 }
 
 .select2-container{

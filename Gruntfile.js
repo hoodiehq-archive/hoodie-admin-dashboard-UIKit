@@ -257,8 +257,9 @@ module.exports = function (grunt) {
                         '.htaccess',
                         'images/{,*/}*.{webp,gif}',
                         'styles/fonts/{,*/}*.*',
-                        'scripts/**/*.*',
-                        'bower_components/**/*.*',
+                        'scripts/main.js',
+                        'scripts/lib/**/*.*',
+                        'bower_components/**/*.*'
                     ]
                 }]
             },
@@ -275,9 +276,10 @@ module.exports = function (grunt) {
             tempstyles: {
                 expand: true,
                 dot: true,
-                cwd: '.tmp/styles/',
+                cwd: '.tmp/concat/styles/',
                 dest: '<%= yeoman.dist %>/styles',
-                src: '{,*/}*.css'
+                //src: '{,*/}.css'
+                src: 'pocket-uikit.css'
             }
         },
         concurrent: {
@@ -324,10 +326,10 @@ module.exports = function (grunt) {
         'clean:dist',
         'useminPrepare',
         'concurrent:dist',
-        //'autoprefixer',
-        //'concat',
+        'autoprefixer',
+        'concat',
         //'cssmin',
-        //'uglify',
+        'uglify',
         'copy:dist',
         'copy:tempstyles',
         //'rev',
@@ -338,5 +340,10 @@ module.exports = function (grunt) {
         'jshint',
         /*'test',*/
         'build'
+    ]);
+
+    grunt.registerTask('um', [
+        'useminPrepare',
+        'usemin'
     ]);
 };

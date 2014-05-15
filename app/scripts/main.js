@@ -1,8 +1,14 @@
 /*
- *  Dropzone (drag n' drop file uploads with previews)
+
+  main.js
+
+  Not part of the UIKit package, is just used internally to init Dropzone
+  in the UIKit test page.
+
 */
 
-Dropzone.options.dropzoneExample = { // The camelized version of the ID of the form element
+//Dropzone (for drag n' drop file uploads with previews)
+Dropzone.options.dropzoneExample = { // The camelized version of the ID of the form element you want to Dropzoneify
   autoProcessQueue: false,
   uploadMultiple: true,
   parallelUploads: 100,
@@ -43,18 +49,4 @@ Dropzone.options.dropzoneExample = { // The camelized version of the ID of the f
 
 };
 
-$(document).ready(function(){
 
-  /*
-   *  iCheck (nicer checkboxes)
-  */
-  $('input').iCheck({
-    checkboxClass: 'icheckbox_flat-green icheckbox',
-    radioClass: 'iradio_flat-green iradio',
-    increaseArea: '20%' // optional
-  });
-  /*
-   *  Select2 (Better select dropdowns with search, autocomplete etc.)
-  */
-  $("select").select2();
-});
