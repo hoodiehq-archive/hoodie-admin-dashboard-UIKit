@@ -353,7 +353,15 @@ legend{
         cursor: not-allowed;
         & + label{
           cursor: not-allowed;
+          color: #D7DCDE;
         }
+      }
+      & + label {
+        color: #BBBFC0;
+        @include transition(color ease 0.25s);
+      }
+      &.checked + label{
+        color: #333;
       }
     }
     &:first-child{
@@ -539,28 +547,31 @@ legend{
 .select2-container-active .select2-choices {
   @include noShadow;
   @include focus;
-  border: none;
+  border: 1px solid transparent;
 }
 
 .select2-dropdown-open.select2-drop-above .select2-choice,
 .select2-dropdown-open.select2-drop-above .select2-choices{
   @include noBackground;
-  border: none;
+  border: 1px solid transparent;
 }
 
 .select2-drop.select2-drop-above.select2-drop-active {
-  //@include focus;
   border-top: 3px solid #9FCAEC;
-  //border: none;
 }
 
 .select2-drop-active {
-  //@include focus;
   border: 3px solid #9FCAEC;
   border-top: none;
-  //border: none;
   box-sizing: content-box;
   margin-left: -3px;
+  .select2-results{
+    .select2-no-results{
+      border-radius: 3px;
+      background-color: $yellow;
+      padding: 0 0 0 .25em;
+    }
+  }
 }
 
 .select2-choice{
@@ -590,27 +601,35 @@ legend{
 }
 
 .select2-container-multi{
-  &.select2-container-active{
+  &.select2-container-active,
+  &.select2-dropdown-open{
     .select2-choices{
       @include noShadow;
+      @include focus;
+      border: 1px solid transparent;
     }
   }
+  font-size: 1.25em;
   .select2-choices{
-    min-height: 2.75em;
+    min-height: 3em;
     @include noBackground;
+    @include noShadow;
     @include border-radius(3px);
     .select2-search-field{
       input{
-        padding: .35em 0 0em .5em;
+        padding: .5em 0 0em .5em;
       }
     }
     .select2-search-choice{
+      padding-top: 4px;
       @include border-radius(1em);
+      @include noShadow;
       @include noBackground;
       background-color: $white;
+      border: 1px solid #D7DCDE;
       font-size: 1em;
-      height: 2.1em;
-      margin: .25em 0 .25em .25em;
+      height: 2.05em;
+      margin: .4em 0 .25em .3em;
       &.select2-search-choice-focus{
         background: $lightGreen;
         border-color: $lightGreen;
@@ -622,7 +641,7 @@ legend{
         margin: 0 .75em;
       }
       .select2-search-choice-close{
-        top: 10em;
+        top: 8em;
         left: 10em;
       }
     }
