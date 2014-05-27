@@ -19,12 +19,15 @@ $inputDistance:   1.25em;
 $labelColWidth:   30%;
 $inputColWidth:   70%;
 
+$mediumGrey:      #555555;
 $white:           #FFFFFF;
 $lightGrey:       #F7F4F2;
+$zebraGrey:       #FDFAF8;
 $borderGrey:      #AAAAAA;
 $lightBlue:       #9FCAEC;
 $strongLightBlue: #66AFE9;
 $lightGreen:      #1ABC9C;
+$darkGreen:       #149B80;
 $red:             #F22D23;
 $yellow:          #F9B233;
 
@@ -141,10 +144,13 @@ legend{
 .btn{
   margin: .5em 0 .5em 30%;
   background: $white;
+  border: 1px solid #CCC;
+  color: $mediumGrey;
   &:hover,
   &:focus{
     background: $lightGreen;
     color: $white;
+    border: 1px solid $darkGreen;
   }
   &:focus{
     @include focus;
@@ -179,6 +185,9 @@ legend{
     &>label{
       @include label;
       margin: .75em 0 0.75em;
+    }
+    legend{
+      margin-top: 0.5em;
     }
   }
   .input-group{
@@ -300,6 +309,9 @@ legend{
     & + input{
       margin-top: 1.25em;
     }
+    & + .help-block{
+      margin-top: 1em;
+    }
   }
   ul{
     float: none;
@@ -327,7 +339,6 @@ legend{
     & + .help-block{
       padding-left: 2.75em;
       margin-top: .25em;
-      margin-bottom: 0em;
     }
     /*
     & + .radio,
@@ -401,8 +412,55 @@ legend{
   }
 }
 
+.pill{
+  background-color: $white;
+  @include border-radius(16px);
+  font-size: .75em;
+  text-transform: uppercase;
+  padding: 0 .5em;
+  display: inline-block;
+  letter-spacing: 1px;
+  line-height: 1.5em;
+  vertical-align: text-top;
+  &.success{
+    background-color: $lightGreen;
+    color: $white;
+  }
+  &.warn{
+    background-color: $yellow;
+    color: $white;
+  }
+  &.error{
+    background-color: $red;
+    color: $white;
+  }
+}
+
+a.pill:hover, a.pill:focus{
+  background: $strongLightBlue;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+}
+/*
+p .pill{
+  font-size: 1em;
+  vertical-align: baseline;
+  padding: 0 .5em;
+  margin: 0 0.25em;
+  & a:hover, & a:focus{
+    @include border-radius(16px);
+    background: $strongLightBlue;
+  }
+}
+*/
+
 .container{
   table{
+    &.table-striped > tbody > tr:nth-child(odd) > td,
+    &.table-striped > tbody > tr:nth-child(odd) > th{
+      background: $zebraGrey;
+    }
     background: $lightGrey;
     @include border-radius(.5em);
     margin-bottom: 0.25em;
@@ -439,10 +497,10 @@ legend{
     tbody{
       tr{
         td{
-          line-height: calc(2rem - 1px);
+          line-height: calc(2.5rem - 1px);
           padding: 0.25em;
           &:first-of-type{
-            padding-left: 1em;
+            padding-left: .75em;
           }
         }
       }
@@ -483,7 +541,7 @@ legend{
   }
 }
 
-// Style overrides for dropezone.js
+// Style overrides for dropzone.js
 .dropzone{
   margin: 1.25em 0;
   background: $lightGreen;
@@ -530,6 +588,7 @@ legend{
 
 .select2-drop{
   @include noShadow;
+  color: $mediumGrey;
   &.select2-drop-above{
     @include noShadow;
   }
@@ -543,8 +602,8 @@ legend{
   }
 }
 
-.select2-container-active .select2-choice,
-.select2-container-active .select2-choices {
+div.select2-container-active .select2-choice,
+div.select2-container-active .select2-choices {
   @include noShadow;
   @include focus;
   border: 1px solid transparent;
@@ -586,7 +645,10 @@ legend{
     height: 2.75em;
     line-height: 2.75em;
     padding: .025em 0 0 .5em;
+    color: $mediumGrey;
     @include noBackground;
+    border: 1px solid #CCC;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
     .select2-arrow{
       @include noBackground;
       border-left: none;
