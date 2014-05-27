@@ -9705,7 +9705,7 @@ td.visible-print {
   }
 }
 
-/* line 82, ../../app/styles/main.scss */
+/* line 85, ../../app/styles/main.scss */
 
 body.debug {
   background-image: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0) 960px, transparent 20px), -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(56, 255, 255, 0.8) 100%);
@@ -9713,7 +9713,7 @@ body.debug {
   background-position: 10px 1px;
 }
 
-/* line 86, ../../app/styles/main.scss */
+/* line 89, ../../app/styles/main.scss */
 
 body.debug form .form-group,
 body.debug .group,
@@ -9721,7 +9721,7 @@ body.debug table {
   background: rgba(200, 0, 0, 0.05);
 }
 
-/* line 89, ../../app/styles/main.scss */
+/* line 92, ../../app/styles/main.scss */
 
 body.debug form .form-group .form-container,
 body.debug .group .form-container,
@@ -9729,19 +9729,19 @@ body.debug table .form-container {
   background: rgba(0, 200, 0, 0.05);
 }
 
-/* line 96, ../../app/styles/main.scss */
+/* line 99, ../../app/styles/main.scss */
 
 a {
   color: #1abc9c;
 }
 
-/* line 98, ../../app/styles/main.scss */
+/* line 101, ../../app/styles/main.scss */
 
 a:hover {
   color: #1abc9c;
 }
 
-/* line 103, ../../app/styles/main.scss */
+/* line 106, ../../app/styles/main.scss */
 
 h1 {
   font-size: 2em;
@@ -9751,7 +9751,7 @@ h1 {
   border-bottom: 1px solid #000;
 }
 
-/* line 111, ../../app/styles/main.scss */
+/* line 114, ../../app/styles/main.scss */
 
 h2 {
   font-size: 1em;
@@ -9762,13 +9762,13 @@ h2 {
   font-weight: bold;
 }
 
-/* line 120, ../../app/styles/main.scss */
+/* line 123, ../../app/styles/main.scss */
 
 .description {
   margin: 1.25em .25em 1em;
 }
 
-/* line 134, ../../app/styles/main.scss */
+/* line 137, ../../app/styles/main.scss */
 
 legend {
   display: block;
@@ -9783,22 +9783,25 @@ legend {
   border: none;
 }
 
-/* line 141, ../../app/styles/main.scss */
+/* line 144, ../../app/styles/main.scss */
 
 .btn {
   margin: .5em 0 .5em 30%;
   background: white;
+  border: 1px solid #CCC;
+  color: #555555;
 }
 
-/* line 145, ../../app/styles/main.scss */
+/* line 150, ../../app/styles/main.scss */
 
 .btn:hover,
 .btn:focus {
   background: #1abc9c;
   color: white;
+  border: 1px solid #149b80;
 }
 
-/* line 149, ../../app/styles/main.scss */
+/* line 155, ../../app/styles/main.scss */
 
 .btn:focus {
   box-shadow: 0 0 0 3px #9fcaec;
@@ -9806,7 +9809,7 @@ legend {
   outline: none;
 }
 
-/* line 154, ../../app/styles/main.scss */
+/* line 160, ../../app/styles/main.scss */
 
 .form-group,
 .group {
@@ -9816,7 +9819,7 @@ legend {
   margin-bottom: .25em;
 }
 
-/* line 33, ../../app/styles/main.scss */
+/* line 36, ../../app/styles/main.scss */
 
 .form-group:before,
 .form-group:after,
@@ -9826,14 +9829,14 @@ legend {
   content: " ";
 }
 
-/* line 37, ../../app/styles/main.scss */
+/* line 40, ../../app/styles/main.scss */
 
 .form-group:after,
 .group:after {
   clear: both;
 }
 
-/* line 160, ../../app/styles/main.scss */
+/* line 166, ../../app/styles/main.scss */
 
 .form-group > label,
 .group > label {
@@ -9846,43 +9849,43 @@ legend {
   font-weight: bold;
 }
 
-/* line 162, ../../app/styles/main.scss */
+/* line 168, ../../app/styles/main.scss */
 
 .form-group > label:last-of-type,
 .group > label:last-of-type {
   margin-top: 0;
 }
 
-/* line 165, ../../app/styles/main.scss */
+/* line 171, ../../app/styles/main.scss */
 
 .form-group > label:first-child,
 .group > label:first-child {
   margin-top: 0.75em;
 }
 
-/* line 168, ../../app/styles/main.scss */
+/* line 174, ../../app/styles/main.scss */
 
 .form-group > label + input,
 .group > label + input {
   margin-top: 1.25em;
 }
 
-/* line 172, ../../app/styles/main.scss */
+/* line 178, ../../app/styles/main.scss */
 
 .form-group .form-container,
 .group .form-container {
-  overflow: hidden;
   margin-top: .25em;
+  margin-bottom: .75em;
 }
 
-/* line 175, ../../app/styles/main.scss */
+/* line 182, ../../app/styles/main.scss */
 
 .form-group .form-container:first-child,
 .group .form-container:first-child {
   margin-top: 0;
 }
 
-/* line 178, ../../app/styles/main.scss */
+/* line 185, ../../app/styles/main.scss */
 
 .form-group .form-container > label,
 .group .form-container > label {
@@ -9896,14 +9899,21 @@ legend {
   margin: .75em 0 0.75em;
 }
 
-/* line 184, ../../app/styles/main.scss */
+/* line 189, ../../app/styles/main.scss */
+
+.form-group .form-container legend,
+.group .form-container legend {
+  margin-top: 0.5em;
+}
+
+/* line 194, ../../app/styles/main.scss */
 
 .form-group .input-group input,
 .group .input-group input {
   margin-left: 0;
 }
 
-/* line 188, ../../app/styles/main.scss */
+/* line 198, ../../app/styles/main.scss */
 
 .form-group .input-group input:focus + .input-group-btn .btn,
 .form-group .input-group .input-group-btn .btn:focus,
@@ -9914,7 +9924,7 @@ legend {
   outline: none;
 }
 
-/* line 191, ../../app/styles/main.scss */
+/* line 201, ../../app/styles/main.scss */
 
 .form-group .input-group .input-group-btn:last-child > .btn,
 .group .input-group .input-group-btn:last-child > .btn {
@@ -9922,14 +9932,14 @@ legend {
   margin-top: .25em;
 }
 
-/* line 195, ../../app/styles/main.scss */
+/* line 205, ../../app/styles/main.scss */
 
 .form-group .input-group + .help-block,
 .group .input-group + .help-block {
-  margin-top: 1.25em;
+  margin-top: 0em;
 }
 
-/* line 203, ../../app/styles/main.scss */
+/* line 213, ../../app/styles/main.scss */
 
 .form-group label + input,
 .form-group label + textarea,
@@ -9950,7 +9960,7 @@ legend {
   margin-top: .25em;
 }
 
-/* line 210, ../../app/styles/main.scss */
+/* line 220, ../../app/styles/main.scss */
 
 .form-group label + .radio,
 .form-group label + .checkbox,
@@ -9967,7 +9977,7 @@ legend {
   margin-top: .75em;
 }
 
-/* line 217, ../../app/styles/main.scss */
+/* line 227, ../../app/styles/main.scss */
 
 .form-group .radio:first-child,
 .form-group .checkbox:first-child,
@@ -9978,7 +9988,7 @@ legend {
   margin-top: .75em;
 }
 
-/* line 226, ../../app/styles/main.scss */
+/* line 236, ../../app/styles/main.scss */
 
 .form-group input:first-child,
 .form-group textarea:first-child,
@@ -9993,7 +10003,7 @@ legend {
   margin-top: .25em;
 }
 
-/* line 229, ../../app/styles/main.scss */
+/* line 239, ../../app/styles/main.scss */
 
 .form-group input:last-child,
 .form-group textarea:last-child,
@@ -10008,14 +10018,14 @@ legend {
   margin-bottom: .25em;
 }
 
-/* line 233, ../../app/styles/main.scss */
+/* line 243, ../../app/styles/main.scss */
 
 .form-group .forceEndMargin,
 .group .forceEndMargin {
   margin-bottom: .25em;
 }
 
-/* line 236, ../../app/styles/main.scss */
+/* line 246, ../../app/styles/main.scss */
 
 .form-group input,
 .group input {
@@ -10024,7 +10034,7 @@ legend {
   margin: 1.25em 0 1.25em 30%;
 }
 
-/* line 241, ../../app/styles/main.scss */
+/* line 251, ../../app/styles/main.scss */
 
 .form-group input:required:invalid,
 .form-group input:focus:invalid,
@@ -10036,7 +10046,7 @@ legend {
   background-position: calc(100% - 10px) center;
 }
 
-/* line 247, ../../app/styles/main.scss */
+/* line 257, ../../app/styles/main.scss */
 
 .form-group input.valid,
 .form-group input:required:valid,
@@ -10048,7 +10058,7 @@ legend {
   background-position: calc(100% - 10px) center;
 }
 
-/* line 252, ../../app/styles/main.scss */
+/* line 262, ../../app/styles/main.scss */
 
 .form-group input.invalid,
 .group input.invalid {
@@ -10058,7 +10068,7 @@ legend {
   background-position: calc(100% - 10px) center;
 }
 
-/* line 258, ../../app/styles/main.scss */
+/* line 268, ../../app/styles/main.scss */
 
 .form-group textarea,
 .group textarea {
@@ -10070,16 +10080,16 @@ legend {
   resize: vertical;
 }
 
-/* line 267, ../../app/styles/main.scss */
+/* line 277, ../../app/styles/main.scss */
 
 .form-group p + .radio,
 .form-group p + .checkbox,
 .group p + .radio,
 .group p + .checkbox {
-  margin-top: 1.75em;
+  margin-top: 0em;
 }
 
-/* line 272, ../../app/styles/main.scss */
+/* line 282, ../../app/styles/main.scss */
 
 .form-group p:before,
 .form-group p:after,
@@ -10092,7 +10102,7 @@ legend {
   height: 0;
 }
 
-/* line 279, ../../app/styles/main.scss */
+/* line 289, ../../app/styles/main.scss */
 
 .form-group p a,
 .form-group table a,
@@ -10101,7 +10111,7 @@ legend {
   padding: 0 3px;
 }
 
-/* line 282, ../../app/styles/main.scss */
+/* line 292, ../../app/styles/main.scss */
 
 .form-group p a:hover,
 .form-group p a:focus,
@@ -10121,35 +10131,61 @@ legend {
   text-decoration: none;
 }
 
-/* line 293, ../../app/styles/main.scss */
+/* line 301, ../../app/styles/main.scss */
 
 .form-group .help-block,
-.form-group ul,
-.group .help-block,
-.group ul {
+.group .help-block {
   float: none;
-  margin: 0 0 0 30%;
+  margin: -1em 0 0 30%;
+  font-size: .75em;
+  padding: 0 0.75em;
 }
 
-/* line 296, ../../app/styles/main.scss */
+/* line 306, ../../app/styles/main.scss */
 
 .form-group .help-block:last-child,
+.group .help-block:last-child {
+  margin-bottom: 0.75em;
+}
+
+/* line 309, ../../app/styles/main.scss */
+
+.form-group .help-block + input,
+.group .help-block + input {
+  margin-top: 1.25em;
+}
+
+/* line 312, ../../app/styles/main.scss */
+
+.form-group .help-block + .help-block,
+.group .help-block + .help-block {
+  margin-top: 1em;
+}
+
+/* line 316, ../../app/styles/main.scss */
+
+.form-group ul,
+.group ul {
+  float: none;
+  margin: 0.75em 0 1.75em 30%;
+  font-size: .75em;
+}
+
+/* line 320, ../../app/styles/main.scss */
+
 .form-group ul:last-child,
-.group .help-block:last-child,
 .group ul:last-child {
   margin-bottom: 0.75em;
 }
 
-/* line 299, ../../app/styles/main.scss */
+/* line 323, ../../app/styles/main.scss */
 
-.form-group .help-block + input,
 .form-group ul + input,
-.group .help-block + input,
 .group ul + input {
   margin-top: 1.25em;
 }
 
-/* line 303, ../../app/styles/main.scss */
+/* line 327, ../../app/styles/main.scss */
 
 .form-group .radio,
 .form-group .checkbox,
@@ -10163,7 +10199,7 @@ legend {
   padding-bottom: 0;
 }
 
-/* line 33, ../../app/styles/main.scss */
+/* line 36, ../../app/styles/main.scss */
 
 .form-group .radio:before,
 .form-group .radio:after,
@@ -10177,7 +10213,7 @@ legend {
   content: " ";
 }
 
-/* line 37, ../../app/styles/main.scss */
+/* line 40, ../../app/styles/main.scss */
 
 .form-group .radio:after,
 .form-group .checkbox:after,
@@ -10186,26 +10222,27 @@ legend {
   clear: both;
 }
 
-/* line 311, ../../app/styles/main.scss */
+/* line 335, ../../app/styles/main.scss */
 
 .form-group .radio label,
 .form-group .checkbox label,
 .group .radio label,
 .group .checkbox label {
-  vertical-align: top;
+  vertical-align: bottom;
   margin-left: .5em;
 }
 
-/* line 315, ../../app/styles/main.scss */
+/* line 339, ../../app/styles/main.scss */
 
 .form-group .radio + .help-block,
 .form-group .checkbox + .help-block,
 .group .radio + .help-block,
 .group .checkbox + .help-block {
-  padding-left: 2em;
+  padding-left: 2.75em;
+  margin-top: .25em;
 }
 
-/* line 332, ../../app/styles/main.scss */
+/* line 357, ../../app/styles/main.scss */
 
 .form-group .radio .iradio,
 .form-group .radio .icheckbox,
@@ -10218,7 +10255,7 @@ legend {
   display: inline-block;
 }
 
-/* line 334, ../../app/styles/main.scss */
+/* line 359, ../../app/styles/main.scss */
 
 .form-group .radio .iradio.focus,
 .form-group .radio .icheckbox.focus,
@@ -10234,7 +10271,7 @@ legend {
   border-radius: 4px;
 }
 
-/* line 338, ../../app/styles/main.scss */
+/* line 363, ../../app/styles/main.scss */
 
 .form-group .radio .iradio.disabled,
 .form-group .radio .icheckbox.disabled,
@@ -10247,7 +10284,7 @@ legend {
   cursor: not-allowed;
 }
 
-/* line 340, ../../app/styles/main.scss */
+/* line 365, ../../app/styles/main.scss */
 
 .form-group .radio .iradio.disabled + label,
 .form-group .radio .icheckbox.disabled + label,
@@ -10258,9 +10295,38 @@ legend {
 .group .checkbox .iradio.disabled + label,
 .group .checkbox .icheckbox.disabled + label {
   cursor: not-allowed;
+  color: #D7DCDE;
 }
 
-/* line 345, ../../app/styles/main.scss */
+/* line 370, ../../app/styles/main.scss */
+
+.form-group .radio .iradio + label,
+.form-group .radio .icheckbox + label,
+.form-group .checkbox .iradio + label,
+.form-group .checkbox .icheckbox + label,
+.group .radio .iradio + label,
+.group .radio .icheckbox + label,
+.group .checkbox .iradio + label,
+.group .checkbox .icheckbox + label {
+  color: #BBBFC0;
+  -webkit-transition: color ease 0.25s;
+  transition: color ease 0.25s;
+}
+
+/* line 374, ../../app/styles/main.scss */
+
+.form-group .radio .iradio.checked + label,
+.form-group .radio .icheckbox.checked + label,
+.form-group .checkbox .iradio.checked + label,
+.form-group .checkbox .icheckbox.checked + label,
+.group .radio .iradio.checked + label,
+.group .radio .icheckbox.checked + label,
+.group .checkbox .iradio.checked + label,
+.group .checkbox .icheckbox.checked + label {
+  color: #333;
+}
+
+/* line 378, ../../app/styles/main.scss */
 
 .form-group .radio:first-child,
 .form-group .checkbox:first-child,
@@ -10269,7 +10335,7 @@ legend {
   margin-top: .75em;
 }
 
-/* line 348, ../../app/styles/main.scss */
+/* line 381, ../../app/styles/main.scss */
 
 .form-group .radio:last-child,
 .form-group .checkbox:last-child,
@@ -10278,7 +10344,7 @@ legend {
   margin-bottom: .75em;
 }
 
-/* line 351, ../../app/styles/main.scss */
+/* line 384, ../../app/styles/main.scss */
 
 .form-group .radio .iradio.focus,
 .form-group .checkbox .iradio.focus,
@@ -10289,14 +10355,14 @@ legend {
   border-radius: 50%;
 }
 
-/* line 356, ../../app/styles/main.scss */
+/* line 389, ../../app/styles/main.scss */
 
 .form-group select + .help-block,
 .group select + .help-block {
   margin-top: 1.25em;
 }
 
-/* line 377, ../../app/styles/main.scss */
+/* line 410, ../../app/styles/main.scss */
 
 .form-group input + input,
 .form-group input + textarea,
@@ -10333,7 +10399,54 @@ legend {
   margin-top: -0.5em;
 }
 
-/* line 383, ../../app/styles/main.scss */
+/* line 415, ../../app/styles/main.scss */
+
+.pill {
+  background-color: white;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+  border-radius: 16px;
+  font-size: .75em;
+  text-transform: uppercase;
+  padding: 0 .5em;
+  display: inline-block;
+  letter-spacing: 1px;
+  line-height: 1.5em;
+  vertical-align: text-top;
+}
+
+/* line 425, ../../app/styles/main.scss */
+
+.pill.success {
+  background-color: #1abc9c;
+  color: white;
+}
+
+/* line 429, ../../app/styles/main.scss */
+
+.pill.warn {
+  background-color: #f9b233;
+  color: white;
+}
+
+/* line 433, ../../app/styles/main.scss */
+
+.pill.error {
+  background-color: #f22d23;
+  color: white;
+}
+
+/* line 439, ../../app/styles/main.scss */
+
+a.pill:hover,
+a.pill:focus {
+  background: #66afe9;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+}
+
+/* line 459, ../../app/styles/main.scss */
 
 .container table {
   background: #f7f4f2;
@@ -10343,7 +10456,14 @@ legend {
   margin-bottom: 0.25em;
 }
 
-/* line 389, ../../app/styles/main.scss */
+/* line 461, ../../app/styles/main.scss */
+
+.container table.table-striped > tbody > tr:nth-child(odd) > td,
+.container table.table-striped > tbody > tr:nth-child(odd) > th {
+  background: #fdfaf8;
+}
+
+/* line 469, ../../app/styles/main.scss */
 
 .container table thead tr th {
   padding: 1em 0 0 .25em;
@@ -10354,13 +10474,13 @@ legend {
   border-bottom: 1px solid #aaaaaa;
 }
 
-/* line 396, ../../app/styles/main.scss */
+/* line 476, ../../app/styles/main.scss */
 
 .container table thead tr th:first-of-type {
   padding-left: 1em;
 }
 
-/* line 404, ../../app/styles/main.scss */
+/* line 484, ../../app/styles/main.scss */
 
 .container table tfoot tr td {
   padding: 0 0 1em .25em;
@@ -10371,27 +10491,27 @@ legend {
   border-top: 1px solid #aaaaaa;
 }
 
-/* line 411, ../../app/styles/main.scss */
+/* line 491, ../../app/styles/main.scss */
 
 .container table tfoot tr td:first-of-type {
   padding-left: 1em;
 }
 
-/* line 419, ../../app/styles/main.scss */
+/* line 499, ../../app/styles/main.scss */
 
 .container table tbody tr td {
-  line-height: -webkit-calc(2rem - 1px);
-  line-height: calc(2rem - 1px);
+  line-height: -webkit-calc(2.5rem - 1px);
+  line-height: calc(2.5rem - 1px);
   padding: 0.25em;
 }
 
-/* line 422, ../../app/styles/main.scss */
+/* line 502, ../../app/styles/main.scss */
 
 .container table tbody tr td:first-of-type {
-  padding-left: 1em;
+  padding-left: .75em;
 }
 
-/* line 429, ../../app/styles/main.scss */
+/* line 509, ../../app/styles/main.scss */
 
 .container span.status {
   width: 1.25em;
@@ -10400,13 +10520,13 @@ legend {
   height: .7em;
 }
 
-/* line 434, ../../app/styles/main.scss */
+/* line 514, ../../app/styles/main.scss */
 
 .container span.status:before {
   margin: 0;
 }
 
-/* line 439, ../../app/styles/main.scss */
+/* line 519, ../../app/styles/main.scss */
 
 .container .status:before {
   content: "";
@@ -10420,7 +10540,7 @@ legend {
   margin: .25em 0 0 0;
 }
 
-/* line 450, ../../app/styles/main.scss */
+/* line 530, ../../app/styles/main.scss */
 
 .container .status.on:before,
 .container .status.success:before,
@@ -10428,7 +10548,7 @@ legend {
   background-color: #1abc9c;
 }
 
-/* line 455, ../../app/styles/main.scss */
+/* line 535, ../../app/styles/main.scss */
 
 .container .status.off:before,
 .container .status.error:before,
@@ -10436,13 +10556,13 @@ legend {
   background-color: #f22d23;
 }
 
-/* line 458, ../../app/styles/main.scss */
+/* line 538, ../../app/styles/main.scss */
 
 .container .status.warn:before {
   background-color: #f9b233;
 }
 
-/* line 465, ../../app/styles/main.scss */
+/* line 545, ../../app/styles/main.scss */
 
 .dropzone {
   margin: 1.25em 0;
@@ -10450,7 +10570,7 @@ legend {
   color: white;
 }
 
-/* line 477, ../../app/styles/main.scss */
+/* line 557, ../../app/styles/main.scss */
 
 .dropzone .dz-preview {
   box-shadow: none;
@@ -10461,19 +10581,19 @@ legend {
   margin: 19px 19px 5px 19px;
 }
 
-/* line 482, ../../app/styles/main.scss */
+/* line 562, ../../app/styles/main.scss */
 
 .dropzone .dz-preview:last-of-type {
   margin-bottom: 19px;
 }
 
-/* line 485, ../../app/styles/main.scss */
+/* line 565, ../../app/styles/main.scss */
 
 .dropzone .dz-preview .dz-remove {
   cursor: pointer;
 }
 
-/* line 487, ../../app/styles/main.scss */
+/* line 567, ../../app/styles/main.scss */
 
 .dropzone .dz-preview .dz-remove:focus {
   box-shadow: 0 0 0 3px #9fcaec;
@@ -10481,20 +10601,20 @@ legend {
   outline: none;
 }
 
-/* line 491, ../../app/styles/main.scss */
+/* line 571, ../../app/styles/main.scss */
 
 .dropzone .dz-preview .dz-details {
   color: #666;
 }
 
-/* line 494, ../../app/styles/main.scss */
+/* line 574, ../../app/styles/main.scss */
 
 .dropzone .dz-preview .dz-remove {
   background: white;
   background-image: none;
 }
 
-/* line 503, ../../app/styles/main.scss */
+/* line 583, ../../app/styles/main.scss */
 
 .select2-search input {
   background: none;
@@ -10503,26 +10623,27 @@ legend {
   border-radius: 3px;
 }
 
-/* line 509, ../../app/styles/main.scss */
+/* line 589, ../../app/styles/main.scss */
 
 .select2-drop {
   box-shadow: none;
+  color: #555555;
 }
 
-/* line 511, ../../app/styles/main.scss */
+/* line 592, ../../app/styles/main.scss */
 
 .select2-drop.select2-drop-above {
   box-shadow: none;
 }
 
-/* line 514, ../../app/styles/main.scss */
+/* line 595, ../../app/styles/main.scss */
 
 .select2-drop .select2-disabled {
   background: none;
   color: #CCC;
 }
 
-/* line 518, ../../app/styles/main.scss */
+/* line 599, ../../app/styles/main.scss */
 
 .select2-drop .select2-highlighted {
   background: #1abc9c;
@@ -10531,22 +10652,57 @@ legend {
   border-radius: 3px;
 }
 
-/* line 525, ../../app/styles/main.scss */
+/* line 606, ../../app/styles/main.scss */
 
-.select2-container-active .select2-choice,
-.select2-container-active .select2-choices {
+div.select2-container-active .select2-choice,
+div.select2-container-active .select2-choices {
   box-shadow: none;
+  box-shadow: 0 0 0 3px #9fcaec;
+  border: 1px solid #66afe9;
+  outline: none;
+  border: 1px solid transparent;
 }
 
-/* line 530, ../../app/styles/main.scss */
+/* line 613, ../../app/styles/main.scss */
 
 .select2-dropdown-open.select2-drop-above .select2-choice,
 .select2-dropdown-open.select2-drop-above .select2-choices {
   background: white;
   background-image: none;
+  border: 1px solid transparent;
 }
 
-/* line 534, ../../app/styles/main.scss */
+/* line 618, ../../app/styles/main.scss */
+
+.select2-drop.select2-drop-above.select2-drop-active {
+  border-top: 3px solid #9FCAEC;
+}
+
+/* line 622, ../../app/styles/main.scss */
+
+.select2-drop-active {
+  border: 3px solid #9FCAEC;
+  border-top: none;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  margin-left: -3px;
+}
+
+/* line 628, ../../app/styles/main.scss */
+
+.select2-drop-active .select2-results .select2-no-results {
+  border-radius: 3px;
+  background-color: #f9b233;
+  padding: 0 0 0 .25em;
+}
+
+/* line 636, ../../app/styles/main.scss */
+
+.select2-choice {
+  border: 1px solid #CCC;
+}
+
+/* line 640, ../../app/styles/main.scss */
 
 .select2-container {
   width: 70%;
@@ -10554,17 +10710,20 @@ legend {
   display: block;
 }
 
-/* line 538, ../../app/styles/main.scss */
+/* line 644, ../../app/styles/main.scss */
 
 .select2-container .select2-choice {
   height: 2.75em;
   line-height: 2.75em;
   padding: .025em 0 0 .5em;
+  color: #555555;
   background: white;
   background-image: none;
+  border: 1px solid #CCC;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
-/* line 543, ../../app/styles/main.scss */
+/* line 652, ../../app/styles/main.scss */
 
 .select2-container .select2-choice .select2-arrow {
   background: white;
@@ -10572,56 +10731,71 @@ legend {
   border-left: none;
 }
 
-/* line 546, ../../app/styles/main.scss */
+/* line 655, ../../app/styles/main.scss */
 
 .select2-container .select2-choice .select2-arrow b {
   background-position: 0 8px;
 }
 
-/* line 551, ../../app/styles/main.scss */
+/* line 660, ../../app/styles/main.scss */
 
 .select2-container:last-child {
   margin-bottom: 0.25em;
 }
 
-/* line 558, ../../app/styles/main.scss */
+/* line 665, ../../app/styles/main.scss */
 
-.select2-container-multi.select2-container-active .select2-choices {
-  box-shadow: none;
+.select2-container-multi {
+  font-size: 1.25em;
 }
 
-/* line 562, ../../app/styles/main.scss */
+/* line 668, ../../app/styles/main.scss */
+
+.select2-container-multi.select2-container-active .select2-choices,
+.select2-container-multi.select2-dropdown-open .select2-choices {
+  box-shadow: none;
+  box-shadow: 0 0 0 3px #9fcaec;
+  border: 1px solid #66afe9;
+  outline: none;
+  border: 1px solid transparent;
+}
+
+/* line 675, ../../app/styles/main.scss */
 
 .select2-container-multi .select2-choices {
-  min-height: 2.75em;
+  min-height: 3em;
   background: white;
   background-image: none;
+  box-shadow: none;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
 }
 
-/* line 567, ../../app/styles/main.scss */
+/* line 681, ../../app/styles/main.scss */
 
 .select2-container-multi .select2-choices .select2-search-field input {
-  padding: .35em 0 0em .5em;
+  padding: .5em 0 0em .5em;
 }
 
-/* line 571, ../../app/styles/main.scss */
+/* line 685, ../../app/styles/main.scss */
 
 .select2-container-multi .select2-choices .select2-search-choice {
+  padding-top: 4px;
   -ms-border-radius: 1em;
   -o-border-radius: 1em;
   border-radius: 1em;
+  box-shadow: none;
   background: white;
   background-image: none;
   background-color: white;
+  border: 1px solid #D7DCDE;
   font-size: 1em;
-  height: 2.1em;
-  margin: .25em 0 .25em .25em;
+  height: 2.05em;
+  margin: .4em 0 .25em .3em;
 }
 
-/* line 578, ../../app/styles/main.scss */
+/* line 695, ../../app/styles/main.scss */
 
 .select2-container-multi .select2-choices .select2-search-choice.select2-search-choice-focus {
   background: #1abc9c;
@@ -10630,21 +10804,21 @@ legend {
   color: white;
 }
 
-/* line 584, ../../app/styles/main.scss */
+/* line 701, ../../app/styles/main.scss */
 
 .select2-container-multi .select2-choices .select2-search-choice div {
   line-height: 1.5em;
   margin: 0 .75em;
 }
 
-/* line 588, ../../app/styles/main.scss */
+/* line 705, ../../app/styles/main.scss */
 
 .select2-container-multi .select2-choices .select2-search-choice .select2-search-choice-close {
-  top: 10em;
+  top: 8em;
   left: 10em;
 }
 
-/* line 601, ../../app/styles/main.scss */
+/* line 718, ../../app/styles/main.scss */
 
 .btn.btn-default:hover,
 .btn.btn-default:focus {
@@ -10652,7 +10826,7 @@ legend {
   color: white;
 }
 
-/* line 609, ../../app/styles/main.scss */
+/* line 726, ../../app/styles/main.scss */
 
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
