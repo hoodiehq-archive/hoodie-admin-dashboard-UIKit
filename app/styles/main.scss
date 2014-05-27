@@ -554,6 +554,9 @@ p .pill{
     margin-bottom: .25em;
   }
   */
+  .fallback input[type="file"] {
+    margin: 0.25em .75em;
+  }
   .dz-preview{
     @include box-shadow(none);
     border: none;
