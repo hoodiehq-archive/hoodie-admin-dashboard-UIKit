@@ -10572,6 +10572,12 @@ a.pill:focus {
 
 /* line 557, ../../app/styles/main.scss */
 
+.dropzone .fallback input[type="file"] {
+  margin: 0.25em .75em;
+}
+
+/* line 560, ../../app/styles/main.scss */
+
 .dropzone .dz-preview {
   box-shadow: none;
   border: none;
@@ -10581,19 +10587,19 @@ a.pill:focus {
   margin: 19px 19px 5px 19px;
 }
 
-/* line 562, ../../app/styles/main.scss */
+/* line 565, ../../app/styles/main.scss */
 
 .dropzone .dz-preview:last-of-type {
   margin-bottom: 19px;
 }
 
-/* line 565, ../../app/styles/main.scss */
+/* line 568, ../../app/styles/main.scss */
 
 .dropzone .dz-preview .dz-remove {
   cursor: pointer;
 }
 
-/* line 567, ../../app/styles/main.scss */
+/* line 570, ../../app/styles/main.scss */
 
 .dropzone .dz-preview .dz-remove:focus {
   box-shadow: 0 0 0 3px #9fcaec;
@@ -10601,20 +10607,20 @@ a.pill:focus {
   outline: none;
 }
 
-/* line 571, ../../app/styles/main.scss */
+/* line 574, ../../app/styles/main.scss */
 
 .dropzone .dz-preview .dz-details {
   color: #666;
 }
 
-/* line 574, ../../app/styles/main.scss */
+/* line 577, ../../app/styles/main.scss */
 
 .dropzone .dz-preview .dz-remove {
   background: white;
   background-image: none;
 }
 
-/* line 583, ../../app/styles/main.scss */
+/* line 586, ../../app/styles/main.scss */
 
 .select2-search input {
   background: none;
@@ -10623,27 +10629,27 @@ a.pill:focus {
   border-radius: 3px;
 }
 
-/* line 589, ../../app/styles/main.scss */
+/* line 592, ../../app/styles/main.scss */
 
 .select2-drop {
   box-shadow: none;
   color: #555555;
 }
 
-/* line 592, ../../app/styles/main.scss */
+/* line 595, ../../app/styles/main.scss */
 
 .select2-drop.select2-drop-above {
   box-shadow: none;
 }
 
-/* line 595, ../../app/styles/main.scss */
+/* line 598, ../../app/styles/main.scss */
 
 .select2-drop .select2-disabled {
   background: none;
   color: #CCC;
 }
 
-/* line 599, ../../app/styles/main.scss */
+/* line 602, ../../app/styles/main.scss */
 
 .select2-drop .select2-highlighted {
   background: #1abc9c;
@@ -10652,7 +10658,7 @@ a.pill:focus {
   border-radius: 3px;
 }
 
-/* line 606, ../../app/styles/main.scss */
+/* line 609, ../../app/styles/main.scss */
 
 div.select2-container-active .select2-choice,
 div.select2-container-active .select2-choices {
@@ -10663,7 +10669,7 @@ div.select2-container-active .select2-choices {
   border: 1px solid transparent;
 }
 
-/* line 613, ../../app/styles/main.scss */
+/* line 616, ../../app/styles/main.scss */
 
 .select2-dropdown-open.select2-drop-above .select2-choice,
 .select2-dropdown-open.select2-drop-above .select2-choices {
@@ -10672,13 +10678,13 @@ div.select2-container-active .select2-choices {
   border: 1px solid transparent;
 }
 
-/* line 618, ../../app/styles/main.scss */
+/* line 621, ../../app/styles/main.scss */
 
 .select2-drop.select2-drop-above.select2-drop-active {
   border-top: 3px solid #9FCAEC;
 }
 
-/* line 622, ../../app/styles/main.scss */
+/* line 625, ../../app/styles/main.scss */
 
 .select2-drop-active {
   border: 3px solid #9FCAEC;
@@ -10688,7 +10694,7 @@ div.select2-container-active .select2-choices {
   margin-left: -3px;
 }
 
-/* line 628, ../../app/styles/main.scss */
+/* line 631, ../../app/styles/main.scss */
 
 .select2-drop-active .select2-results .select2-no-results {
   border-radius: 3px;
@@ -10696,13 +10702,13 @@ div.select2-container-active .select2-choices {
   padding: 0 0 0 .25em;
 }
 
-/* line 636, ../../app/styles/main.scss */
+/* line 639, ../../app/styles/main.scss */
 
 .select2-choice {
   border: 1px solid #CCC;
 }
 
-/* line 640, ../../app/styles/main.scss */
+/* line 643, ../../app/styles/main.scss */
 
 .select2-container {
   width: 70%;
@@ -10710,7 +10716,7 @@ div.select2-container-active .select2-choices {
   display: block;
 }
 
-/* line 644, ../../app/styles/main.scss */
+/* line 647, ../../app/styles/main.scss */
 
 .select2-container .select2-choice {
   height: 2.75em;
@@ -10723,7 +10729,7 @@ div.select2-container-active .select2-choices {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
-/* line 652, ../../app/styles/main.scss */
+/* line 655, ../../app/styles/main.scss */
 
 .select2-container .select2-choice .select2-arrow {
   background: white;
@@ -10731,25 +10737,25 @@ div.select2-container-active .select2-choices {
   border-left: none;
 }
 
-/* line 655, ../../app/styles/main.scss */
+/* line 658, ../../app/styles/main.scss */
 
 .select2-container .select2-choice .select2-arrow b {
   background-position: 0 8px;
 }
 
-/* line 660, ../../app/styles/main.scss */
+/* line 663, ../../app/styles/main.scss */
 
 .select2-container:last-child {
   margin-bottom: 0.25em;
 }
 
-/* line 665, ../../app/styles/main.scss */
+/* line 668, ../../app/styles/main.scss */
 
 .select2-container-multi {
   font-size: 1.25em;
 }
 
-/* line 668, ../../app/styles/main.scss */
+/* line 671, ../../app/styles/main.scss */
 
 .select2-container-multi.select2-container-active .select2-choices,
 .select2-container-multi.select2-dropdown-open .select2-choices {
@@ -10760,7 +10766,7 @@ div.select2-container-active .select2-choices {
   border: 1px solid transparent;
 }
 
-/* line 675, ../../app/styles/main.scss */
+/* line 678, ../../app/styles/main.scss */
 
 .select2-container-multi .select2-choices {
   min-height: 3em;
@@ -10772,13 +10778,13 @@ div.select2-container-active .select2-choices {
   border-radius: 3px;
 }
 
-/* line 681, ../../app/styles/main.scss */
+/* line 684, ../../app/styles/main.scss */
 
 .select2-container-multi .select2-choices .select2-search-field input {
   padding: .5em 0 0em .5em;
 }
 
-/* line 685, ../../app/styles/main.scss */
+/* line 688, ../../app/styles/main.scss */
 
 .select2-container-multi .select2-choices .select2-search-choice {
   padding-top: 4px;
@@ -10795,7 +10801,7 @@ div.select2-container-active .select2-choices {
   margin: .4em 0 .25em .3em;
 }
 
-/* line 695, ../../app/styles/main.scss */
+/* line 698, ../../app/styles/main.scss */
 
 .select2-container-multi .select2-choices .select2-search-choice.select2-search-choice-focus {
   background: #1abc9c;
@@ -10804,21 +10810,21 @@ div.select2-container-active .select2-choices {
   color: white;
 }
 
-/* line 701, ../../app/styles/main.scss */
+/* line 704, ../../app/styles/main.scss */
 
 .select2-container-multi .select2-choices .select2-search-choice div {
   line-height: 1.5em;
   margin: 0 .75em;
 }
 
-/* line 705, ../../app/styles/main.scss */
+/* line 708, ../../app/styles/main.scss */
 
 .select2-container-multi .select2-choices .select2-search-choice .select2-search-choice-close {
   top: 8em;
   left: 10em;
 }
 
-/* line 718, ../../app/styles/main.scss */
+/* line 721, ../../app/styles/main.scss */
 
 .btn.btn-default:hover,
 .btn.btn-default:focus {
@@ -10826,7 +10832,7 @@ div.select2-container-active .select2-choices {
   color: white;
 }
 
-/* line 726, ../../app/styles/main.scss */
+/* line 729, ../../app/styles/main.scss */
 
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
