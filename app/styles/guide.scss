@@ -4,8 +4,27 @@ Additional styles for the Pocket UIKit guide page
 
  */
 
+$strongLightBlue: #66AFE9;
+$lightGreen:      #1ABC9C;
+$darkGreen:       #149B80;
+$red:             #F22D23;
+$yellow:          #F9B233;
+
 pre[class*="language-"] {
   padding: 1em 1em .75em 1em;
   border: none;
   background: #F7F4F2;
+  .string,
+  .attr-name{
+    color: $lightGreen;
+  }
+  .keyword,
+  .attr-value{
+    color: $strongLightBlue;
+  }
+  .boolean,
+  .number,
+  .tag{
+    color: $darkGreen;
+  }
 }
