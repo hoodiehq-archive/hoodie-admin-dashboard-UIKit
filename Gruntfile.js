@@ -267,7 +267,7 @@ module.exports = function (grunt) {
                 expand: true,
                 dot: true,
                 cwd: '<%= yeoman.app %>/styles',
-                dest: '.tmp/styles/',
+                dest: '.tmp/concat/styles/',
                 src: [
                     'styles/{,*/}*.css',
                     '../bower_components/**/*.css'

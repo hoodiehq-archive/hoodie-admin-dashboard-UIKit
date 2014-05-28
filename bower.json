@@ -6,7 +6,8 @@
     "jquery": "~1.10.2",
     "dropzone": "~3.7.1",
     "select2": "~3.4.5",
-    "jquery-icheck": "~1.0.1"
+    "jquery-icheck": "~1.0.1",
+    "prism": "git@github.com:LeaVerou/prism.git#gh-pages"
   },
   "devDependencies": {}
 }
