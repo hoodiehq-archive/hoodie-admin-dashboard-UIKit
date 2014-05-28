@@ -9715,7 +9715,7 @@ body.debug {
 
 /* line 89, ../../app/styles/main.scss */
 
-body.debug form .form-group,
+body.debug form fieldset,
 body.debug .group,
 body.debug table {
   background: rgba(200, 0, 0, 0.05);
@@ -9723,7 +9723,7 @@ body.debug table {
 
 /* line 92, ../../app/styles/main.scss */
 
-body.debug form .form-group .form-container,
+body.debug form fieldset .form-container,
 body.debug .group .form-container,
 body.debug table .form-container {
   background: rgba(0, 200, 0, 0.05);
@@ -9751,9 +9751,17 @@ h1 {
   border-bottom: 1px solid #000;
 }
 
-/* line 114, ../../app/styles/main.scss */
+/* line 115, ../../app/styles/main.scss */
 
 h2 {
+  font-size: 1.25em;
+  line-height: 1.2em;
+  margin: 1.25em .25rem .75em;
+}
+
+/* line 121, ../../app/styles/main.scss */
+
+h3 {
   font-size: 1em;
   line-height: 1.25em;
   margin-bottom: .5em;
@@ -9762,13 +9770,31 @@ h2 {
   font-weight: bold;
 }
 
-/* line 123, ../../app/styles/main.scss */
+/* line 130, ../../app/styles/main.scss */
+
+h4 {
+  font-size: .75em;
+  line-height: 1em;
+  margin-bottom: .5em;
+  margin-top: 0;
+  margin-left: .25em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* line 140, ../../app/styles/main.scss */
+
+p {
+  margin: 0 0 1em .25rem;
+}
+
+/* line 144, ../../app/styles/main.scss */
 
 .description {
   margin: 1.25em .25em 1em;
 }
 
-/* line 137, ../../app/styles/main.scss */
+/* line 158, ../../app/styles/main.scss */
 
 legend {
   display: block;
@@ -9783,7 +9809,7 @@ legend {
   border: none;
 }
 
-/* line 144, ../../app/styles/main.scss */
+/* line 165, ../../app/styles/main.scss */
 
 .btn {
   margin: .5em 0 .5em 30%;
@@ -9792,7 +9818,7 @@ legend {
   color: #555555;
 }
 
-/* line 150, ../../app/styles/main.scss */
+/* line 171, ../../app/styles/main.scss */
 
 .btn:hover,
 .btn:focus {
@@ -9801,7 +9827,7 @@ legend {
   border: 1px solid #149b80;
 }
 
-/* line 155, ../../app/styles/main.scss */
+/* line 176, ../../app/styles/main.scss */
 
 .btn:focus {
   box-shadow: 0 0 0 3px #9fcaec;
@@ -9809,9 +9835,9 @@ legend {
   outline: none;
 }
 
-/* line 160, ../../app/styles/main.scss */
+/* line 181, ../../app/styles/main.scss */
 
-.form-group,
+fieldset,
 .group {
   background: #f7f4f2;
   border-radius: 0.5em;
@@ -9821,8 +9847,8 @@ legend {
 
 /* line 36, ../../app/styles/main.scss */
 
-.form-group:before,
-.form-group:after,
+fieldset:before,
+fieldset:after,
 .group:before,
 .group:after {
   display: table;
@@ -9831,14 +9857,14 @@ legend {
 
 /* line 40, ../../app/styles/main.scss */
 
-.form-group:after,
+fieldset:after,
 .group:after {
   clear: both;
 }
 
-/* line 166, ../../app/styles/main.scss */
+/* line 187, ../../app/styles/main.scss */
 
-.form-group > label,
+fieldset > label,
 .group > label {
   display: block;
   width: 30%;
@@ -9849,45 +9875,45 @@ legend {
   font-weight: bold;
 }
 
-/* line 168, ../../app/styles/main.scss */
+/* line 189, ../../app/styles/main.scss */
 
-.form-group > label:last-of-type,
+fieldset > label:last-of-type,
 .group > label:last-of-type {
   margin-top: 0;
 }
 
-/* line 171, ../../app/styles/main.scss */
+/* line 192, ../../app/styles/main.scss */
 
-.form-group > label:first-child,
+fieldset > label:first-child,
 .group > label:first-child {
   margin-top: 0.75em;
 }
 
-/* line 174, ../../app/styles/main.scss */
+/* line 195, ../../app/styles/main.scss */
 
-.form-group > label + input,
+fieldset > label + input,
 .group > label + input {
   margin-top: 1.25em;
 }
 
-/* line 178, ../../app/styles/main.scss */
+/* line 199, ../../app/styles/main.scss */
 
-.form-group .form-container,
+fieldset .form-container,
 .group .form-container {
   margin-top: .25em;
   margin-bottom: .75em;
 }
 
-/* line 182, ../../app/styles/main.scss */
+/* line 203, ../../app/styles/main.scss */
 
-.form-group .form-container:first-child,
+fieldset .form-container:first-child,
 .group .form-container:first-child {
   margin-top: 0;
 }
 
-/* line 185, ../../app/styles/main.scss */
+/* line 206, ../../app/styles/main.scss */
 
-.form-group .form-container > label,
+fieldset .form-container > label,
 .group .form-container > label {
   display: block;
   width: 30%;
@@ -9899,24 +9925,24 @@ legend {
   margin: .75em 0 0.75em;
 }
 
-/* line 189, ../../app/styles/main.scss */
+/* line 210, ../../app/styles/main.scss */
 
-.form-group .form-container legend,
+fieldset .form-container legend,
 .group .form-container legend {
   margin-top: 0.5em;
 }
 
-/* line 194, ../../app/styles/main.scss */
+/* line 215, ../../app/styles/main.scss */
 
-.form-group .input-group input,
+fieldset .input-group input,
 .group .input-group input {
   margin-left: 0;
 }
 
-/* line 198, ../../app/styles/main.scss */
+/* line 219, ../../app/styles/main.scss */
 
-.form-group .input-group input:focus + .input-group-btn .btn,
-.form-group .input-group .input-group-btn .btn:focus,
+fieldset .input-group input:focus + .input-group-btn .btn,
+fieldset .input-group .input-group-btn .btn:focus,
 .group .input-group input:focus + .input-group-btn .btn,
 .group .input-group .input-group-btn .btn:focus {
   box-shadow: 0 0 0 3px #9fcaec;
@@ -9924,31 +9950,31 @@ legend {
   outline: none;
 }
 
-/* line 201, ../../app/styles/main.scss */
+/* line 222, ../../app/styles/main.scss */
 
-.form-group .input-group .input-group-btn:last-child > .btn,
+fieldset .input-group .input-group-btn:last-child > .btn,
 .group .input-group .input-group-btn:last-child > .btn {
   height: 2.75em;
   margin-top: .25em;
 }
 
-/* line 205, ../../app/styles/main.scss */
+/* line 226, ../../app/styles/main.scss */
 
-.form-group .input-group + .help-block,
+fieldset .input-group + .help-block,
 .group .input-group + .help-block {
   margin-top: 0em;
 }
 
-/* line 213, ../../app/styles/main.scss */
+/* line 234, ../../app/styles/main.scss */
 
-.form-group label + input,
-.form-group label + textarea,
-.form-group label + .dropzone,
-.form-group label + .select2-container,
-.form-group legend + input,
-.form-group legend + textarea,
-.form-group legend + .dropzone,
-.form-group legend + .select2-container,
+fieldset label + input,
+fieldset label + textarea,
+fieldset label + .dropzone,
+fieldset label + .select2-container,
+fieldset legend + input,
+fieldset legend + textarea,
+fieldset legend + .dropzone,
+fieldset legend + .select2-container,
 .group label + input,
 .group label + textarea,
 .group label + .dropzone,
@@ -9960,14 +9986,14 @@ legend {
   margin-top: .25em;
 }
 
-/* line 220, ../../app/styles/main.scss */
+/* line 241, ../../app/styles/main.scss */
 
-.form-group label + .radio,
-.form-group label + .checkbox,
-.form-group label + .help-block,
-.form-group legend + .radio,
-.form-group legend + .checkbox,
-.form-group legend + .help-block,
+fieldset label + .radio,
+fieldset label + .checkbox,
+fieldset label + .help-block,
+fieldset legend + .radio,
+fieldset legend + .checkbox,
+fieldset legend + .help-block,
 .group label + .radio,
 .group label + .checkbox,
 .group label + .help-block,
@@ -9977,24 +10003,24 @@ legend {
   margin-top: .75em;
 }
 
-/* line 227, ../../app/styles/main.scss */
+/* line 248, ../../app/styles/main.scss */
 
-.form-group .radio:first-child,
-.form-group .checkbox:first-child,
-.form-group p:first-child,
+fieldset .radio:first-child,
+fieldset .checkbox:first-child,
+fieldset p:first-child,
 .group .radio:first-child,
 .group .checkbox:first-child,
 .group p:first-child {
   margin-top: .75em;
 }
 
-/* line 236, ../../app/styles/main.scss */
+/* line 257, ../../app/styles/main.scss */
 
-.form-group input:first-child,
-.form-group textarea:first-child,
-.form-group .dropzone:first-child,
-.form-group .select2-container:first-child,
-.form-group select:first-child,
+fieldset input:first-child,
+fieldset textarea:first-child,
+fieldset .dropzone:first-child,
+fieldset .select2-container:first-child,
+fieldset select:first-child,
 .group input:first-child,
 .group textarea:first-child,
 .group .dropzone:first-child,
@@ -10003,13 +10029,13 @@ legend {
   margin-top: .25em;
 }
 
-/* line 239, ../../app/styles/main.scss */
+/* line 260, ../../app/styles/main.scss */
 
-.form-group input:last-child,
-.form-group textarea:last-child,
-.form-group .dropzone:last-child,
-.form-group .select2-container:last-child,
-.form-group select:last-child,
+fieldset input:last-child,
+fieldset textarea:last-child,
+fieldset .dropzone:last-child,
+fieldset .select2-container:last-child,
+fieldset select:last-child,
 .group input:last-child,
 .group textarea:last-child,
 .group .dropzone:last-child,
@@ -10018,26 +10044,26 @@ legend {
   margin-bottom: .25em;
 }
 
-/* line 243, ../../app/styles/main.scss */
+/* line 264, ../../app/styles/main.scss */
 
-.form-group .forceEndMargin,
+fieldset .forceEndMargin,
 .group .forceEndMargin {
   margin-bottom: .25em;
 }
 
-/* line 246, ../../app/styles/main.scss */
+/* line 267, ../../app/styles/main.scss */
 
-.form-group input,
+fieldset input,
 .group input {
   display: block;
   width: 70%;
   margin: 1.25em 0 1.25em 30%;
 }
 
-/* line 251, ../../app/styles/main.scss */
+/* line 272, ../../app/styles/main.scss */
 
-.form-group input:required:invalid,
-.form-group input:focus:invalid,
+fieldset input:required:invalid,
+fieldset input:focus:invalid,
 .group input:required:invalid,
 .group input:focus:invalid {
   background-image: url("../images/required_form.png");
@@ -10046,10 +10072,10 @@ legend {
   background-position: calc(100% - 10px) center;
 }
 
-/* line 257, ../../app/styles/main.scss */
+/* line 278, ../../app/styles/main.scss */
 
-.form-group input.valid,
-.form-group input:required:valid,
+fieldset input.valid,
+fieldset input:required:valid,
 .group input.valid,
 .group input:required:valid {
   background-image: url("../images/valid_form.png");
@@ -10058,9 +10084,9 @@ legend {
   background-position: calc(100% - 10px) center;
 }
 
-/* line 262, ../../app/styles/main.scss */
+/* line 283, ../../app/styles/main.scss */
 
-.form-group input.invalid,
+fieldset input.invalid,
 .group input.invalid {
   background-image: url("../images/invalid_form.png");
   background-repeat: no-repeat;
@@ -10068,9 +10094,9 @@ legend {
   background-position: calc(100% - 10px) center;
 }
 
-/* line 268, ../../app/styles/main.scss */
+/* line 289, ../../app/styles/main.scss */
 
-.form-group textarea,
+fieldset textarea,
 .group textarea {
   width: 70%;
   margin: 1.25em 0 -webkit-calc(1.25em - 2px) 30%;
@@ -10080,19 +10106,19 @@ legend {
   resize: vertical;
 }
 
-/* line 277, ../../app/styles/main.scss */
+/* line 298, ../../app/styles/main.scss */
 
-.form-group p + .radio,
-.form-group p + .checkbox,
+fieldset p + .radio,
+fieldset p + .checkbox,
 .group p + .radio,
 .group p + .checkbox {
   margin-top: 0em;
 }
 
-/* line 282, ../../app/styles/main.scss */
+/* line 303, ../../app/styles/main.scss */
 
-.form-group p:before,
-.form-group p:after,
+fieldset p:before,
+fieldset p:after,
 .group p:before,
 .group p:after {
   content: "\00a0";
@@ -10102,21 +10128,21 @@ legend {
   height: 0;
 }
 
-/* line 289, ../../app/styles/main.scss */
+/* line 310, ../../app/styles/main.scss */
 
-.form-group p a,
-.form-group table a,
+fieldset p a,
+fieldset table a,
 .group p a,
 .group table a {
   padding: 0 3px;
 }
 
-/* line 292, ../../app/styles/main.scss */
+/* line 313, ../../app/styles/main.scss */
 
-.form-group p a:hover,
-.form-group p a:focus,
-.form-group table a:hover,
-.form-group table a:focus,
+fieldset p a:hover,
+fieldset p a:focus,
+fieldset table a:hover,
+fieldset table a:focus,
 .group p a:hover,
 .group p a:focus,
 .group table a:hover,
@@ -10131,9 +10157,9 @@ legend {
   text-decoration: none;
 }
 
-/* line 301, ../../app/styles/main.scss */
+/* line 322, ../../app/styles/main.scss */
 
-.form-group .help-block,
+fieldset .help-block,
 .group .help-block {
   float: none;
   margin: -1em 0 0 30%;
@@ -10141,54 +10167,54 @@ legend {
   padding: 0 0.75em;
 }
 
-/* line 306, ../../app/styles/main.scss */
+/* line 327, ../../app/styles/main.scss */
 
-.form-group .help-block:last-child,
+fieldset .help-block:last-child,
 .group .help-block:last-child {
   margin-bottom: 0.75em;
 }
 
-/* line 309, ../../app/styles/main.scss */
+/* line 330, ../../app/styles/main.scss */
 
-.form-group .help-block + input,
+fieldset .help-block + input,
 .group .help-block + input {
   margin-top: 1.25em;
 }
 
-/* line 312, ../../app/styles/main.scss */
+/* line 333, ../../app/styles/main.scss */
 
-.form-group .help-block + .help-block,
+fieldset .help-block + .help-block,
 .group .help-block + .help-block {
   margin-top: 1em;
 }
 
-/* line 316, ../../app/styles/main.scss */
+/* line 337, ../../app/styles/main.scss */
 
-.form-group ul,
+fieldset ul,
 .group ul {
   float: none;
   margin: 0.75em 0 1.75em 30%;
   font-size: .75em;
 }
 
-/* line 320, ../../app/styles/main.scss */
+/* line 341, ../../app/styles/main.scss */
 
-.form-group ul:last-child,
+fieldset ul:last-child,
 .group ul:last-child {
   margin-bottom: 0.75em;
 }
 
-/* line 323, ../../app/styles/main.scss */
+/* line 344, ../../app/styles/main.scss */
 
-.form-group ul + input,
+fieldset ul + input,
 .group ul + input {
   margin-top: 1.25em;
 }
 
-/* line 327, ../../app/styles/main.scss */
+/* line 348, ../../app/styles/main.scss */
 
-.form-group .radio,
-.form-group .checkbox,
+fieldset .radio,
+fieldset .checkbox,
 .group .radio,
 .group .checkbox {
   line-height: 1.25em;
@@ -10201,10 +10227,10 @@ legend {
 
 /* line 36, ../../app/styles/main.scss */
 
-.form-group .radio:before,
-.form-group .radio:after,
-.form-group .checkbox:before,
-.form-group .checkbox:after,
+fieldset .radio:before,
+fieldset .radio:after,
+fieldset .checkbox:before,
+fieldset .checkbox:after,
 .group .radio:before,
 .group .radio:after,
 .group .checkbox:before,
@@ -10215,39 +10241,39 @@ legend {
 
 /* line 40, ../../app/styles/main.scss */
 
-.form-group .radio:after,
-.form-group .checkbox:after,
+fieldset .radio:after,
+fieldset .checkbox:after,
 .group .radio:after,
 .group .checkbox:after {
   clear: both;
 }
 
-/* line 335, ../../app/styles/main.scss */
+/* line 356, ../../app/styles/main.scss */
 
-.form-group .radio label,
-.form-group .checkbox label,
+fieldset .radio label,
+fieldset .checkbox label,
 .group .radio label,
 .group .checkbox label {
   vertical-align: bottom;
   margin-left: .5em;
 }
 
-/* line 339, ../../app/styles/main.scss */
+/* line 360, ../../app/styles/main.scss */
 
-.form-group .radio + .help-block,
-.form-group .checkbox + .help-block,
+fieldset .radio + .help-block,
+fieldset .checkbox + .help-block,
 .group .radio + .help-block,
 .group .checkbox + .help-block {
   padding-left: 2.75em;
   margin-top: .25em;
 }
 
-/* line 357, ../../app/styles/main.scss */
+/* line 378, ../../app/styles/main.scss */
 
-.form-group .radio .iradio,
-.form-group .radio .icheckbox,
-.form-group .checkbox .iradio,
-.form-group .checkbox .icheckbox,
+fieldset .radio .iradio,
+fieldset .radio .icheckbox,
+fieldset .checkbox .iradio,
+fieldset .checkbox .icheckbox,
 .group .radio .iradio,
 .group .radio .icheckbox,
 .group .checkbox .iradio,
@@ -10255,12 +10281,12 @@ legend {
   display: inline-block;
 }
 
-/* line 359, ../../app/styles/main.scss */
+/* line 380, ../../app/styles/main.scss */
 
-.form-group .radio .iradio.focus,
-.form-group .radio .icheckbox.focus,
-.form-group .checkbox .iradio.focus,
-.form-group .checkbox .icheckbox.focus,
+fieldset .radio .iradio.focus,
+fieldset .radio .icheckbox.focus,
+fieldset .checkbox .iradio.focus,
+fieldset .checkbox .icheckbox.focus,
 .group .radio .iradio.focus,
 .group .radio .icheckbox.focus,
 .group .checkbox .iradio.focus,
@@ -10271,12 +10297,12 @@ legend {
   border-radius: 4px;
 }
 
-/* line 363, ../../app/styles/main.scss */
+/* line 384, ../../app/styles/main.scss */
 
-.form-group .radio .iradio.disabled,
-.form-group .radio .icheckbox.disabled,
-.form-group .checkbox .iradio.disabled,
-.form-group .checkbox .icheckbox.disabled,
+fieldset .radio .iradio.disabled,
+fieldset .radio .icheckbox.disabled,
+fieldset .checkbox .iradio.disabled,
+fieldset .checkbox .icheckbox.disabled,
 .group .radio .iradio.disabled,
 .group .radio .icheckbox.disabled,
 .group .checkbox .iradio.disabled,
@@ -10284,12 +10310,12 @@ legend {
   cursor: not-allowed;
 }
 
-/* line 365, ../../app/styles/main.scss */
+/* line 386, ../../app/styles/main.scss */
 
-.form-group .radio .iradio.disabled + label,
-.form-group .radio .icheckbox.disabled + label,
-.form-group .checkbox .iradio.disabled + label,
-.form-group .checkbox .icheckbox.disabled + label,
+fieldset .radio .iradio.disabled + label,
+fieldset .radio .icheckbox.disabled + label,
+fieldset .checkbox .iradio.disabled + label,
+fieldset .checkbox .icheckbox.disabled + label,
 .group .radio .iradio.disabled + label,
 .group .radio .icheckbox.disabled + label,
 .group .checkbox .iradio.disabled + label,
@@ -10298,12 +10324,12 @@ legend {
   color: #D7DCDE;
 }
 
-/* line 370, ../../app/styles/main.scss */
+/* line 391, ../../app/styles/main.scss */
 
-.form-group .radio .iradio + label,
-.form-group .radio .icheckbox + label,
-.form-group .checkbox .iradio + label,
-.form-group .checkbox .icheckbox + label,
+fieldset .radio .iradio + label,
+fieldset .radio .icheckbox + label,
+fieldset .checkbox .iradio + label,
+fieldset .checkbox .icheckbox + label,
 .group .radio .iradio + label,
 .group .radio .icheckbox + label,
 .group .checkbox .iradio + label,
@@ -10313,12 +10339,12 @@ legend {
   transition: color ease 0.25s;
 }
 
-/* line 374, ../../app/styles/main.scss */
+/* line 395, ../../app/styles/main.scss */
 
-.form-group .radio .iradio.checked + label,
-.form-group .radio .icheckbox.checked + label,
-.form-group .checkbox .iradio.checked + label,
-.form-group .checkbox .icheckbox.checked + label,
+fieldset .radio .iradio.checked + label,
+fieldset .radio .icheckbox.checked + label,
+fieldset .checkbox .iradio.checked + label,
+fieldset .checkbox .icheckbox.checked + label,
 .group .radio .iradio.checked + label,
 .group .radio .icheckbox.checked + label,
 .group .checkbox .iradio.checked + label,
@@ -10326,28 +10352,28 @@ legend {
   color: #333;
 }
 
-/* line 378, ../../app/styles/main.scss */
+/* line 399, ../../app/styles/main.scss */
 
-.form-group .radio:first-child,
-.form-group .checkbox:first-child,
+fieldset .radio:first-child,
+fieldset .checkbox:first-child,
 .group .radio:first-child,
 .group .checkbox:first-child {
   margin-top: .75em;
 }
 
-/* line 381, ../../app/styles/main.scss */
+/* line 402, ../../app/styles/main.scss */
 
-.form-group .radio:last-child,
-.form-group .checkbox:last-child,
+fieldset .radio:last-child,
+fieldset .checkbox:last-child,
 .group .radio:last-child,
 .group .checkbox:last-child {
   margin-bottom: .75em;
 }
 
-/* line 384, ../../app/styles/main.scss */
+/* line 405, ../../app/styles/main.scss */
 
-.form-group .radio .iradio.focus,
-.form-group .checkbox .iradio.focus,
+fieldset .radio .iradio.focus,
+fieldset .checkbox .iradio.focus,
 .group .radio .iradio.focus,
 .group .checkbox .iradio.focus {
   -ms-border-radius: 50%;
@@ -10355,31 +10381,31 @@ legend {
   border-radius: 50%;
 }
 
-/* line 389, ../../app/styles/main.scss */
+/* line 410, ../../app/styles/main.scss */
 
-.form-group select + .help-block,
+fieldset select + .help-block,
 .group select + .help-block {
   margin-top: 1.25em;
 }
 
-/* line 410, ../../app/styles/main.scss */
+/* line 431, ../../app/styles/main.scss */
 
-.form-group input + input,
-.form-group input + textarea,
-.form-group input + select,
-.form-group input + .dropzone,
-.form-group textarea + input,
-.form-group textarea + textarea,
-.form-group textarea + select,
-.form-group textarea + .dropzone,
-.form-group select + input,
-.form-group select + textarea,
-.form-group select + select,
-.form-group select + .dropzone,
-.form-group .dropzone + input,
-.form-group .dropzone + textarea,
-.form-group .dropzone + select,
-.form-group .dropzone + .dropzone,
+fieldset input + input,
+fieldset input + textarea,
+fieldset input + select,
+fieldset input + .dropzone,
+fieldset textarea + input,
+fieldset textarea + textarea,
+fieldset textarea + select,
+fieldset textarea + .dropzone,
+fieldset select + input,
+fieldset select + textarea,
+fieldset select + select,
+fieldset select + .dropzone,
+fieldset .dropzone + input,
+fieldset .dropzone + textarea,
+fieldset .dropzone + select,
+fieldset .dropzone + .dropzone,
 .group input + input,
 .group input + textarea,
 .group input + select,
@@ -10399,7 +10425,7 @@ legend {
   margin-top: -0.5em;
 }
 
-/* line 415, ../../app/styles/main.scss */
+/* line 436, ../../app/styles/main.scss */
 
 .pill {
   background-color: white;
@@ -10415,28 +10441,28 @@ legend {
   vertical-align: text-top;
 }
 
-/* line 425, ../../app/styles/main.scss */
+/* line 446, ../../app/styles/main.scss */
 
 .pill.success {
   background-color: #1abc9c;
   color: white;
 }
 
-/* line 429, ../../app/styles/main.scss */
+/* line 450, ../../app/styles/main.scss */
 
 .pill.warn {
   background-color: #f9b233;
   color: white;
 }
 
-/* line 433, ../../app/styles/main.scss */
+/* line 454, ../../app/styles/main.scss */
 
 .pill.error {
   background-color: #f22d23;
   color: white;
 }
 
-/* line 439, ../../app/styles/main.scss */
+/* line 460, ../../app/styles/main.scss */
 
 a.pill:hover,
 a.pill:focus {
@@ -10446,7 +10472,7 @@ a.pill:focus {
   outline: none;
 }
 
-/* line 459, ../../app/styles/main.scss */
+/* line 480, ../../app/styles/main.scss */
 
 .container table {
   background: #f7f4f2;
@@ -10456,14 +10482,14 @@ a.pill:focus {
   margin-bottom: 0.25em;
 }
 
-/* line 461, ../../app/styles/main.scss */
+/* line 482, ../../app/styles/main.scss */
 
 .container table.table-striped > tbody > tr:nth-child(odd) > td,
 .container table.table-striped > tbody > tr:nth-child(odd) > th {
   background: #fdfaf8;
 }
 
-/* line 469, ../../app/styles/main.scss */
+/* line 490, ../../app/styles/main.scss */
 
 .container table thead tr th {
   padding: 1em 0 0 .25em;
@@ -10474,13 +10500,13 @@ a.pill:focus {
   border-bottom: 1px solid #aaaaaa;
 }
 
-/* line 476, ../../app/styles/main.scss */
+/* line 497, ../../app/styles/main.scss */
 
 .container table thead tr th:first-of-type {
   padding-left: 1em;
 }
 
-/* line 484, ../../app/styles/main.scss */
+/* line 505, ../../app/styles/main.scss */
 
 .container table tfoot tr td {
   padding: 0 0 1em .25em;
@@ -10491,13 +10517,13 @@ a.pill:focus {
   border-top: 1px solid #aaaaaa;
 }
 
-/* line 491, ../../app/styles/main.scss */
+/* line 512, ../../app/styles/main.scss */
 
 .container table tfoot tr td:first-of-type {
   padding-left: 1em;
 }
 
-/* line 499, ../../app/styles/main.scss */
+/* line 520, ../../app/styles/main.scss */
 
 .container table tbody tr td {
   line-height: -webkit-calc(2.5rem - 1px);
@@ -10505,13 +10531,13 @@ a.pill:focus {
   padding: 0.25em;
 }
 
-/* line 502, ../../app/styles/main.scss */
+/* line 523, ../../app/styles/main.scss */
 
 .container table tbody tr td:first-of-type {
   padding-left: .75em;
 }
 
-/* line 509, ../../app/styles/main.scss */
+/* line 530, ../../app/styles/main.scss */
 
 .container span.status {
   width: 1.25em;
@@ -10520,13 +10546,13 @@ a.pill:focus {
   height: .7em;
 }
 
-/* line 514, ../../app/styles/main.scss */
+/* line 535, ../../app/styles/main.scss */
 
 .container span.status:before {
   margin: 0;
 }
 
-/* line 519, ../../app/styles/main.scss */
+/* line 540, ../../app/styles/main.scss */
 
 .container .status:before {
   content: "";
@@ -10540,7 +10566,7 @@ a.pill:focus {
   margin: .25em 0 0 0;
 }
 
-/* line 530, ../../app/styles/main.scss */
+/* line 551, ../../app/styles/main.scss */
 
 .container .status.on:before,
 .container .status.success:before,
@@ -10548,7 +10574,7 @@ a.pill:focus {
   background-color: #1abc9c;
 }
 
-/* line 535, ../../app/styles/main.scss */
+/* line 556, ../../app/styles/main.scss */
 
 .container .status.off:before,
 .container .status.error:before,
@@ -10556,13 +10582,13 @@ a.pill:focus {
   background-color: #f22d23;
 }
 
-/* line 538, ../../app/styles/main.scss */
+/* line 559, ../../app/styles/main.scss */
 
 .container .status.warn:before {
   background-color: #f9b233;
 }
 
-/* line 545, ../../app/styles/main.scss */
+/* line 566, ../../app/styles/main.scss */
 
 .dropzone {
   margin: 1.25em 0;
@@ -10570,13 +10596,13 @@ a.pill:focus {
   color: white;
 }
 
-/* line 557, ../../app/styles/main.scss */
+/* line 578, ../../app/styles/main.scss */
 
 .dropzone .fallback input[type="file"] {
   margin: 0.25em .75em;
 }
 
-/* line 560, ../../app/styles/main.scss */
+/* line 581, ../../app/styles/main.scss */
 
 .dropzone .dz-preview {
   box-shadow: none;
@@ -10587,19 +10613,19 @@ a.pill:focus {
   margin: 19px 19px 5px 19px;
 }
 
-/* line 565, ../../app/styles/main.scss */
+/* line 586, ../../app/styles/main.scss */
 
 .dropzone .dz-preview:last-of-type {
   margin-bottom: 19px;
 }
 
-/* line 568, ../../app/styles/main.scss */
+/* line 589, ../../app/styles/main.scss */
 
 .dropzone .dz-preview .dz-remove {
   cursor: pointer;
 }
 
-/* line 570, ../../app/styles/main.scss */
+/* line 591, ../../app/styles/main.scss */
 
 .dropzone .dz-preview .dz-remove:focus {
   box-shadow: 0 0 0 3px #9fcaec;
@@ -10607,20 +10633,20 @@ a.pill:focus {
   outline: none;
 }
 
-/* line 574, ../../app/styles/main.scss */
+/* line 595, ../../app/styles/main.scss */
 
 .dropzone .dz-preview .dz-details {
   color: #666;
 }
 
-/* line 577, ../../app/styles/main.scss */
+/* line 598, ../../app/styles/main.scss */
 
 .dropzone .dz-preview .dz-remove {
   background: white;
   background-image: none;
 }
 
-/* line 586, ../../app/styles/main.scss */
+/* line 607, ../../app/styles/main.scss */
 
 .select2-search input {
   background: none;
@@ -10629,27 +10655,27 @@ a.pill:focus {
   border-radius: 3px;
 }
 
-/* line 592, ../../app/styles/main.scss */
+/* line 613, ../../app/styles/main.scss */
 
 .select2-drop {
   box-shadow: none;
   color: #555555;
 }
 
-/* line 595, ../../app/styles/main.scss */
+/* line 616, ../../app/styles/main.scss */
 
 .select2-drop.select2-drop-above {
   box-shadow: none;
 }
 
-/* line 598, ../../app/styles/main.scss */
+/* line 619, ../../app/styles/main.scss */
 
 .select2-drop .select2-disabled {
   background: none;
   color: #CCC;
 }
 
-/* line 602, ../../app/styles/main.scss */
+/* line 623, ../../app/styles/main.scss */
 
 .select2-drop .select2-highlighted {
   background: #1abc9c;
@@ -10658,7 +10684,7 @@ a.pill:focus {
   border-radius: 3px;
 }
 
-/* line 609, ../../app/styles/main.scss */
+/* line 630, ../../app/styles/main.scss */
 
 div.select2-container-active .select2-choice,
 div.select2-container-active .select2-choices {
@@ -10669,7 +10695,7 @@ div.select2-container-active .select2-choices {
   border: 1px solid transparent;
 }
 
-/* line 616, ../../app/styles/main.scss */
+/* line 637, ../../app/styles/main.scss */
 
 .select2-dropdown-open.select2-drop-above .select2-choice,
 .select2-dropdown-open.select2-drop-above .select2-choices {
@@ -10678,13 +10704,13 @@ div.select2-container-active .select2-choices {
   border: 1px solid transparent;
 }
 
-/* line 621, ../../app/styles/main.scss */
+/* line 642, ../../app/styles/main.scss */
 
 .select2-drop.select2-drop-above.select2-drop-active {
   border-top: 3px solid #9FCAEC;
 }
 
-/* line 625, ../../app/styles/main.scss */
+/* line 646, ../../app/styles/main.scss */
 
 .select2-drop-active {
   border: 3px solid #9FCAEC;
@@ -10694,7 +10720,7 @@ div.select2-container-active .select2-choices {
   margin-left: -3px;
 }
 
-/* line 631, ../../app/styles/main.scss */
+/* line 652, ../../app/styles/main.scss */
 
 .select2-drop-active .select2-results .select2-no-results {
   border-radius: 3px;
@@ -10702,13 +10728,13 @@ div.select2-container-active .select2-choices {
   padding: 0 0 0 .25em;
 }
 
-/* line 639, ../../app/styles/main.scss */
+/* line 660, ../../app/styles/main.scss */
 
 .select2-choice {
   border: 1px solid #CCC;
 }
 
-/* line 643, ../../app/styles/main.scss */
+/* line 664, ../../app/styles/main.scss */
 
 .select2-container {
   width: 70%;
@@ -10716,7 +10742,7 @@ div.select2-container-active .select2-choices {
   display: block;
 }
 
-/* line 647, ../../app/styles/main.scss */
+/* line 668, ../../app/styles/main.scss */
 
 .select2-container .select2-choice {
   height: 2.75em;
@@ -10729,7 +10755,7 @@ div.select2-container-active .select2-choices {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
-/* line 655, ../../app/styles/main.scss */
+/* line 676, ../../app/styles/main.scss */
 
 .select2-container .select2-choice .select2-arrow {
   background: white;
@@ -10737,25 +10763,25 @@ div.select2-container-active .select2-choices {
   border-left: none;
 }
 
-/* line 658, ../../app/styles/main.scss */
+/* line 679, ../../app/styles/main.scss */
 
 .select2-container .select2-choice .select2-arrow b {
   background-position: 0 8px;
 }
 
-/* line 663, ../../app/styles/main.scss */
+/* line 684, ../../app/styles/main.scss */
 
 .select2-container:last-child {
   margin-bottom: 0.25em;
 }
 
-/* line 668, ../../app/styles/main.scss */
+/* line 689, ../../app/styles/main.scss */
 
 .select2-container-multi {
   font-size: 1.25em;
 }
 
-/* line 671, ../../app/styles/main.scss */
+/* line 692, ../../app/styles/main.scss */
 
 .select2-container-multi.select2-container-active .select2-choices,
 .select2-container-multi.select2-dropdown-open .select2-choices {
@@ -10766,7 +10792,7 @@ div.select2-container-active .select2-choices {
   border: 1px solid transparent;
 }
 
-/* line 678, ../../app/styles/main.scss */
+/* line 699, ../../app/styles/main.scss */
 
 .select2-container-multi .select2-choices {
   min-height: 3em;
@@ -10778,13 +10804,13 @@ div.select2-container-active .select2-choices {
   border-radius: 3px;
 }
 
-/* line 684, ../../app/styles/main.scss */
+/* line 705, ../../app/styles/main.scss */
 
 .select2-container-multi .select2-choices .select2-search-field input {
   padding: .5em 0 0em .5em;
 }
 
-/* line 688, ../../app/styles/main.scss */
+/* line 709, ../../app/styles/main.scss */
 
 .select2-container-multi .select2-choices .select2-search-choice {
   padding-top: 4px;
@@ -10801,7 +10827,7 @@ div.select2-container-active .select2-choices {
   margin: .4em 0 .25em .3em;
 }
 
-/* line 698, ../../app/styles/main.scss */
+/* line 719, ../../app/styles/main.scss */
 
 .select2-container-multi .select2-choices .select2-search-choice.select2-search-choice-focus {
   background: #1abc9c;
@@ -10810,21 +10836,21 @@ div.select2-container-active .select2-choices {
   color: white;
 }
 
-/* line 704, ../../app/styles/main.scss */
+/* line 725, ../../app/styles/main.scss */
 
 .select2-container-multi .select2-choices .select2-search-choice div {
   line-height: 1.5em;
   margin: 0 .75em;
 }
 
-/* line 708, ../../app/styles/main.scss */
+/* line 729, ../../app/styles/main.scss */
 
 .select2-container-multi .select2-choices .select2-search-choice .select2-search-choice-close {
   top: 8em;
   left: 10em;
 }
 
-/* line 721, ../../app/styles/main.scss */
+/* line 742, ../../app/styles/main.scss */
 
 .btn.btn-default:hover,
 .btn.btn-default:focus {
@@ -10832,7 +10858,7 @@ div.select2-container-active .select2-choices {
   color: white;
 }
 
-/* line 729, ../../app/styles/main.scss */
+/* line 750, ../../app/styles/main.scss */
 
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
