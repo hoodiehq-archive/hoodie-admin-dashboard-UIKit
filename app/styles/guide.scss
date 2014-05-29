@@ -14,6 +14,8 @@ pre[class*="language-"] {
   padding: 1em 1em .75em 1em;
   border: none;
   background: #F7F4F2;
+  margin: .5em 0;
+  border-radius: .5em;
   .string,
   .attr-name{
     color: $lightGreen;
@@ -27,4 +29,19 @@ pre[class*="language-"] {
   .tag{
     color: $darkGreen;
   }
+  & + p{
+    margin-top: 1em;
+  }
+}
+
+.bottomArrow:after{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 1em;
+  bottom: -7px;
+  border-top: 7px solid #F7F4F2;
+  border-left: 7px solid rgba(0, 0, 0, 0);
+  border-right: 7px solid rgba(0, 0, 0, 0);
 }

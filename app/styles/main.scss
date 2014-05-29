@@ -107,6 +107,18 @@ a {
   }
 }
 
+.container p > a{
+  padding: 0.15em .25em;
+  &:hover,&:focus{
+    background: $lightGreen;
+    border-radius: 4px;
+    color: #FFF;
+    text-decoration: none;
+    padding: 0.15em .25em;
+    outline: none;
+  }
+}
+
 h1{
   font-size: 2em;
   line-height: 1.75em;
@@ -126,7 +138,7 @@ h3{
   font-size: 1em;
   line-height: 1.25em;
   margin-bottom: .5em;
-  margin-top: 0;
+  margin-top: 1em;
   margin-left: .25em;
   font-weight: bold;
 }
@@ -176,35 +188,83 @@ legend{
 }
 
 .btn{
-  margin: .5em 0 .5em 30%;
+  margin: .5em 0 .5em .5em;
   background: $white;
   border: 1px solid #CCC;
   color: $mediumGrey;
+  position: relative;
+  @include transition(all ease 0.25s);
+  &:first-of-type{
+    margin-left: 30%;
+  }
   &:hover,
   &:focus{
-    background: $lightGreen;
+    background: $lightBlue;
     color: $white;
-    border: 1px solid $darkGreen;
+    border: 1px solid $strongLightBlue;
   }
   &:focus{
     @include focus;
   }
+  &.success,
+  &.ok{
+    background-color: $lightGreen;
+    border: 1px solid $darkGreen;
+    color: $white;
+    &:hover{
+      background-color: darken( $lightGreen, 10% );
+    }
+  }
+  &.danger,
+  &.cancel,
+  &.error{
+    background-color: $red;
+    border: 1px solid $red;
+    color: $white;
+    &:hover{
+      background-color: darken( $red, 10% );
+      border-color: darken( $red, 10% );
+    }
+  }
+  &.careful,
+  &.waiting{
+    background-color: $yellow;
+    border: 1px solid $yellow;
+    color: $white;
+    &:hover{
+      background-color: darken( $yellow, 10% );
+      border-color: darken( $yellow, 10% );
+    }
+  }
+  &.unobtrusive{
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: $mediumGrey;
+    &:hover{
+      border: 1px solid #CCC;
+    }
+  }
 }
 
-form .form-control{
-  width: 70%;
+form{
+  position: relative;
+  .form-control{
+    width: 70%;
+  }
 }
 
 fieldset, .group{
   @include clearfix;
+  position: relative;
   background: $lightGrey;
   border-radius: 0.5em;
   padding: 0 0.25em 0 0.5em;
   margin-bottom: .25em;
   &>label{
     @include label;
+    margin-top: 0.5em;
     &:last-of-type{
-      margin-top: 0;
+      margin-top: 0.5em;
     }
     &:first-child{
       margin-top: 0.75em;
@@ -285,11 +345,33 @@ fieldset, .group{
     display: block;
     width: 70%;
     margin: $inputDistance 0 $inputDistance $labelColWidth;
-    &:required:invalid,
-    &:focus:invalid{
-      background-image: url('../images/required_form.png');
-      background-repeat: no-repeat;
-      background-position: calc(100% - 10px) center;
+    &[pattern],
+    &[type="datetime"],
+    &[type="datetime-local"],
+    &[type="date"],
+    &[type="month"],
+    &[type="time"],
+    &[type="week"],
+    &[type="number"],
+    &[type="email"],
+    &[type="url"],
+    &[type="tel"],
+    &[type="color"]{
+      &.valid,
+      &:valid,
+      &:required:valid{
+        background-image: url('../images/valid_form.png');
+        background-repeat: no-repeat;
+        background-position: calc(100% - 10px) center;
+      }
+      &:invalid,
+      &:required:invalid,
+      &:focus:invalid,
+      &.invalid{
+        background-image: url('../images/invalid_form.png');
+        background-repeat: no-repeat;
+        background-position: calc(100% - 10px) center;
+      }
     }
     &.valid,
     &:required:valid{
@@ -297,6 +379,8 @@ fieldset, .group{
       background-repeat: no-repeat;
       background-position: calc(100% - 10px) center;
     }
+    &:required:invalid,
+    &:focus:invalid,
     &.invalid{
       background-image: url('../images/invalid_form.png');
       background-repeat: no-repeat;
@@ -399,7 +483,7 @@ fieldset, .group{
         @include border-radius($input-border-radius);
       }
       &.disabled{
-        cursor: not-allowed;
+
         & + label{
           cursor: not-allowed;
           color: #D7DCDE;
@@ -425,7 +509,7 @@ fieldset, .group{
   }
   select{
     & + .help-block{
-      margin-top: 1.25em;
+      margin-top: -.75em;
     }
   }
   // Bit daft, but input elements that immediately follow each other
@@ -448,6 +532,10 @@ fieldset, .group{
   .dropzone + .dropzone {
     margin-top: -$inputMargin;
   }
+}
+
+.group{
+  padding: 0;
 }
 
 .pill{
@@ -499,6 +587,7 @@ p .pill{
     &.table-striped > tbody > tr:nth-child(odd) > th{
       background: $zebraGrey;
     }
+    position: relative;
     background: $lightGrey;
     @include border-radius(.5em);
     margin-bottom: 0.25em;

@@ -66,14 +66,13 @@
   <h2>Inputs</h2>
   <p>If you've got input elements, please always put them inside a form element and group them in fieldsets. Each input should have a label above that references the input in its <code>for</code>-attribute, and optionally a help text below. Your only concession to Bootstrap is having to give inputs the class <code>form-control</code>.</p>
 
-  <form>
+  <form class="bottomArrow">
     <fieldset>
       <label for="input-1">Text input</label>
       <input type="text" class="form-control" id="input-1" placeholder="placeholder">
       <p class="help-block">Example block-level help text.</p>
     </fieldset>
   </form>
-
   <pre><code class="language-markup">&lt;form>
   &lt;fieldset>
     &lt;label for="input-1">Password&lt;/label>
@@ -81,10 +80,38 @@
     &lt;p class="help-block">Example block-level help text here.&lt;/p>
   &lt;/fieldset>
 &lt;/form></code></pre>
-
+  <h3>Validation and Field Types</h3>
+  <p>This input is <code>type="email"</code> and required, so it's marked with an exclamation mark over there on the right. Once you enter a valid email, that exclamation mark will be replaced by a green check mark. This is how all HTML5 form validation features (required, patterns and types) are handled in Pocket.</p>
+  <p>Please let users know which fields are required by stating so in the <code>help-block</code> paragraph.</p>
+  <form class="bottomArrow">
+    <fieldset>
+      <input type="email" class="form-control" placeholder="Enter email" required>
+      <p class="help-block">Required, must be a valid email address</p>
+    </fieldset>
+  </form>
+  <pre><code class="language-markup">&lt;form>
+  &lt;fieldset>
+    &lt;input type="email" class="form-control" placeholder="Enter email"   required>
+    &lt;p class="help-block">Required, must be a valid email address&lt;/p>
+  &lt;/fieldset>
+&lt;/form></code></pre>
+  <p>Here's an optional input field with pattern validation. It's marked as valid initially because it's optional, and an empty value is ok. It will switch to invalid as soon as it contains anything that's not an IPv4 address.</p>
+  <form class="bottomArrow">
+    <fieldset>
+      <input type="text" pattern="\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}" class="form-control" placeholder="Enter IPv4 address">
+      <p class="help-block">Optional, must be a valid IPv4 address</p>
+    </fieldset>
+  </form>
+  <pre><code class="language-markup">&lt;form>
+  &lt;fieldset>
+    &lt;input type="text" pattern="\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}" class="form-control" placeholder="Enter IPv4 address">
+    &lt;p class="help-block">Optional, must be a valid IPv4 address&lt;/p>
+  &lt;/fieldset>
+&lt;/form></code></pre>
+  <p>You can add the validation icons to any input manually by giving it the <code>.valid</code> or <code>.invalid</code> class.</p>
   <h2>Checkboxes</h2>
   <p>Checkboxes use the <a href="http://fronteed.com/iCheck/">iCheck</a> library to make them nicer across all platforms. This is automatic as long as you adhere to the following structure:</p>
-  <form>
+  <form class="bottomArrow">
     <fieldset>
       <div class="checkbox">
         <input type="checkbox" id="checkbox-1" checked>
@@ -114,7 +141,7 @@
 &lt;/form></code></pre>
   <h2>Radio Buttons</h2>
   <p>Radio buttons use the <a href="http://fronteed.com/iCheck/">iCheck</a> library to make them nicer across all platforms. This is automatic as long as you adhere to the following structure:</p>
-  <form>
+  <form class="bottomArrow">
     <fieldset>
       <label>Please select something</label>
       <div class="radio">
@@ -127,24 +154,30 @@
       </div>
       <div class="radio">
         <input type="radio" id="flat-radio-disabled" name="radio-group-1" disabled>
-        <label for="flat-radio-disabled">Disabled</label>
-      </div>
-    </fieldset>
-    <fieldset>
-      <label>Please select something</label>
-      <div class="radio">
-        <input type="radio" id="flat-radio-5" name="radio-group-2">
-        <label for="flat-radio-5">Radio button 1</label>
-      </div>
-      <div class="radio">
-        <input type="radio" id="flat-radio-6" name="radio-group-2" checked>
-        <label for="flat-radio-6">Radio button 2</label>
+        <label for="flat-radio-disabled">Disabled radio button</label>
       </div>
     </fieldset>
   </form>
+  <pre><code class="language-markup">&lt;form>
+  &lt;fieldset>
+    &lt;label>Please select something&lt;/label>
+    &lt;div class="radio">
+      &lt;input type="radio" id="flat-radio-1" name="radio-group-1">
+      &lt;label for="flat-radio-1">Radio button 1&lt;/label>
+    &lt;/div>
+    &lt;div class="radio">
+      &lt;input type="radio" id="flat-radio-2" name="radio-group-1" checked>
+      &lt;label for="flat-radio-2">Radio button 2&lt;/label>
+    &lt;/div>
+    &lt;div class="radio">
+      &lt;input type="radio" id="flat-radio-disabled" name="radio-group-1" disabled>
+      &lt;label for="flat-radio-disabled">Disabled radio button&lt;/label>
+    &lt;/div>
+  &lt;/fieldset>
+&lt;/form></code></pre>
   <h2>Select Dropdowns</h2>
   <p>Select dropdowns are enhanced with the wonderful <a href="http://ivaynberg.github.io/select2/index.html">Select2 library</a>, giving you better styling as well as more usable multi-selection and autocomplete.</p>
-  <form>
+  <form class="bottomArrow">
     <fieldset>
       <label>Please select one thing</label>
       <select>
@@ -171,7 +204,7 @@
   <h3>Multi-Select</h3>
   <p>To enable multiple selections, add the <code>multiple</code>-attribute to the <code>select</code> element:</p>
   <form>
-    <fieldset>
+    <fieldset class="bottomArrow">
       <label>Please select a few things</label>
       <select multiple>
         <option value="Pick me!">Pick me!</option>
@@ -195,10 +228,24 @@
   &lt;/fieldset>
 &lt;/form></code></pre>
   <h2>Buttons</h2>
-  <p>Currently, there's only one very basic type of button:</p>
-  <form>
+  <p>Currently, there's only one very basic type of button with a couple of states.</p>
+  <p>By default, buttons are beige with a blue hover state. You can add <code>.unobtrusive</code> to make less glaring buttons for canceling etc.</p>
+  <form class="bottomArrow">
     <fieldset>
-      <button class="submit btn" type="submit">Save config</button>
+      <button class="submit btn unobtrusive" type="submit">Go back</button>
+      <button class="submit btn" type="submit">Continue</button>
+    </fieldset>
+  </form>
+  <pre><code class="language-markup">&lt;form>
+  &lt;fieldset>
+    &lt;button class="submit btn unobtrusive" type="submit">Go back&lt;/button>
+    &lt;button class="submit btn" type="submit">Continue&lt;/button>
+  &lt;/fieldset>
+&lt;/form></code></pre>
+  <p>Make buttons green with <code>.ok</code> or <code>.success</code>.</p>
+  <form class="bottomArrow">
+    <fieldset>
+      <button class="submit btn ok" type="submit">Save</button>
     </fieldset>
   </form>
   <pre><code class="language-markup">&lt;form>
@@ -206,10 +253,110 @@
     &lt;button class="submit btn" type="submit">Save config&lt;/button>
   &lt;/fieldset>
 &lt;/form></code></pre>
+  <p>Make buttons orange with <code>.careful</code>.</p>
+  <form class="bottomArrow">
+    <fieldset>
+      <button class="submit btn careful" type="submit">Change URL</button>
+    </fieldset>
+  </form>
+  <pre><code class="language-markup">&lt;form>
+  &lt;fieldset>
+    &lt;button class="submit btn careful" type="submit">Change URL&lt;/button>
+  &lt;/fieldset>
+&lt;/form></code></pre>
+  <p>Make buttons red with <code>.danger</code>, <code>.cancel</code> or <code>.error</code>.</p>
+  <form class="bottomArrow">
+    <fieldset>
+      <button class="submit btn danger" type="submit">Delete all the things!</button>
+      <button class="submit btn unobtrusive" type="submit">Cancel</button>
+    </fieldset>
+  </form>
+  <pre><code class="language-markup">&lt;form>
+  &lt;fieldset>
+    &lt;button class="submit btn danger" type="submit">Delete all the things!&lt;/button>
+    &lt;button class="submit btn unobtrusive" type="submit">Cancel&lt;/button>
+  &lt;/fieldset>
+&lt;/form></code></pre>
+  <h2>Example Form</h2>
+  <p>Let's put everything we've seen so far together:</p>
+  <form class="bottomArrow">
+    <h2>User Information</h2>
+    <fieldset>
+      <label>User name</label>
+      <input type="text" class="form-control" id="username" name="appName" placeholder="User name" required>
+      <label>User's Twitter handle</label>
+      <input type="text" class="form-control" id="twitterhandle" name="appName" placeholder="Twitter handle">
+      <label>Role</label>
+      <select>
+        <option value="admin">Admin</option>
+        <option value="editor">Editor</option>
+        <option value="user">User</option>
+        <option value="guest" selected="selected">Guest</option>
+      </select>
+      <div class="checkbox">
+        <input type="checkbox" id="example-checkbox-1" checked>
+        <label for="example-checkbox-1">Wants to receive newsletter</label>
+      </div>
+      <div class="group"><label>Meal selection</label>
+        <div class="radio">
+          <input type="radio" id="example-radio-1" name="example-group-1" checked>
+          <label for="example-radio-1">Regular</label>
+        </div>
+        <div class="radio">
+          <input type="radio" id="example-radio-2" name="example-group-1" >
+          <label for="example-radio-2">Vegetarian</label>
+        </div>
+        <div class="radio">
+          <input type="radio" id="example-radio-3" name="example-group-1">
+          <label for="example-radio-3">Vegan</label>
+        </div>
+      </div>
+      <button class="submit btn careful" type="submit">Save</button>
+      <button class="submit btn unobtrusive" type="submit">Cancel</button>
+    </fieldset>
+  </form>
+  <pre><code class="language-markup">&lt;form>
+  &lt;h2>User Information&lt;/h2>
+  &lt;fieldset>
+    &lt;label>User name&lt;/label>
+    &lt;input type="text" class="form-control" id="username" name="appName" placeholder="User name" required>
+    &lt;label>User's Twitter handle&lt;/label>
+    &lt;input type="text" class="form-control" id="twitterhandle" name="appName" placeholder="Twitter handle">
+    &lt;label>Role&lt;/label>
+    &lt;select>
+      &lt;option value="admin">Admin&lt;/option>
+      &lt;option value="editor">Editor&lt;/option>
+      &lt;option value="user">User&lt;/option>
+      &lt;option value="guest" selected="selected">Guest&lt;/option>
+    &lt;/select>
+    &lt;div class="checkbox">
+      &lt;input type="checkbox" id="example-checkbox-1" checked>
+      &lt;label for="example-checkbox-1">Wants to receive newsletter&lt;/label>
+    &lt;/div>
+    &lt;div class="group">
+      &lt;label>Meal selection&lt;/label>
+      &lt;div class="radio">
+        &lt;input type="radio" id="example-radio-1" name="example-group-1" checked>
+        &lt;label for="example-radio-1">Regular&lt;/label>
+      &lt;/div>
+      &lt;div class="radio">
+        &lt;input type="radio" id="example-radio-2" name="example-group-1" >
+        &lt;label for="example-radio-2">Vegetarian&lt;/label>
+      &lt;/div>
+      &lt;div class="radio">
+        &lt;input type="radio" id="example-radio-3" name="example-group-1">
+        &lt;label for="example-radio-3">Vegan&lt;/label>
+      &lt;/div>
+    &lt;/div>
+    &lt;button class="submit btn careful" type="submit">Save&lt;/button>
+    &lt;button class="submit btn unobtrusive" type="submit">Cancel&lt;/button>
+  &lt;/fieldset>
+&lt;/form></code></pre>
+  <p>Note the use of a <code>div.group</code> around the radio buttons and their label. You can use this to make sure the vertical rhythm is consistent when you've got inputs without labels (in this case, the checkbox above the radio buttons).</p>
   <h2>Tables</h2>
   <p>Tables are also pre-styled and include a number of practical helper classes, such as <code>.pill</code> for spans and links, and <code>.status</code> for status indicators.</p>
   <p>Give the table the class <code>.table-striped</code> to make it a zebra table.</p>
-  <table class="table table-striped">
+  <table class="table table-striped bottomArrow">
     <thead>
       <tr>
         <th>Username</th>
@@ -302,8 +449,7 @@
       &lt;td>&lt;a href="#">edit&lt;/a> / &lt;a href="#">delete&lt;/a>&lt;/td>
     &lt;/tr>
   &lt;/tbody>
-&lt;/table>
-  </code></pre>
+&lt;/table></code></pre>
   <p>The following table shows the use of the <code>.status</code> class, applied to individual <code>&lt;td></code> elements.</p>
   <p>You can combine <code>.status</code> with the following classes in order to colour them:</p>
   <ul>
@@ -432,14 +578,6 @@
     });
   }
 };</code></pre>
-
-  FIX: 404 at http://127.0.0.1:9000/bower_components/select2/select2.png
-
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
   </div>
 
 
