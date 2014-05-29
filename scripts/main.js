@@ -49,4 +49,18 @@ Dropzone.options.dropzoneExample = { // The camelized version of the ID of the f
 
 };
 
+$('#hmm').click(function(e){
+  e.preventDefault();
+  if($(this).hasClass('waiting')){
+    $(this).removeClass('waiting');
+    $(this).addClass('error');
+    return;
+  }
+  if($(this).hasClass('error')){
+    $(this).removeClass('error');
+    return;
+  }
+  $(this).addClass('waiting');
+});
+
 
