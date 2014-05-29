@@ -280,6 +280,14 @@ module.exports = function (grunt) {
                 dest: '<%= yeoman.dist %>/styles',
                 //src: '{,*/}.css'
                 src: 'pocket-uikit.css'
+            },
+            guidestyles: {
+                expand: true,
+                dot: true,
+                cwd: '.tmp/styles/',
+                dest: '<%= yeoman.dist %>/styles',
+                //src: '{,*/}.css'
+                src: 'guide.css'
             }
         },
         concurrent: {
@@ -332,6 +340,7 @@ module.exports = function (grunt) {
         'uglify',
         'copy:dist',
         'copy:tempstyles',
+        'copy:guidestyles',
         //'rev',
         'usemin'
     ]);
