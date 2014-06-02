@@ -1,6 +1,6 @@
 {
   "name": "hoodie-pocket-uikit",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "author": "Alex Feyerke <hello@alexfeyerke.com>",
   "description": "A UI kit for building the Pocket components of Hoodie plugins.",
   "dependencies": {},
