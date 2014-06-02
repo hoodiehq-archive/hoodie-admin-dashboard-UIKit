@@ -512,6 +512,12 @@ fieldset, .group{
       margin-top: -.75em;
     }
   }
+  button{
+    & + .help-block{
+      margin-top: 0em;
+      display: block;
+    }
+  }
   // Bit daft, but input elements that immediately follow each other
   // look better with less top margin, so:
   input + input,
@@ -582,6 +588,7 @@ p .pill{
 */
 
 .container{
+  padding-bottom: 10em;
   table{
     &.table-striped > tbody > tr:nth-child(odd) > td,
     &.table-striped > tbody > tr:nth-child(odd) > th{
