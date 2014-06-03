@@ -263,9 +263,6 @@ fieldset, .group{
   &>label{
     @include label;
     margin-top: 0.5em;
-    &:last-of-type{
-      margin-top: 0.5em;
-    }
     &:first-child{
       margin-top: 0.75em;
     }
@@ -433,6 +430,9 @@ fieldset, .group{
     }
     & + .help-block{
       margin-top: 1em;
+    }
+    & + label{
+      margin-top: 0.75em;
     }
   }
   ul{
