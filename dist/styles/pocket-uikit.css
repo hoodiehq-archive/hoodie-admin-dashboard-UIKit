@@ -9997,26 +9997,19 @@ fieldset > label,
 
 /* line 266, ../../app/styles/main.scss */
 
-fieldset > label:last-of-type,
-.group > label:last-of-type {
-  margin-top: 0.5em;
-}
-
-/* line 269, ../../app/styles/main.scss */
-
 fieldset > label:first-child,
 .group > label:first-child {
   margin-top: 0.75em;
 }
 
-/* line 272, ../../app/styles/main.scss */
+/* line 269, ../../app/styles/main.scss */
 
 fieldset > label + input,
 .group > label + input {
   margin-top: 1.25em;
 }
 
-/* line 276, ../../app/styles/main.scss */
+/* line 273, ../../app/styles/main.scss */
 
 fieldset .form-container,
 .group .form-container {
@@ -10041,14 +10034,14 @@ fieldset .form-container:after,
   clear: both;
 }
 
-/* line 280, ../../app/styles/main.scss */
+/* line 277, ../../app/styles/main.scss */
 
 fieldset .form-container:first-child,
 .group .form-container:first-child {
   margin-top: 0;
 }
 
-/* line 283, ../../app/styles/main.scss */
+/* line 280, ../../app/styles/main.scss */
 
 fieldset .form-container > label,
 .group .form-container > label {
@@ -10062,21 +10055,21 @@ fieldset .form-container > label,
   margin: .75em 0 0.75em;
 }
 
-/* line 287, ../../app/styles/main.scss */
+/* line 284, ../../app/styles/main.scss */
 
 fieldset .form-container legend,
 .group .form-container legend {
   margin-top: 0.5em;
 }
 
-/* line 292, ../../app/styles/main.scss */
+/* line 289, ../../app/styles/main.scss */
 
 fieldset .input-group input,
 .group .input-group input {
   margin-left: 0;
 }
 
-/* line 296, ../../app/styles/main.scss */
+/* line 293, ../../app/styles/main.scss */
 
 fieldset .input-group input:focus + .input-group-btn .btn,
 fieldset .input-group .input-group-btn .btn:focus,
@@ -10087,7 +10080,7 @@ fieldset .input-group .input-group-btn .btn:focus,
   outline: none;
 }
 
-/* line 299, ../../app/styles/main.scss */
+/* line 296, ../../app/styles/main.scss */
 
 fieldset .input-group .input-group-btn:last-child > .btn,
 .group .input-group .input-group-btn:last-child > .btn {
@@ -10095,14 +10088,14 @@ fieldset .input-group .input-group-btn:last-child > .btn,
   margin-top: .25em;
 }
 
-/* line 303, ../../app/styles/main.scss */
+/* line 300, ../../app/styles/main.scss */
 
 fieldset .input-group + .help-block,
 .group .input-group + .help-block {
   margin-top: 0em;
 }
 
-/* line 311, ../../app/styles/main.scss */
+/* line 308, ../../app/styles/main.scss */
 
 fieldset label + input,
 fieldset label + textarea,
@@ -10123,7 +10116,7 @@ fieldset legend + .select2-container,
   margin-top: .25em;
 }
 
-/* line 318, ../../app/styles/main.scss */
+/* line 315, ../../app/styles/main.scss */
 
 fieldset label + .radio,
 fieldset label + .checkbox,
@@ -10140,7 +10133,7 @@ fieldset legend + .help-block,
   margin-top: .75em;
 }
 
-/* line 325, ../../app/styles/main.scss */
+/* line 322, ../../app/styles/main.scss */
 
 fieldset .radio:first-child,
 fieldset .checkbox:first-child,
@@ -10151,7 +10144,7 @@ fieldset p:first-child,
   margin-top: .75em;
 }
 
-/* line 334, ../../app/styles/main.scss */
+/* line 331, ../../app/styles/main.scss */
 
 fieldset input:first-child,
 fieldset textarea:first-child,
@@ -10166,7 +10159,7 @@ fieldset select:first-child,
   margin-top: .25em;
 }
 
-/* line 337, ../../app/styles/main.scss */
+/* line 334, ../../app/styles/main.scss */
 
 fieldset input:last-child,
 fieldset textarea:last-child,
@@ -10181,14 +10174,14 @@ fieldset select:last-child,
   margin-bottom: .25em;
 }
 
-/* line 341, ../../app/styles/main.scss */
+/* line 338, ../../app/styles/main.scss */
 
 fieldset .forceEndMargin,
 .group .forceEndMargin {
   margin-bottom: .25em;
 }
 
-/* line 344, ../../app/styles/main.scss */
+/* line 341, ../../app/styles/main.scss */
 
 fieldset input,
 .group input {
@@ -10197,7 +10190,7 @@ fieldset input,
   margin: 1.25em 0 1.25em 30%;
 }
 
-/* line 362, ../../app/styles/main.scss */
+/* line 359, ../../app/styles/main.scss */
 
 fieldset input[pattern].valid,
 fieldset input[pattern]:valid,
@@ -10277,7 +10270,7 @@ fieldset input[type="color"]:required:valid,
   background-position: calc(100% - 10px) center;
 }
 
-/* line 370, ../../app/styles/main.scss */
+/* line 367, ../../app/styles/main.scss */
 
 fieldset input[pattern]:invalid,
 fieldset input[pattern]:required:invalid,
@@ -10381,7 +10374,7 @@ fieldset input[type="color"].invalid,
   background-position: calc(100% - 10px) center;
 }
 
-/* line 377, ../../app/styles/main.scss */
+/* line 374, ../../app/styles/main.scss */
 
 fieldset input.valid,
 fieldset input:required:valid,
@@ -10393,7 +10386,7 @@ fieldset input:required:valid,
   background-position: calc(100% - 10px) center;
 }
 
-/* line 384, ../../app/styles/main.scss */
+/* line 381, ../../app/styles/main.scss */
 
 fieldset input:required:invalid,
 fieldset input:focus:invalid,
@@ -10407,7 +10400,7 @@ fieldset input.invalid,
   background-position: calc(100% - 10px) center;
 }
 
-/* line 390, ../../app/styles/main.scss */
+/* line 387, ../../app/styles/main.scss */
 
 fieldset textarea,
 .group textarea {
@@ -10419,7 +10412,7 @@ fieldset textarea,
   resize: vertical;
 }
 
-/* line 399, ../../app/styles/main.scss */
+/* line 396, ../../app/styles/main.scss */
 
 fieldset p + .radio,
 fieldset p + .checkbox,
@@ -10428,7 +10421,7 @@ fieldset p + .checkbox,
   margin-top: 0em;
 }
 
-/* line 404, ../../app/styles/main.scss */
+/* line 401, ../../app/styles/main.scss */
 
 fieldset p:before,
 fieldset p:after,
@@ -10441,7 +10434,7 @@ fieldset p:after,
   height: 0;
 }
 
-/* line 411, ../../app/styles/main.scss */
+/* line 408, ../../app/styles/main.scss */
 
 fieldset p a,
 fieldset table a,
@@ -10450,7 +10443,7 @@ fieldset table a,
   padding: 0 3px;
 }
 
-/* line 414, ../../app/styles/main.scss */
+/* line 411, ../../app/styles/main.scss */
 
 fieldset p a:hover,
 fieldset p a:focus,
@@ -10470,7 +10463,7 @@ fieldset table a:focus,
   text-decoration: none;
 }
 
-/* line 423, ../../app/styles/main.scss */
+/* line 420, ../../app/styles/main.scss */
 
 fieldset .help-block,
 .group .help-block {
@@ -10480,25 +10473,32 @@ fieldset .help-block,
   padding: 0 0.75em;
 }
 
-/* line 428, ../../app/styles/main.scss */
+/* line 425, ../../app/styles/main.scss */
 
 fieldset .help-block:last-child,
 .group .help-block:last-child {
   margin-bottom: 0.75em;
 }
 
-/* line 431, ../../app/styles/main.scss */
+/* line 428, ../../app/styles/main.scss */
 
 fieldset .help-block + input,
 .group .help-block + input {
   margin-top: 1.25em;
 }
 
-/* line 434, ../../app/styles/main.scss */
+/* line 431, ../../app/styles/main.scss */
 
 fieldset .help-block + .help-block,
 .group .help-block + .help-block {
   margin-top: 1em;
+}
+
+/* line 434, ../../app/styles/main.scss */
+
+fieldset .help-block + label,
+.group .help-block + label {
+  margin-top: 0.75em;
 }
 
 /* line 438, ../../app/styles/main.scss */
