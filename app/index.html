@@ -181,10 +181,10 @@
     <fieldset>
       <label>Please select one thing</label>
       <select>
-        <option value="Pick me!">Pick me!</option>
-        <option value="I'm cool too!">I'm cool too!</option>
-        <option value="Huh?" disabled>Huh?</option>
-        <option value="Hey wait">Hey wait</option>
+        <option value="pick_me">Pick me!</option>
+        <option value="im_cool_too">I'm cool too!</option>
+        <option value="huh" disabled>Huh?</option>
+        <option value="hey_wait">Hey wait</option>
       </select>
       <p class="help-block">Select dropdowns can of course have a <code>.help-block</code>-paragraph too.</p>
     </fieldset>
@@ -193,10 +193,10 @@
   &lt;fieldset>
     &lt;label>Please select one thing&lt;/label>
     &lt;select>
-      &lt;option value="Pick me!">Pick me!&lt;/option>
-      &lt;option value="I'm cool too!">I'm cool too!&lt;/option>
-      &lt;option value="Huh?" disabled>Huh?&lt;/option>
-      &lt;option value="Hey wait">Hey wait&lt;/option>
+      &lt;option value="pick_me">Pick me!&lt;/option>
+      &lt;option value="im_cool_too">I'm cool too!&lt;/option>
+      &lt;option value="huh" disabled>Huh?&lt;/option>
+      &lt;option value="hey_wait">Hey wait&lt;/option>
     &lt;/select>
     &lt;p class="help-block">Select dropdowns can of course have a &lt;code>.help-block&lt;/code>-paragraph too.&lt;/p>
   &lt;/fieldset>
@@ -207,10 +207,10 @@
     <fieldset class="bottomArrow">
       <label>Please select a few things</label>
       <select multiple>
-        <option value="Pick me!">Pick me!</option>
-        <option value="I'm cool too!">I'm cool too!</option>
-        <option value="Huh?" disabled>Huh?</option>
-        <option value="Hey wait">Hey wait</option>
+        <option value="pick_me">Pick me!</option>
+        <option value="im_cool_too">I'm cool too!</option>
+        <option value="huh" disabled>Huh?</option>
+        <option value="hey_wait">Hey wait</option>
       </select>
       <p class="help-block">Select dropdowns can of course have a <code>.help-block</code>-paragraph too.</p>
     </fieldset>
@@ -219,14 +219,20 @@
   &lt;fieldset>
     &lt;label>Please select a few things&lt;/label>
     &lt;select multiple>
-      &lt;option value="Pick me!">Pick me!&lt;/option>
-      &lt;option value="I'm cool too!">I'm cool too!&lt;/option>
-      &lt;option value="Huh?" disabled>Huh?&lt;/option>
-      &lt;option value="Hey wait">Hey wait&lt;/option>
+      &lt;option value="pick_me">Pick me!&lt;/option>
+      &lt;option value="im_cool_too">I'm cool too!&lt;/option>
+      &lt;option value="huh" disabled>Huh?&lt;/option>
+      &lt;option value="hey_wait">Hey wait&lt;/option>
     &lt;/select>
     &lt;p class="help-block">Select dropdowns can of course have a &lt;code>.help-block&lt;/code>-paragraph too.&lt;/p>
   &lt;/fieldset>
 &lt;/form></code></pre>
+  <p>Please note that accessing these select boxes programmatically is a bit different than vanilla selects:</p>
+  <pre><code class="language-javascript">// Setting a Select2 dropdown value programmatically:
+$("select").select2("val", "pick_me");
+// Same thing for a multiple-select dropdown:
+$("select").select2("val", ["pick_me", "hey_wait]");</code></pre>
+  <p>Please refer to the <a href="http://ivaynberg.github.io/select2/index.html#documentation">Select2 docs</a> for more information on the many amazing things you can do with it.</p>
   <h2>Buttons</h2>
   <p>Currently, there's only one very basic type of button with a couple of states.</p>
   <p>By default, buttons are beige with a blue hover state. You can add <code>.unobtrusive</code> to make less glaring buttons for canceling etc.</p>
