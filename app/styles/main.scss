@@ -1,9 +1,5 @@
 $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
-@import '../scripts/lib/dropzone/css/dropzone.css';
-@import '../bower_components/jquery-icheck/skins/flat/green.css';
-@import '../bower_components/select2/select2.css';
-
 // Use own version of bootstrap
 @import '../styles/lib/bootstrap';
 @import "compass/css3/border-radius";

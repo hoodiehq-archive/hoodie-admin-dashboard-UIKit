@@ -257,10 +257,23 @@ module.exports = function (grunt) {
                         '.htaccess',
                         'images/{,*/}*.{webp,gif}',
                         'styles/fonts/{,*/}*.*',
-                        'scripts/main.js',
-                        'scripts/lib/**/*.*',
-                        'bower_components/**/*.*'
+                        'styles/{,*/}*.css'
                     ]
+                },{
+                    expand: true,
+                    flatten: true,
+                    cwd: '<%= yeoman.app %>',
+                    dest: '<%= yeoman.dist %>/styles',
+                    src: [
+                        'bower_components/jquery-icheck/skins/flat/green{,@2x}.png',
+                        'bower_components/select2/select2{,x2}.png'
+                    ]
+                },{
+                    expand: true,
+                    flatten: true,
+                    cwd: '<%= yeoman.app %>',
+                    src: 'scripts/lib/dropzone/images/spritemap{,@2x}.png',
+                    dest: '<%= yeoman.dist %>/images',
                 }]
             },
             styles: {
@@ -269,8 +282,7 @@ module.exports = function (grunt) {
                 cwd: '<%= yeoman.app %>/styles',
                 dest: '.tmp/concat/styles/',
                 src: [
-                    'styles/{,*/}*.css',
-                    '../bower_components/**/*.css'
+                    '{,*/}*.css',
                 ]
             },
             tempstyles: {
@@ -278,16 +290,7 @@ module.exports = function (grunt) {
                 dot: true,
                 cwd: '.tmp/concat/styles/',
                 dest: '<%= yeoman.dist %>/styles',
-                //src: '{,*/}.css'
-                src: 'pocket-uikit.css'
-            },
-            guidestyles: {
-                expand: true,
-                dot: true,
-                cwd: '.tmp/styles/',
-                dest: '<%= yeoman.dist %>/styles',
-                //src: '{,*/}.css'
-                src: 'guide.css'
+                src: '{,*/}*.css'
             }
         },
         concurrent: {
@@ -340,7 +343,6 @@ module.exports = function (grunt) {
         'uglify',
         'copy:dist',
         'copy:tempstyles',
-        'copy:guidestyles',
         //'rev',
         'usemin'
     ]);
