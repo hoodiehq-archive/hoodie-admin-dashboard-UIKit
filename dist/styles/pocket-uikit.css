@@ -1,10 +1,4 @@
-@import url(../scripts/lib/dropzone/css/dropzone.css);
-
-@import url(../bower_components/jquery-icheck/skins/flat/green.css);
-
-@import url(../bower_components/select2/select2.css);
-
-/* normalize.css v2.1.3 | MIT License | git.io/normalize */
+/*! normalize.css v2.1.3 | MIT License | git.io/normalize */
 
 /* line 22, ../../app/styles/lib/_normalize.scss */
 
@@ -9705,7 +9699,7 @@ td.visible-print {
   }
 }
 
-/* line 89, ../../app/styles/main.scss */
+/* line 85, ../../app/styles/main.scss */
 
 body.debug {
   background-image: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0) 960px, transparent 20px), -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(56, 255, 255, 0.8) 100%);
@@ -9713,7 +9707,7 @@ body.debug {
   background-position: 10px 1px;
 }
 
-/* line 93, ../../app/styles/main.scss */
+/* line 89, ../../app/styles/main.scss */
 
 body.debug form fieldset,
 body.debug .group,
@@ -9721,7 +9715,7 @@ body.debug table {
   background: rgba(200, 0, 0, 0.05);
 }
 
-/* line 96, ../../app/styles/main.scss */
+/* line 92, ../../app/styles/main.scss */
 
 body.debug form fieldset .form-container,
 body.debug .group .form-container,
@@ -9729,25 +9723,25 @@ body.debug table .form-container {
   background: rgba(0, 200, 0, 0.05);
 }
 
-/* line 103, ../../app/styles/main.scss */
+/* line 99, ../../app/styles/main.scss */
 
 a {
   color: #1abc9c;
 }
 
-/* line 105, ../../app/styles/main.scss */
+/* line 101, ../../app/styles/main.scss */
 
 a:hover {
   color: #1abc9c;
 }
 
-/* line 110, ../../app/styles/main.scss */
+/* line 106, ../../app/styles/main.scss */
 
 .container p > a {
   padding: 0.15em .25em;
 }
 
-/* line 112, ../../app/styles/main.scss */
+/* line 108, ../../app/styles/main.scss */
 
 .container p > a:hover,
 .container p > a:focus {
@@ -9759,7 +9753,7 @@ a:hover {
   outline: none;
 }
 
-/* line 122, ../../app/styles/main.scss */
+/* line 118, ../../app/styles/main.scss */
 
 h1 {
   font-size: 2em;
@@ -9769,7 +9763,7 @@ h1 {
   border-bottom: 1px solid #000;
 }
 
-/* line 131, ../../app/styles/main.scss */
+/* line 127, ../../app/styles/main.scss */
 
 h2 {
   font-size: 1.25em;
@@ -9777,7 +9771,7 @@ h2 {
   margin: 1.25em .25rem .75em;
 }
 
-/* line 137, ../../app/styles/main.scss */
+/* line 133, ../../app/styles/main.scss */
 
 h3 {
   font-size: 1em;
@@ -9788,7 +9782,7 @@ h3 {
   font-weight: bold;
 }
 
-/* line 146, ../../app/styles/main.scss */
+/* line 142, ../../app/styles/main.scss */
 
 h4 {
   font-size: .75em;
@@ -9800,32 +9794,32 @@ h4 {
   text-transform: uppercase;
 }
 
-/* line 156, ../../app/styles/main.scss */
+/* line 152, ../../app/styles/main.scss */
 
 p {
   margin: 0 0 1em .25rem;
 }
 
-/* line 160, ../../app/styles/main.scss */
+/* line 156, ../../app/styles/main.scss */
 
 code {
   background: #f7f4f2;
   color: #555;
 }
 
-/* line 165, ../../app/styles/main.scss */
+/* line 161, ../../app/styles/main.scss */
 
 fieldset code {
   background: white;
 }
 
-/* line 169, ../../app/styles/main.scss */
+/* line 165, ../../app/styles/main.scss */
 
 .description {
   margin: 1.25em .25em 1em;
 }
 
-/* line 183, ../../app/styles/main.scss */
+/* line 179, ../../app/styles/main.scss */
 
 legend {
   display: block;
@@ -9840,7 +9834,7 @@ legend {
   border: none;
 }
 
-/* line 190, ../../app/styles/main.scss */
+/* line 186, ../../app/styles/main.scss */
 
 .btn {
   margin: .5em 0 .5em .5em;
@@ -9852,13 +9846,13 @@ legend {
   transition: all ease 0.25s;
 }
 
-/* line 197, ../../app/styles/main.scss */
+/* line 193, ../../app/styles/main.scss */
 
 .btn:first-of-type {
   margin-left: 30%;
 }
 
-/* line 201, ../../app/styles/main.scss */
+/* line 197, ../../app/styles/main.scss */
 
 .btn:hover,
 .btn:focus {
@@ -9867,7 +9861,7 @@ legend {
   border: 1px solid #66afe9;
 }
 
-/* line 206, ../../app/styles/main.scss */
+/* line 202, ../../app/styles/main.scss */
 
 .btn:focus {
   box-shadow: 0 0 0 3px #9fcaec;
@@ -9875,7 +9869,7 @@ legend {
   outline: none;
 }
 
-/* line 210, ../../app/styles/main.scss */
+/* line 206, ../../app/styles/main.scss */
 
 .btn.success,
 .btn.ok {
@@ -9884,14 +9878,14 @@ legend {
   color: white;
 }
 
-/* line 214, ../../app/styles/main.scss */
+/* line 210, ../../app/styles/main.scss */
 
 .btn.success:hover,
 .btn.ok:hover {
   background-color: #148f77;
 }
 
-/* line 220, ../../app/styles/main.scss */
+/* line 216, ../../app/styles/main.scss */
 
 .btn.danger,
 .btn.cancel,
@@ -9901,7 +9895,7 @@ legend {
   color: white;
 }
 
-/* line 224, ../../app/styles/main.scss */
+/* line 220, ../../app/styles/main.scss */
 
 .btn.danger:hover,
 .btn.cancel:hover,
@@ -9910,7 +9904,7 @@ legend {
   border-color: #d5160d;
 }
 
-/* line 230, ../../app/styles/main.scss */
+/* line 226, ../../app/styles/main.scss */
 
 .btn.careful,
 .btn.waiting {
@@ -9919,7 +9913,7 @@ legend {
   color: white;
 }
 
-/* line 234, ../../app/styles/main.scss */
+/* line 230, ../../app/styles/main.scss */
 
 .btn.careful:hover,
 .btn.waiting:hover {
@@ -9927,7 +9921,7 @@ legend {
   border-color: #f29e07;
 }
 
-/* line 239, ../../app/styles/main.scss */
+/* line 235, ../../app/styles/main.scss */
 
 .btn.unobtrusive {
   background-color: transparent;
@@ -9935,25 +9929,25 @@ legend {
   color: #555555;
 }
 
-/* line 243, ../../app/styles/main.scss */
+/* line 239, ../../app/styles/main.scss */
 
 .btn.unobtrusive:hover {
   border: 1px solid #CCC;
 }
 
-/* line 249, ../../app/styles/main.scss */
+/* line 245, ../../app/styles/main.scss */
 
 form {
   position: relative;
 }
 
-/* line 251, ../../app/styles/main.scss */
+/* line 247, ../../app/styles/main.scss */
 
 form .form-control {
   width: 70%;
 }
 
-/* line 256, ../../app/styles/main.scss */
+/* line 252, ../../app/styles/main.scss */
 
 fieldset,
 .group {
@@ -9964,7 +9958,7 @@ fieldset,
   margin-bottom: .25em;
 }
 
-/* line 36, ../../app/styles/main.scss */
+/* line 32, ../../app/styles/main.scss */
 
 fieldset:before,
 fieldset:after,
@@ -9974,14 +9968,14 @@ fieldset:after,
   content: " ";
 }
 
-/* line 40, ../../app/styles/main.scss */
+/* line 36, ../../app/styles/main.scss */
 
 fieldset:after,
 .group:after {
   clear: both;
 }
 
-/* line 263, ../../app/styles/main.scss */
+/* line 259, ../../app/styles/main.scss */
 
 fieldset > label,
 .group > label {
@@ -9995,21 +9989,21 @@ fieldset > label,
   margin-top: 0.5em;
 }
 
-/* line 266, ../../app/styles/main.scss */
+/* line 262, ../../app/styles/main.scss */
 
 fieldset > label:first-child,
 .group > label:first-child {
   margin-top: 0.75em;
 }
 
-/* line 269, ../../app/styles/main.scss */
+/* line 265, ../../app/styles/main.scss */
 
 fieldset > label + input,
 .group > label + input {
   margin-top: 1.25em;
 }
 
-/* line 273, ../../app/styles/main.scss */
+/* line 269, ../../app/styles/main.scss */
 
 fieldset .form-container,
 .group .form-container {
@@ -10017,7 +10011,7 @@ fieldset .form-container,
   margin-bottom: .75em;
 }
 
-/* line 36, ../../app/styles/main.scss */
+/* line 32, ../../app/styles/main.scss */
 
 fieldset .form-container:before,
 fieldset .form-container:after,
@@ -10027,21 +10021,21 @@ fieldset .form-container:after,
   content: " ";
 }
 
-/* line 40, ../../app/styles/main.scss */
+/* line 36, ../../app/styles/main.scss */
 
 fieldset .form-container:after,
 .group .form-container:after {
   clear: both;
 }
 
-/* line 277, ../../app/styles/main.scss */
+/* line 273, ../../app/styles/main.scss */
 
 fieldset .form-container:first-child,
 .group .form-container:first-child {
   margin-top: 0;
 }
 
-/* line 280, ../../app/styles/main.scss */
+/* line 276, ../../app/styles/main.scss */
 
 fieldset .form-container > label,
 .group .form-container > label {
@@ -10055,21 +10049,21 @@ fieldset .form-container > label,
   margin: .75em 0 0.75em;
 }
 
-/* line 284, ../../app/styles/main.scss */
+/* line 280, ../../app/styles/main.scss */
 
 fieldset .form-container legend,
 .group .form-container legend {
   margin-top: 0.5em;
 }
 
-/* line 289, ../../app/styles/main.scss */
+/* line 285, ../../app/styles/main.scss */
 
 fieldset .input-group input,
 .group .input-group input {
   margin-left: 0;
 }
 
-/* line 293, ../../app/styles/main.scss */
+/* line 289, ../../app/styles/main.scss */
 
 fieldset .input-group input:focus + .input-group-btn .btn,
 fieldset .input-group .input-group-btn .btn:focus,
@@ -10080,7 +10074,7 @@ fieldset .input-group .input-group-btn .btn:focus,
   outline: none;
 }
 
-/* line 296, ../../app/styles/main.scss */
+/* line 292, ../../app/styles/main.scss */
 
 fieldset .input-group .input-group-btn:last-child > .btn,
 .group .input-group .input-group-btn:last-child > .btn {
@@ -10088,14 +10082,14 @@ fieldset .input-group .input-group-btn:last-child > .btn,
   margin-top: .25em;
 }
 
-/* line 300, ../../app/styles/main.scss */
+/* line 296, ../../app/styles/main.scss */
 
 fieldset .input-group + .help-block,
 .group .input-group + .help-block {
   margin-top: 0em;
 }
 
-/* line 308, ../../app/styles/main.scss */
+/* line 304, ../../app/styles/main.scss */
 
 fieldset label + input,
 fieldset label + textarea,
@@ -10116,7 +10110,7 @@ fieldset legend + .select2-container,
   margin-top: .25em;
 }
 
-/* line 315, ../../app/styles/main.scss */
+/* line 311, ../../app/styles/main.scss */
 
 fieldset label + .radio,
 fieldset label + .checkbox,
@@ -10133,7 +10127,7 @@ fieldset legend + .help-block,
   margin-top: .75em;
 }
 
-/* line 322, ../../app/styles/main.scss */
+/* line 318, ../../app/styles/main.scss */
 
 fieldset .radio:first-child,
 fieldset .checkbox:first-child,
@@ -10144,7 +10138,7 @@ fieldset p:first-child,
   margin-top: .75em;
 }
 
-/* line 331, ../../app/styles/main.scss */
+/* line 327, ../../app/styles/main.scss */
 
 fieldset input:first-child,
 fieldset textarea:first-child,
@@ -10159,7 +10153,7 @@ fieldset select:first-child,
   margin-top: .25em;
 }
 
-/* line 334, ../../app/styles/main.scss */
+/* line 330, ../../app/styles/main.scss */
 
 fieldset input:last-child,
 fieldset textarea:last-child,
@@ -10174,14 +10168,14 @@ fieldset select:last-child,
   margin-bottom: .25em;
 }
 
-/* line 338, ../../app/styles/main.scss */
+/* line 334, ../../app/styles/main.scss */
 
 fieldset .forceEndMargin,
 .group .forceEndMargin {
   margin-bottom: .25em;
 }
 
-/* line 341, ../../app/styles/main.scss */
+/* line 337, ../../app/styles/main.scss */
 
 fieldset input,
 .group input {
@@ -10190,7 +10184,7 @@ fieldset input,
   margin: 1.25em 0 1.25em 30%;
 }
 
-/* line 359, ../../app/styles/main.scss */
+/* line 355, ../../app/styles/main.scss */
 
 fieldset input[pattern].valid,
 fieldset input[pattern]:valid,
@@ -10270,7 +10264,7 @@ fieldset input[type="color"]:required:valid,
   background-position: calc(100% - 10px) center;
 }
 
-/* line 367, ../../app/styles/main.scss */
+/* line 363, ../../app/styles/main.scss */
 
 fieldset input[pattern]:invalid,
 fieldset input[pattern]:required:invalid,
@@ -10374,7 +10368,7 @@ fieldset input[type="color"].invalid,
   background-position: calc(100% - 10px) center;
 }
 
-/* line 374, ../../app/styles/main.scss */
+/* line 370, ../../app/styles/main.scss */
 
 fieldset input.valid,
 fieldset input:required:valid,
@@ -10386,7 +10380,7 @@ fieldset input:required:valid,
   background-position: calc(100% - 10px) center;
 }
 
-/* line 381, ../../app/styles/main.scss */
+/* line 377, ../../app/styles/main.scss */
 
 fieldset input:required:invalid,
 fieldset input:focus:invalid,
@@ -10400,7 +10394,7 @@ fieldset input.invalid,
   background-position: calc(100% - 10px) center;
 }
 
-/* line 387, ../../app/styles/main.scss */
+/* line 383, ../../app/styles/main.scss */
 
 fieldset textarea,
 .group textarea {
@@ -10412,7 +10406,7 @@ fieldset textarea,
   resize: vertical;
 }
 
-/* line 396, ../../app/styles/main.scss */
+/* line 392, ../../app/styles/main.scss */
 
 fieldset p + .radio,
 fieldset p + .checkbox,
@@ -10421,7 +10415,7 @@ fieldset p + .checkbox,
   margin-top: 0em;
 }
 
-/* line 401, ../../app/styles/main.scss */
+/* line 397, ../../app/styles/main.scss */
 
 fieldset p:before,
 fieldset p:after,
@@ -10434,7 +10428,7 @@ fieldset p:after,
   height: 0;
 }
 
-/* line 408, ../../app/styles/main.scss */
+/* line 404, ../../app/styles/main.scss */
 
 fieldset p a,
 fieldset table a,
@@ -10443,7 +10437,7 @@ fieldset table a,
   padding: 0 3px;
 }
 
-/* line 411, ../../app/styles/main.scss */
+/* line 407, ../../app/styles/main.scss */
 
 fieldset p a:hover,
 fieldset p a:focus,
@@ -10463,7 +10457,7 @@ fieldset table a:focus,
   text-decoration: none;
 }
 
-/* line 420, ../../app/styles/main.scss */
+/* line 416, ../../app/styles/main.scss */
 
 fieldset .help-block,
 .group .help-block {
@@ -10473,35 +10467,35 @@ fieldset .help-block,
   padding: 0 0.75em;
 }
 
-/* line 425, ../../app/styles/main.scss */
+/* line 421, ../../app/styles/main.scss */
 
 fieldset .help-block:last-child,
 .group .help-block:last-child {
   margin-bottom: 0.75em;
 }
 
-/* line 428, ../../app/styles/main.scss */
+/* line 424, ../../app/styles/main.scss */
 
 fieldset .help-block + input,
 .group .help-block + input {
   margin-top: 1.25em;
 }
 
-/* line 431, ../../app/styles/main.scss */
+/* line 427, ../../app/styles/main.scss */
 
 fieldset .help-block + .help-block,
 .group .help-block + .help-block {
   margin-top: 1em;
 }
 
-/* line 434, ../../app/styles/main.scss */
+/* line 430, ../../app/styles/main.scss */
 
 fieldset .help-block + label,
 .group .help-block + label {
   margin-top: 0.75em;
 }
 
-/* line 438, ../../app/styles/main.scss */
+/* line 434, ../../app/styles/main.scss */
 
 fieldset ul,
 .group ul {
@@ -10510,21 +10504,21 @@ fieldset ul,
   font-size: .75em;
 }
 
-/* line 442, ../../app/styles/main.scss */
+/* line 438, ../../app/styles/main.scss */
 
 fieldset ul:last-child,
 .group ul:last-child {
   margin-bottom: 0.75em;
 }
 
-/* line 445, ../../app/styles/main.scss */
+/* line 441, ../../app/styles/main.scss */
 
 fieldset ul + input,
 .group ul + input {
   margin-top: 1.25em;
 }
 
-/* line 449, ../../app/styles/main.scss */
+/* line 445, ../../app/styles/main.scss */
 
 fieldset .radio,
 fieldset .checkbox,
@@ -10538,7 +10532,7 @@ fieldset .checkbox,
   padding-bottom: 0;
 }
 
-/* line 36, ../../app/styles/main.scss */
+/* line 32, ../../app/styles/main.scss */
 
 fieldset .radio:before,
 fieldset .radio:after,
@@ -10552,7 +10546,7 @@ fieldset .checkbox:after,
   content: " ";
 }
 
-/* line 40, ../../app/styles/main.scss */
+/* line 36, ../../app/styles/main.scss */
 
 fieldset .radio:after,
 fieldset .checkbox:after,
@@ -10561,7 +10555,7 @@ fieldset .checkbox:after,
   clear: both;
 }
 
-/* line 457, ../../app/styles/main.scss */
+/* line 453, ../../app/styles/main.scss */
 
 fieldset .radio label,
 fieldset .checkbox label,
@@ -10571,17 +10565,17 @@ fieldset .checkbox label,
   margin-left: .5em;
 }
 
-/* line 461, ../../app/styles/main.scss */
+/* line 457, ../../app/styles/main.scss */
 
 fieldset .radio + .help-block,
 fieldset .checkbox + .help-block,
 .group .radio + .help-block,
 .group .checkbox + .help-block {
   padding-left: 2.75em;
-  margin-top: -0.25em;
+  margin-top: -.25em;
 }
 
-/* line 479, ../../app/styles/main.scss */
+/* line 475, ../../app/styles/main.scss */
 
 fieldset .radio .iradio,
 fieldset .radio .icheckbox,
@@ -10594,7 +10588,7 @@ fieldset .checkbox .icheckbox,
   display: inline-block;
 }
 
-/* line 481, ../../app/styles/main.scss */
+/* line 477, ../../app/styles/main.scss */
 
 fieldset .radio .iradio.focus,
 fieldset .radio .icheckbox.focus,
@@ -10610,7 +10604,7 @@ fieldset .checkbox .icheckbox.focus,
   border-radius: 4px;
 }
 
-/* line 487, ../../app/styles/main.scss */
+/* line 483, ../../app/styles/main.scss */
 
 fieldset .radio .iradio.disabled + label,
 fieldset .radio .icheckbox.disabled + label,
@@ -10624,7 +10618,7 @@ fieldset .checkbox .icheckbox.disabled + label,
   color: #D7DCDE;
 }
 
-/* line 492, ../../app/styles/main.scss */
+/* line 488, ../../app/styles/main.scss */
 
 fieldset .radio .iradio + label,
 fieldset .radio .icheckbox + label,
@@ -10639,7 +10633,7 @@ fieldset .checkbox .icheckbox + label,
   transition: color ease 0.25s;
 }
 
-/* line 496, ../../app/styles/main.scss */
+/* line 492, ../../app/styles/main.scss */
 
 fieldset .radio .iradio.checked + label,
 fieldset .radio .icheckbox.checked + label,
@@ -10652,7 +10646,7 @@ fieldset .checkbox .icheckbox.checked + label,
   color: #333;
 }
 
-/* line 500, ../../app/styles/main.scss */
+/* line 496, ../../app/styles/main.scss */
 
 fieldset .radio:first-child,
 fieldset .checkbox:first-child,
@@ -10661,7 +10655,7 @@ fieldset .checkbox:first-child,
   margin-top: .75em;
 }
 
-/* line 503, ../../app/styles/main.scss */
+/* line 499, ../../app/styles/main.scss */
 
 fieldset .radio:last-child,
 fieldset .checkbox:last-child,
@@ -10670,7 +10664,7 @@ fieldset .checkbox:last-child,
   margin-bottom: .5em;
 }
 
-/* line 506, ../../app/styles/main.scss */
+/* line 502, ../../app/styles/main.scss */
 
 fieldset .radio .iradio.focus,
 fieldset .checkbox .iradio.focus,
@@ -10681,14 +10675,14 @@ fieldset .checkbox .iradio.focus,
   border-radius: 50%;
 }
 
-/* line 511, ../../app/styles/main.scss */
+/* line 507, ../../app/styles/main.scss */
 
 fieldset select + .help-block,
 .group select + .help-block {
-  margin-top: -0.75em;
+  margin-top: -.75em;
 }
 
-/* line 516, ../../app/styles/main.scss */
+/* line 512, ../../app/styles/main.scss */
 
 fieldset button + .help-block,
 .group button + .help-block {
@@ -10696,7 +10690,7 @@ fieldset button + .help-block,
   display: block;
 }
 
-/* line 538, ../../app/styles/main.scss */
+/* line 534, ../../app/styles/main.scss */
 
 fieldset input + input,
 fieldset input + textarea,
@@ -10733,13 +10727,13 @@ fieldset .dropzone + .dropzone,
   margin-top: -0.5em;
 }
 
-/* line 543, ../../app/styles/main.scss */
+/* line 539, ../../app/styles/main.scss */
 
 .group {
   padding: 0;
 }
 
-/* line 547, ../../app/styles/main.scss */
+/* line 543, ../../app/styles/main.scss */
 
 .pill {
   background-color: white;
@@ -10755,28 +10749,28 @@ fieldset .dropzone + .dropzone,
   vertical-align: text-top;
 }
 
-/* line 557, ../../app/styles/main.scss */
+/* line 553, ../../app/styles/main.scss */
 
 .pill.success {
   background-color: #1abc9c;
   color: white;
 }
 
-/* line 561, ../../app/styles/main.scss */
+/* line 557, ../../app/styles/main.scss */
 
 .pill.warn {
   background-color: #f9b233;
   color: white;
 }
 
-/* line 565, ../../app/styles/main.scss */
+/* line 561, ../../app/styles/main.scss */
 
 .pill.error {
   background-color: #f22d23;
   color: white;
 }
 
-/* line 571, ../../app/styles/main.scss */
+/* line 567, ../../app/styles/main.scss */
 
 a.pill:hover,
 a.pill:focus {
@@ -10786,13 +10780,13 @@ a.pill:focus {
   outline: none;
 }
 
-/* line 590, ../../app/styles/main.scss */
+/* line 586, ../../app/styles/main.scss */
 
 .container {
   padding-bottom: 10em;
 }
 
-/* line 592, ../../app/styles/main.scss */
+/* line 588, ../../app/styles/main.scss */
 
 .container table {
   position: relative;
@@ -10803,14 +10797,14 @@ a.pill:focus {
   margin-bottom: 0.25em;
 }
 
-/* line 594, ../../app/styles/main.scss */
+/* line 590, ../../app/styles/main.scss */
 
 .container table.table-striped > tbody > tr:nth-child(odd) > td,
 .container table.table-striped > tbody > tr:nth-child(odd) > th {
   background: #fdfaf8;
 }
 
-/* line 603, ../../app/styles/main.scss */
+/* line 599, ../../app/styles/main.scss */
 
 .container table thead tr th {
   padding: 1em 0 0 .25em;
@@ -10821,13 +10815,13 @@ a.pill:focus {
   border-bottom: 1px solid #aaaaaa;
 }
 
-/* line 610, ../../app/styles/main.scss */
+/* line 606, ../../app/styles/main.scss */
 
 .container table thead tr th:first-of-type {
   padding-left: 1em;
 }
 
-/* line 618, ../../app/styles/main.scss */
+/* line 614, ../../app/styles/main.scss */
 
 .container table tfoot tr td {
   padding: 0 0 1em .25em;
@@ -10838,13 +10832,13 @@ a.pill:focus {
   border-top: 1px solid #aaaaaa;
 }
 
-/* line 625, ../../app/styles/main.scss */
+/* line 621, ../../app/styles/main.scss */
 
 .container table tfoot tr td:first-of-type {
   padding-left: 1em;
 }
 
-/* line 633, ../../app/styles/main.scss */
+/* line 629, ../../app/styles/main.scss */
 
 .container table tbody tr td {
   line-height: -webkit-calc(2.5rem - 1px);
@@ -10852,13 +10846,13 @@ a.pill:focus {
   padding: 0.25em;
 }
 
-/* line 636, ../../app/styles/main.scss */
+/* line 632, ../../app/styles/main.scss */
 
 .container table tbody tr td:first-of-type {
   padding-left: .75em;
 }
 
-/* line 643, ../../app/styles/main.scss */
+/* line 639, ../../app/styles/main.scss */
 
 .container span.status {
   width: 1.25em;
@@ -10867,19 +10861,19 @@ a.pill:focus {
   height: .7em;
 }
 
-/* line 648, ../../app/styles/main.scss */
+/* line 644, ../../app/styles/main.scss */
 
 .container span.status:before {
   margin: 0;
 }
 
-/* line 652, ../../app/styles/main.scss */
+/* line 648, ../../app/styles/main.scss */
 
 .container .status {
   background: none;
 }
 
-/* line 654, ../../app/styles/main.scss */
+/* line 650, ../../app/styles/main.scss */
 
 .container .status:before {
   content: "";
@@ -10893,7 +10887,7 @@ a.pill:focus {
   margin: .35em 0 0 0;
 }
 
-/* line 666, ../../app/styles/main.scss */
+/* line 662, ../../app/styles/main.scss */
 
 .container .status.on:before,
 .container .status.yes:before,
@@ -10901,26 +10895,26 @@ a.pill:focus {
   background-color: #1abc9c;
 }
 
-/* line 669, ../../app/styles/main.scss */
+/* line 665, ../../app/styles/main.scss */
 
 .container .status.off:before {
   background-color: #555;
 }
 
-/* line 674, ../../app/styles/main.scss */
+/* line 670, ../../app/styles/main.scss */
 
 .container .status.no:before,
 .container .status.false:before {
   background-color: #f22d23;
 }
 
-/* line 678, ../../app/styles/main.scss */
+/* line 674, ../../app/styles/main.scss */
 
 .container .status.maybe:before {
   background-color: #f9b233;
 }
 
-/* line 685, ../../app/styles/main.scss */
+/* line 681, ../../app/styles/main.scss */
 
 .dropzone {
   margin: 1.25em 0 .75em;
@@ -10928,13 +10922,13 @@ a.pill:focus {
   color: white;
 }
 
-/* line 697, ../../app/styles/main.scss */
+/* line 693, ../../app/styles/main.scss */
 
 .dropzone .fallback input[type="file"] {
   margin: 0.25em .75em;
 }
 
-/* line 700, ../../app/styles/main.scss */
+/* line 696, ../../app/styles/main.scss */
 
 .dropzone .dz-preview {
   box-shadow: none;
@@ -10945,19 +10939,19 @@ a.pill:focus {
   margin: 19px 19px 5px 19px;
 }
 
-/* line 705, ../../app/styles/main.scss */
+/* line 701, ../../app/styles/main.scss */
 
 .dropzone .dz-preview:last-of-type {
   margin-bottom: 19px;
 }
 
-/* line 708, ../../app/styles/main.scss */
+/* line 704, ../../app/styles/main.scss */
 
 .dropzone .dz-preview .dz-remove {
   cursor: pointer;
 }
 
-/* line 710, ../../app/styles/main.scss */
+/* line 706, ../../app/styles/main.scss */
 
 .dropzone .dz-preview .dz-remove:focus {
   box-shadow: 0 0 0 3px #9fcaec;
@@ -10965,20 +10959,20 @@ a.pill:focus {
   outline: none;
 }
 
-/* line 714, ../../app/styles/main.scss */
+/* line 710, ../../app/styles/main.scss */
 
 .dropzone .dz-preview .dz-details {
   color: #666;
 }
 
-/* line 717, ../../app/styles/main.scss */
+/* line 713, ../../app/styles/main.scss */
 
 .dropzone .dz-preview .dz-remove {
   background: white;
   background-image: none;
 }
 
-/* line 726, ../../app/styles/main.scss */
+/* line 722, ../../app/styles/main.scss */
 
 .select2-search input {
   background: none;
@@ -10987,27 +10981,27 @@ a.pill:focus {
   border-radius: 3px;
 }
 
-/* line 732, ../../app/styles/main.scss */
+/* line 728, ../../app/styles/main.scss */
 
 .select2-drop {
   box-shadow: none;
   color: #555555;
 }
 
-/* line 735, ../../app/styles/main.scss */
+/* line 731, ../../app/styles/main.scss */
 
 .select2-drop.select2-drop-above {
   box-shadow: none;
 }
 
-/* line 738, ../../app/styles/main.scss */
+/* line 734, ../../app/styles/main.scss */
 
 .select2-drop .select2-disabled {
   background: none;
   color: #CCC;
 }
 
-/* line 742, ../../app/styles/main.scss */
+/* line 738, ../../app/styles/main.scss */
 
 .select2-drop .select2-highlighted {
   background: #1abc9c;
@@ -11016,7 +11010,7 @@ a.pill:focus {
   border-radius: 3px;
 }
 
-/* line 749, ../../app/styles/main.scss */
+/* line 745, ../../app/styles/main.scss */
 
 div.select2-container-active .select2-choice,
 div.select2-container-active .select2-choices {
@@ -11027,7 +11021,7 @@ div.select2-container-active .select2-choices {
   border: 1px solid transparent;
 }
 
-/* line 756, ../../app/styles/main.scss */
+/* line 752, ../../app/styles/main.scss */
 
 .select2-dropdown-open.select2-drop-above .select2-choice,
 .select2-dropdown-open.select2-drop-above .select2-choices {
@@ -11036,13 +11030,13 @@ div.select2-container-active .select2-choices {
   border: 1px solid transparent;
 }
 
-/* line 761, ../../app/styles/main.scss */
+/* line 757, ../../app/styles/main.scss */
 
 .select2-drop.select2-drop-above.select2-drop-active {
   border-top: 3px solid #9FCAEC;
 }
 
-/* line 765, ../../app/styles/main.scss */
+/* line 761, ../../app/styles/main.scss */
 
 .select2-drop-active {
   border: 3px solid #9FCAEC;
@@ -11052,7 +11046,7 @@ div.select2-container-active .select2-choices {
   margin-left: -3px;
 }
 
-/* line 771, ../../app/styles/main.scss */
+/* line 767, ../../app/styles/main.scss */
 
 .select2-drop-active .select2-results .select2-no-results {
   border-radius: 3px;
@@ -11060,13 +11054,13 @@ div.select2-container-active .select2-choices {
   padding: 0 0 0 .25em;
 }
 
-/* line 779, ../../app/styles/main.scss */
+/* line 775, ../../app/styles/main.scss */
 
 .select2-choice {
   border: 1px solid #CCC;
 }
 
-/* line 783, ../../app/styles/main.scss */
+/* line 779, ../../app/styles/main.scss */
 
 .select2-container {
   width: 70%;
@@ -11074,7 +11068,7 @@ div.select2-container-active .select2-choices {
   display: block;
 }
 
-/* line 787, ../../app/styles/main.scss */
+/* line 783, ../../app/styles/main.scss */
 
 .select2-container .select2-choice {
   height: 2.75em;
@@ -11087,7 +11081,7 @@ div.select2-container-active .select2-choices {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
-/* line 795, ../../app/styles/main.scss */
+/* line 791, ../../app/styles/main.scss */
 
 .select2-container .select2-choice .select2-arrow {
   background: white;
@@ -11096,25 +11090,25 @@ div.select2-container-active .select2-choices {
   border-left: none;
 }
 
-/* line 799, ../../app/styles/main.scss */
+/* line 795, ../../app/styles/main.scss */
 
 .select2-container .select2-choice .select2-arrow b {
   background-position: 0 8px;
 }
 
-/* line 804, ../../app/styles/main.scss */
+/* line 800, ../../app/styles/main.scss */
 
 .select2-container:last-child {
   margin-bottom: 0.25em;
 }
 
-/* line 809, ../../app/styles/main.scss */
+/* line 805, ../../app/styles/main.scss */
 
 .select2-container-multi {
   font-size: 1.25em;
 }
 
-/* line 812, ../../app/styles/main.scss */
+/* line 808, ../../app/styles/main.scss */
 
 .select2-container-multi.select2-container-active .select2-choices,
 .select2-container-multi.select2-dropdown-open .select2-choices {
@@ -11125,7 +11119,7 @@ div.select2-container-active .select2-choices {
   border: 1px solid transparent;
 }
 
-/* line 819, ../../app/styles/main.scss */
+/* line 815, ../../app/styles/main.scss */
 
 .select2-container-multi .select2-choices {
   min-height: 3em;
@@ -11137,13 +11131,13 @@ div.select2-container-active .select2-choices {
   border-radius: 3px;
 }
 
-/* line 825, ../../app/styles/main.scss */
+/* line 821, ../../app/styles/main.scss */
 
 .select2-container-multi .select2-choices .select2-search-field input {
   padding: .5em 0 0em .5em;
 }
 
-/* line 829, ../../app/styles/main.scss */
+/* line 825, ../../app/styles/main.scss */
 
 .select2-container-multi .select2-choices .select2-search-choice {
   padding-top: 4px;
@@ -11160,7 +11154,7 @@ div.select2-container-active .select2-choices {
   margin: .4em 0 .25em .3em;
 }
 
-/* line 839, ../../app/styles/main.scss */
+/* line 835, ../../app/styles/main.scss */
 
 .select2-container-multi .select2-choices .select2-search-choice.select2-search-choice-focus {
   background: #1abc9c;
@@ -11169,21 +11163,21 @@ div.select2-container-active .select2-choices {
   color: white;
 }
 
-/* line 845, ../../app/styles/main.scss */
+/* line 841, ../../app/styles/main.scss */
 
 .select2-container-multi .select2-choices .select2-search-choice div {
   line-height: 1.5em;
   margin: 0 .75em;
 }
 
-/* line 849, ../../app/styles/main.scss */
+/* line 845, ../../app/styles/main.scss */
 
 .select2-container-multi .select2-choices .select2-search-choice .select2-search-choice-close {
   top: 8em;
   left: 10em;
 }
 
-/* line 862, ../../app/styles/main.scss */
+/* line 858, ../../app/styles/main.scss */
 
 .btn.btn-default:hover,
 .btn.btn-default:focus {
@@ -11191,7 +11185,7 @@ div.select2-container-active .select2-choices {
   color: white;
 }
 
-/* line 870, ../../app/styles/main.scss */
+/* line 866, ../../app/styles/main.scss */
 
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
