@@ -308,6 +308,19 @@ module.exports = function (grunt) {
         'svgmin',
         'htmlmin'
       ]
+    },
+    bump: {
+      options: {
+        commitMessage: 'chore(release): v%VERSION%',
+        files: ['package.json', 'bower.json'],
+        commitFiles: [
+          'package.json',
+          'bower.json',
+          'CHANGELOG.md',
+          'dist/*'
+        ],
+        pushTo: 'origin master'
+      }
     }
   });
 
