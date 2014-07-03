@@ -29,5 +29,13 @@ In the future, these will be part of a `my-first-plugin`-repo you can use as a b
 
 To explore the UIKit further, browse through `http://yourhoodieendpoint/_api/_plugins/_assets/` (final slash matters, sorry). This base path will show you an index of all available files. 
 
+## Development
 
+Install dependencies and run the preview app on a local webserver with livereload.
 
+```bash
+npm install -g grunt-cli bower
+npm install
+bower install
+grunt server
+```
