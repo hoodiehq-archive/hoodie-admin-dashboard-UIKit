@@ -324,6 +324,19 @@ module.exports = function (grunt) {
     }
   });
 
+  grunt.registerTask('release', function() {
+
+    // Forward arguments to the bump-only task
+    this.args.unshift('bump-only');
+
+    grunt.task.run([
+      this.args.join(':'),
+      'default',
+      'changelog',
+      'bump-commit'
+    ]);
+  });
+
   grunt.registerTask('server', function (target) {
     if (target === 'dist') {
       return grunt.task.run(['build', 'connect:dist:keepalive']);
