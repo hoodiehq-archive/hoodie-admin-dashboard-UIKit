@@ -1,0 +1,17 @@
+before_script:
+  - npm install -g grunt-cli
+script:
+  - grunt build
+language: node_js
+node_js:
+  - '0.10'
+notifications:
+  email: false
+deploy:
+  provider: npm
+  email: stephan@boennemann.me
+  api_key:
+    secure: ArQCLL+p1Mdq+0ZbIAdNOHzXl6+zHO3MKSvBVIveaXc6XHYdq/LL3hjR6xJ7twkedu2gyGcf0fsaN88z0OKqrkpR8dRNEFkOJ8IonQ3G5FFawUHB3PeXgnPztXKeg5sCb+zl0zS7A4UbRFwmkGT5A8D6BN4L0Zbasu2GgA+hYlY=
+  on:
+    tags: true
+    repo: hoodiehq/hoodie-pocket-UIKit
