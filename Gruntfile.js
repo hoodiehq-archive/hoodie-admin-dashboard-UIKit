@@ -308,33 +308,7 @@ module.exports = function (grunt) {
         'svgmin',
         'htmlmin'
       ]
-    },
-    bump: {
-      options: {
-        commitMessage: 'chore(release): v%VERSION%',
-        files: ['package.json', 'bower.json'],
-        commitFiles: [
-          'package.json',
-          'bower.json',
-          'CHANGELOG.md',
-          'dist/*'
-        ],
-        pushTo: 'origin master'
-      }
     }
-  });
-
-  grunt.registerTask('release', function() {
-
-    // Forward arguments to the bump-only task
-    this.args.unshift('bump-only');
-
-    grunt.task.run([
-      this.args.join(':'),
-      'default',
-      'changelog',
-      'bump-commit'
-    ]);
   });
 
   grunt.registerTask('server', function (target) {
@@ -360,6 +334,7 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('build', [
+    'jshint',
     'clean:dist',
     'useminPrepare',
     'concurrent:dist',
@@ -374,7 +349,6 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('default', [
-    'jshint',
     /*'test',*/
     'build'
   ]);
