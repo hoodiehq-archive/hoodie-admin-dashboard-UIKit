@@ -2,6 +2,8 @@ before_script:
   - npm install -g grunt-cli
 script:
   - grunt build
+after_success:
+  - grunt gh-pages
 language: node_js
 node_js:
   - '0.10'
@@ -15,3 +17,6 @@ deploy:
   on:
     tags: true
     repo: hoodiehq/hoodie-pocket-UIKit
+env:
+ global:
+  - secure: "oYg+AKhINeGpiaBvoGLLYFlRLC0L7509Pyd7cthoYBbhGAclIZx9JjpC6AP1zaHTlVYqiXlTAQGsoEq5HuxgKD1aM3RBos5o+4HxytQmlVhmETPdBDnCB2B9MSjGwpAMGOqU3U4cmgsezlv8TdWG07EGE9nvsmcQi11x6hYi32o="

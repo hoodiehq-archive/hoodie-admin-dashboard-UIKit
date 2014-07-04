@@ -15,6 +15,7 @@ module.exports = function (grunt) {
 
   grunt.initConfig({
     // configurable paths
+    pkg: grunt.file.readJSON('package.json'),
     yeoman: {
       app: 'app',
       dist: 'dist'
@@ -308,6 +309,19 @@ module.exports = function (grunt) {
         'svgmin',
         'htmlmin'
       ]
+    },
+    'gh-pages': {
+      options: {
+        base: 'dist',
+        dotfiles: true,
+        repo: 'https://' + process.env.GH_TOKEN + '@github.com/hoodiehq/hoodie-pocket-UIKit',
+        message: 'chore(deploy): v<%=pkg.version%>',
+        user: {
+          name: 'Hoodie',
+          email: 'deploy@thehoodiefirm.com'
+        }
+      },
+      src: '**/*'
     }
   });
 
