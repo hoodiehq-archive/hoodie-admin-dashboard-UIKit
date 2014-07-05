@@ -15,6 +15,7 @@ module.exports = function (grunt) {
 
   grunt.initConfig({
     // configurable paths
+    pkg: grunt.file.readJSON('package.json'),
     yeoman: {
       app: 'app',
       dist: 'dist'
@@ -309,32 +310,19 @@ module.exports = function (grunt) {
         'htmlmin'
       ]
     },
-    bump: {
+    'gh-pages': {
       options: {
-        commitMessage: 'chore(release): v%VERSION%',
-        files: ['package.json', 'bower.json'],
-        commitFiles: [
-          'package.json',
-          'bower.json',
-          'CHANGELOG.md',
-          'dist/*'
-        ],
-        pushTo: 'origin master'
-      }
+        base: 'dist',
+        dotfiles: true,
+        repo: 'https://' + process.env.GH_TOKEN + '@github.com/hoodiehq/hoodie-pocket-UIKit',
+        message: 'chore(deploy): v<%=pkg.version%>',
+        user: {
+          name: 'Hoodie',
+          email: 'deploy@thehoodiefirm.com'
+        }
+      },
+      src: '**/*'
     }
-  });
-
-  grunt.registerTask('release', function() {
-
-    // Forward arguments to the bump-only task
-    this.args.unshift('bump-only');
-
-    grunt.task.run([
-      this.args.join(':'),
-      'default',
-      'changelog',
-      'bump-commit'
-    ]);
   });
 
   grunt.registerTask('server', function (target) {
@@ -360,6 +348,7 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('build', [
+    'jshint',
     'clean:dist',
     'useminPrepare',
     'concurrent:dist',
@@ -374,7 +363,6 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('default', [
-    'jshint',
     /*'test',*/
     'build'
   ]);

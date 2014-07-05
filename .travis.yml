@@ -1,0 +1,26 @@
+before_install:
+  - gem update --system
+  - gem install sass --version "=3.3.7"
+  - gem install compass --version "=0.12.3"
+  - npm install -g grunt-cli bower
+  - bower install
+script:
+  - grunt build
+after_success:
+  - grunt gh-pages
+language: node_js
+node_js:
+  - '0.10'
+notifications:
+  email: false
+deploy:
+  provider: npm
+  email: stephan@boennemann.me
+  api_key:
+    secure: ArQCLL+p1Mdq+0ZbIAdNOHzXl6+zHO3MKSvBVIveaXc6XHYdq/LL3hjR6xJ7twkedu2gyGcf0fsaN88z0OKqrkpR8dRNEFkOJ8IonQ3G5FFawUHB3PeXgnPztXKeg5sCb+zl0zS7A4UbRFwmkGT5A8D6BN4L0Zbasu2GgA+hYlY=
+  on:
+    tags: true
+    repo: hoodiehq/hoodie-pocket-UIKit
+env:
+ global:
+  - secure: "oYg+AKhINeGpiaBvoGLLYFlRLC0L7509Pyd7cthoYBbhGAclIZx9JjpC6AP1zaHTlVYqiXlTAQGsoEq5HuxgKD1aM3RBos5o+4HxytQmlVhmETPdBDnCB2B9MSjGwpAMGOqU3U4cmgsezlv8TdWG07EGE9nvsmcQi11x6hYi32o="

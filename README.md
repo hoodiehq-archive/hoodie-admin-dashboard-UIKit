@@ -1,5 +1,7 @@
-hoodie-pocket-UIKit
-===================
+# hoodie-pocket-UIKit
+[![Build Status](https://travis-ci.org/hoodiehq/hoodie-pocket-UIKit.svg)](https://travis-ci.org/hoodiehq/hoodie-pocket-UIKit)
+[![Dependency Status](https://www.versioneye.com/user/projects/53b679e70d5bb8cba7000075/badge.svg)](https://www.versioneye.com/user/projects/53b679e70d5bb8cba7000075)
+[![devDependency Status](https://david-dm.org/hoodiehq/hoodie-pocket-UIKit/dev-status.svg)](https://david-dm.org/hoodiehq/hoodie-pocket-UIKit#info=devDependencies)
 
 **NOTE: the functionality described here is for version 2.0.0 or higher (should be included with any hoodie-server with a version _above_ 0.9.26).**
 
