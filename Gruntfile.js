@@ -293,9 +293,10 @@ module.exports = function (grunt) {
       tempstyles: {
         expand: true,
         dot: true,
-        cwd: '.tmp/concat/styles/',
+        flatten: true,
+        /* cwd: '.tmp/concat/styles/',*/
         dest: '<%= yeoman.dist %>/styles',
-        src: '{,*/}*.css'
+        src: ['.tmp/concat/styles/*.css', '.tmp/styles/guide.css']
       }
     },
     concurrent: {
