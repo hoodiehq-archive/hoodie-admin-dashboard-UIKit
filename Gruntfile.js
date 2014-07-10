@@ -149,8 +149,11 @@ module.exports = function (grunt) {
     // not used since Uglify task does concat,
     // but still available if needed
     /*concat: {
-            dist: {}
-        },*/
+      dist: {
+        src: ['dist/styles/*.css'],
+        dest: 'dist/styles/pocket-uikit.css',
+      }
+    },*/
     // not enabled since usemin task does concat and uglify
     // check index.html to edit your build targets
     // enable this task if you prefer defining your build targets here
@@ -267,7 +270,8 @@ module.exports = function (grunt) {
           dest: '<%= yeoman.dist %>/styles',
           src: [
             'bower_components/jquery-icheck/skins/flat/green{,@2x}.png',
-            'bower_components/select2/select2{,x2}.png'
+            'bower_components/select2/select2{,x2}.png',
+            'bower_components/select2/select2-spinner.gif'
           ]
         }, {
           expand: true,
