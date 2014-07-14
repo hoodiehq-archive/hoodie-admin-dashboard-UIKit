@@ -322,8 +322,8 @@ module.exports = function (grunt) {
         repo: 'https://' + process.env.GH_TOKEN + '@github.com/hoodiehq/hoodie-admin-dashboard-UIKit',
         message: 'chore(deploy): v<%=pkg.version%>',
         user: {
-          name: 'Hoodie',
-          email: 'deploy@thehoodiefirm.com'
+          name: 'Hoodie Bot',
+          email: 'stephan@thehoodiefirm.com'
         }
       },
       src: '**/*'
