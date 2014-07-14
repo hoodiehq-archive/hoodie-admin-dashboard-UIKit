@@ -1,3 +1,5 @@
+/* globals Dropzone */
+
 /*
 
   main.js
@@ -6,6 +8,7 @@
   in the UIKit test page.
 
 */
+
 
 //Dropzone (for drag n' drop file uploads with previews)
 Dropzone.options.dropzoneExample = { // The camelized version of the ID of the form element you want to Dropzoneify

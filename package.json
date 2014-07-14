@@ -1,6 +1,6 @@
 {
   "name": "hoodie-admin-dashboard-uikit",
-  "version": "2.1.5",
+  "version": "4.0.0",
   "author": "Alex Feyerke <hello@alexfeyerke.com>",
   "description": "A UI kit for building the Admin Dashboard components of Hoodie plugins.",
   "devDependencies": {
