@@ -20,7 +20,7 @@ deploy:
     secure: ArQCLL+p1Mdq+0ZbIAdNOHzXl6+zHO3MKSvBVIveaXc6XHYdq/LL3hjR6xJ7twkedu2gyGcf0fsaN88z0OKqrkpR8dRNEFkOJ8IonQ3G5FFawUHB3PeXgnPztXKeg5sCb+zl0zS7A4UbRFwmkGT5A8D6BN4L0Zbasu2GgA+hYlY=
   on:
     tags: true
-    repo: hoodiehq/hoodie-pocket-UIKit
+    repo: hoodiehq/hoodie-admin-dashboard-UIKit
 env:
  global:
   - secure: "oYg+AKhINeGpiaBvoGLLYFlRLC0L7509Pyd7cthoYBbhGAclIZx9JjpC6AP1zaHTlVYqiXlTAQGsoEq5HuxgKD1aM3RBos5o+4HxytQmlVhmETPdBDnCB2B9MSjGwpAMGOqU3U4cmgsezlv8TdWG07EGE9nvsmcQi11x6hYi32o="

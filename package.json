@@ -1,8 +1,8 @@
 {
-  "name": "hoodie-pocket-uikit",
+  "name": "hoodie-admin-dashboard-uikit",
   "version": "2.1.5",
   "author": "Alex Feyerke <hello@alexfeyerke.com>",
-  "description": "A UI kit for building the Pocket components of Hoodie plugins.",
+  "description": "A UI kit for building the Admin Dashboard components of Hoodie plugins.",
   "devDependencies": {
     "grunt": "^0.4.1",
     "grunt-autoprefixer": "^0.2.0",

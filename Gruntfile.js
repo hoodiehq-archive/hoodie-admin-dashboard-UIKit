@@ -151,7 +151,7 @@ module.exports = function (grunt) {
     /*concat: {
       dist: {
         src: ['dist/styles/*.css'],
-        dest: 'dist/styles/pocket-uikit.css',
+        dest: 'dist/styles/admin-dashboard-uikit.css',
       }
     },*/
     // not enabled since usemin task does concat and uglify
@@ -319,7 +319,7 @@ module.exports = function (grunt) {
       options: {
         base: 'dist',
         dotfiles: true,
-        repo: 'https://' + process.env.GH_TOKEN + '@github.com/hoodiehq/hoodie-pocket-UIKit',
+        repo: 'https://' + process.env.GH_TOKEN + '@github.com/hoodiehq/hoodie-admin-dashboard-UIKit',
         message: 'chore(deploy): v<%=pkg.version%>',
         user: {
           name: 'Hoodie',

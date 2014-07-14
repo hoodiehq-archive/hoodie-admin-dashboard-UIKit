@@ -6,23 +6,23 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Hoodie Pocket UIKit - Element Guide</title>
+  <title>Hoodie Admin Dashboard UIKit - Element Guide</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="styles/pocket-uikit.css"/>
+  <link rel="stylesheet" href="styles/admin-dashboard-uikit.css"/>
   <link href="styles/guide.css" rel="stylesheet">
 </head>
 <body class="">
   <div class="container">
-  <h1>Pocket UIKit</h1>
-  <p>The Pocket UIKIt is a collection of styled and functional HTML elements you can use to build the Pocket component of you Hoodie plugin. Its aim is to make your life easier by reducing the amount of CSS and JS you need to deal with, and it aims to make our users' experience better by providing a consistent experience across plugins written by different authors</p>
+  <h1>Admin Dashboard UIKit</h1>
+  <p>The Admin Dashboard UIKIt is a collection of styled and functional HTML elements you can use to build the Admin Dashboard component of you Hoodie plugin. Its aim is to make your life easier by reducing the amount of CSS and JS you need to deal with, and it aims to make our users' experience better by providing a consistent experience across plugins written by different authors</p>
   <p>We don't impose the UIKit on you, so feel free to build crazy stuff on top of or even entirely without it.</p>
   <h2>Including the UIKit</h2>
-  <p>The UIKit consists of one CSS and one JS file that you need to include in your plugin's <code>pocket/index.html</code>. These are served to you from the hoodie-server, so they're only available when your Hoodie app is running.</p>
+  <p>The UIKit consists of one CSS and one JS file that you need to include in your plugin's <code>admin-dashboard/index.html</code>. These are served to you from the hoodie-server, so they're only available when your Hoodie app is running.</p>
   <p>In your html's head: </p>
-  <pre><code class="language-markup">&lt;link rel="stylesheet" href="/_api/_plugins/_assets/styles/pocket-uikit.css"></code></pre>
+  <pre><code class="language-markup">&lt;link rel="stylesheet" href="/_api/_plugins/_assets/styles/admin-dashboard-uikit.css"></code></pre>
   <p>And before the closing body tag:</p>
-  <pre><code class="language-markup">&lt;script src="/_api/_plugins/_assets/scripts/pocket-uikit.js">&lt;/script></code></pre>
+  <pre><code class="language-markup">&lt;script src="/_api/_plugins/_assets/scripts/admin-dashboard-uikit.js">&lt;/script></code></pre>
   <h2>Quickstart Template</h2>
   <p>Here's a handy template so you can get started without any hassle:</p>
   <pre><code class="language-markup">&lt;!doctype html>
@@ -32,22 +32,22 @@
   &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
   &lt;title>My Hoodie Plugin&lt;/title>
 
-  &lt;!-- Pocket UIKit CSS -->
-  &lt;link rel="stylesheet" href="/_api/_plugins/_assets/styles/pocket-uikit.css">
+  &lt;!-- Admin Dashboard UIKit CSS -->
+  &lt;link rel="stylesheet" href="/_api/_plugins/_assets/styles/admin-dashboard-uikit.css">
 &lt;/head>
 &lt;body>
   &lt;div class="container">
     &lt;!-- This is where all your stuff goes -->
   &lt;/div>
 
-  &lt;!-- Pocket UIKit JS (includes jQuery and Boostrap Components) -->
-  &lt;script src="/_api/_plugins/_assets/scripts/pocket-uikit.js">&lt;/script>
+  &lt;!-- Admin Dashboard UIKit JS (includes jQuery and Boostrap Components) -->
+  &lt;script src="/_api/_plugins/_assets/scripts/admin-dashboard-uikit.js">&lt;/script>
 &lt;/body>
 &lt;/html></code></pre>
   <p class="note">Please put all of your plugin's markup in the div with the class <code>container</code>.</p>
   <h2>UIKit Elements</h2>
   <h2>Headlines</h2>
-  <p>Pocket's UIKit offers a couple of  headline styles, where h1 is also used as a section separator with a horizontal border at the bottom.</p>
+  <p>Admin Dashboard's UIKit offers a couple of  headline styles, where h1 is also used as a section separator with a horizontal border at the bottom.</p>
   <h1>Headline Style 1</h1>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, velit veniam commodi in earum doloremque?</p>
   <h2>Headline Style 2</h2>
@@ -78,7 +78,7 @@
   &lt;/fieldset>
 &lt;/form></code></pre>
   <h3>Validation and Field Types</h3>
-  <p>This input is <code>type="email"</code> and required, so it's marked with an exclamation mark over there on the right. Once you enter a valid email, that exclamation mark will be replaced by a green check mark. This is how all HTML5 form validation features (required, patterns and types) are handled in Pocket.</p>
+  <p>This input is <code>type="email"</code> and required, so it's marked with an exclamation mark over there on the right. Once you enter a valid email, that exclamation mark will be replaced by a green check mark. This is how all HTML5 form validation features (required, patterns and types) are handled in Admin Dashboard.</p>
   <p>Please let users know which fields are required by stating so in the <code>help-block</code> paragraph.</p>
   <form class="bottomArrow">
     <fieldset>
@@ -508,12 +508,12 @@ $("select").select2("val", ["pick_me", "hey_wait]");</code></pre>
     </tbody>
   </table>
   <h2>Drag and Drop File Uploads</h2>
-  <p>The Pocket UIKit provides the basics to enable drag n' drop uploads with <a href="http://www.dropzonejs.com/">dropzone.js</a>, however you are required to</p>
+  <p>The Admin Dashboard UIKit provides the basics to enable drag n' drop uploads with <a href="http://www.dropzonejs.com/">dropzone.js</a>, however you are required to</p>
   <ol>
     <li>Initialise each of your dropzone instances with JS</li>
     <li>Handle the server-side aspects yourself (we'll add an example in the future)</li>
   </ol>
-  <p>Please consult <a href="http://www.dropzonejs.com/">dropzone's docs</a> for more information on options, such as <code>maxFilesize</code>, <code>maxFiles</code>, accepted file types etc. There is an example dropzone implementation in hoodie-pocket-UIKit's <code>main.js</code> (with your Hoodie app running, it's at <a href="/_api/_plugins/_assets/scripts/main.js">/_api/_plugins/_assets/scripts/main.js</a>)</p>
+  <p>Please consult <a href="http://www.dropzonejs.com/">dropzone's docs</a> for more information on options, such as <code>maxFilesize</code>, <code>maxFiles</code>, accepted file types etc. There is an example dropzone implementation in hoodie-admin-dashboard-UIKit's <code>main.js</code> (with your Hoodie app running, it's at <a href="/_api/_plugins/_assets/scripts/main.js">/_api/_plugins/_assets/scripts/main.js</a>)</p>
   <form>
     <fieldset>
       <label for="exampleInputFile">File input</label>
@@ -585,7 +585,7 @@ $("select").select2("val", ["pick_me", "hey_wait]");</code></pre>
   </div>
 
 
-  <script src="scripts/pocket-uikit.js"></script>
+  <script src="scripts/admin-dashboard-uikit.js"></script>
   <script src="scripts/scripts.js"></script>
 </body>
 </html>
