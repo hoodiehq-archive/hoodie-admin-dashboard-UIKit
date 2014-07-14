@@ -1,6 +1,6 @@
 {
   "name": "hoodie-admin-dashboard-uikit",
-  "version": "5.0.0",
+  "version": "2.1.3",
   "author": "Alex Feyerke <hello@alexfeyerke.com>",
   "description": "A UI kit for building the Admin Dashboard components of Hoodie plugins.",
   "devDependencies": {
@@ -30,6 +30,6 @@
     "time-grunt": "^0.1.1"
   },
   "engines": {
-    "node": ">=0.8.0"
+    "node": ">=0.10.0"
   }
 }
