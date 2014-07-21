@@ -372,6 +372,8 @@ module.exports = function (grunt) {
     'build'
   ]);
 
+  grunt.registerTask('ci', ['build', 'integration-test']);
+
   grunt.registerTask('um', [
     'useminPrepare',
     'usemin'
