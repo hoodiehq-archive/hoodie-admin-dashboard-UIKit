@@ -6,7 +6,10 @@ before_install:
 - bower install
 after_success:
 - grunt gh-pages
-- grunt ghrelease
+before_deploy:
+- grunt before-deploy
+after_deploy:
+- grunt after-deploy
 language: node_js
 node_js:
 - '0.10'
@@ -14,7 +17,7 @@ notifications:
   email: false
 env:
   global:
-  - secure: gonoYIrichta/K+bjOVSrUbAnm1Re3d+uBVzOZi9pL+ZuAx+Hg3iYqxA0AQf+EOpZj5oTgia16Wv5RjVgnLEeW5o0LTTOwatOJ68JXAXYS/UVhMhEF1gDKHSSqcZaicEY7zh6avIyI3QU9wKLphvD9HMCLrr35Tqujl2tP6Zzik=
+  - secure: NeGM+ZxS9z8ZUfIwAa/1Zy1ZLkwW+aSy09Y/pTZTqGuo3eUR9wAJz+fZrHJLqEOBmOX/GxWVVqMj9Fcx7bkp1AadSbZWnKbDdgW0kt3VQMHhisjTYMFXdFWQB1R6puLQB3IwBpmRfdm1i376KTvpcVUTLdnxBur5b1Uf4MWvKls=
 deploy:
   provider: npm
   email: stephan@thehoodiefirm.com
