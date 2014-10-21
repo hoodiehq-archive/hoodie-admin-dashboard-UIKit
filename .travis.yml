@@ -15,6 +15,8 @@ node_js:
 - '0.10'
 notifications:
   email: false
+  slack:
+    secure: czu8WPyGKrdTFuZIDq4xmEXtXdXV3qFhsXZHzqD+EGUog4qPrJTR/osCkXQxY4ogCorSHT5Zme4oMeExOsjO6PdqXLt74O/hAf3lFEFzoOgCnRwWrePjzsnaVuYcBzwO24prsXmEbEShf6ho6Sckg6hZKDQK934E/scDH7IuNb0=
 env:
   global:
   - secure: NeGM+ZxS9z8ZUfIwAa/1Zy1ZLkwW+aSy09Y/pTZTqGuo3eUR9wAJz+fZrHJLqEOBmOX/GxWVVqMj9Fcx7bkp1AadSbZWnKbDdgW0kt3VQMHhisjTYMFXdFWQB1R6puLQB3IwBpmRfdm1i376KTvpcVUTLdnxBur5b1Uf4MWvKls=
